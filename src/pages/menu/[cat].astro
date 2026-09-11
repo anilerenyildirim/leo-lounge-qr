@@ -1,0 +1,56 @@
+---
+/* ============================================================
+   /menu/<kategori> — bir kartın açtığı ürün listesi.
+
+   Yirmi üç sayfa da build zamanında basılıyor (getStaticPaths);
+   çalışma anında yönlendirme yok, QR'dan gelen telefon statik HTML
+   indiriyor.
+
+   RAY YOK. Kategoriler arası gezinme ızgaranın işi; yapışkan bir
+   şerit bir de burada dursaydı aynı işi iki yerde yapardı.
+
+   GERİ DÖNÜŞ İKİ YOL. Görünen yol üst bardaki "Menü" bağlantısı —
+   logo ana sayfaya gider (ızgaraya değil), o yüzden ayrı bir dönüş
+   yolu gerekiyor.
+
+   Görünmeyen yol TARAYICININ GERİ TUŞU: sayfa doğrudan açıldığında
+   (QR, paylaşılan bağlantı, arama sonucu) altında geçmiş kaydı
+   olmadığı için geri tuşu siteden ÇIKARIR. `data-back` bunu app.ts'e
+   bildiriyor; orada ızgara sayfası geçmişe yerleştiriliyor. Öznitelik
+   değeri dönülecek adres — yol burada bir kez yazılıyor, JS'te ikinci
+   kez değil.
+   ============================================================ */
+import type { GetStaticPaths } from 'astro';
+import Base from '../../layouts/Base.astro';
+import Bar from '../../components/Bar.astro';
+import Section from '../../components/Section.astro';
+import MenuFoot from '../../components/MenuFoot.astro';
+import { LOUNGE } from '../../data/menu';
+import { MENU_CARDS, cardSection } from '../../lib/menuCards';
+import '../../styles/menu.css';
+
+export const getStaticPaths = (() =>
+  MENU_CARDS.map((card) => ({
+    params: { cat: card.key },
+    props: { card },
+  }))) satisfies GetStaticPaths;
+
+const { card } = Astro.props;
+const sec = cardSection(card);
+---
+
+<Base
+  menu
+  venue="lounge"
+  title={`${card.title} — ${LOUNGE.name}`}
+  description={`${LOUNGE.name} menüsü — ${card.title}.`}
+>
+  <Bar back="/menu/" />
+
+  <h1 class="sr-only">{card.title} — {LOUNGE.name}</h1>
+
+  <div class="wrap mpage mpage-cat" data-back="/menu/">
+    <Section sec={sec} />
+    <MenuFoot />
+  </div>
+</Base>

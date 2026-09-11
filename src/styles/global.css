@@ -1,0 +1,193 @@
+/* ============================================================
+   LEO LOUNGE — token katmanı + landing CSS'i
+
+   Bu dosya cafe-leo/src/styles/global.css'in landing page'e düşen
+   ALT KÜMESİ. Menü sayfasına ait olan her şey (ray, bölüm bantları,
+   ürün satırı, büyük görünüm, öneri şeridi) burada YOK — bu projede
+   menü sayfası da yok.
+
+   TASARIM DİLİ logodan türetildi (public/brand/leologo.jpg):
+     a) ayrık KARE nokta   → sistemin tek ayraç karakteri
+     b) oyulmuş serif      → Marcellus
+
+   PALET: bu adres Lounge'un adresi, o yüzden varsayılan tema LOŞ.
+   cafe-leo'da varsayılan aydınlıktı ve lounge bir ikinci temaydı;
+   burada tersi. İki tema da duruyor — kartlardan biri her zaman
+   diğerinin mekanı.
+   ============================================================ */
+
+/* ---------- Leo Lounge — siyah + koyu ahşap ---------- */
+:root,
+:root[data-venue="lounge"] {
+  --bg: #0B0907;
+  --surf: #17120D;
+  --text: #EDE6D8;
+  --muted: #8A8073;
+  --rule: #2A1E14;
+
+  /* Koyu zeminde tek altın yeterli: #E3C244 siyah üzerinde 11.42:1. */
+  --gold-leaf: #E3C244;
+  --gold-ink: #E3C244;
+  --on-gold: #0B0907;
+
+  --line: rgba(237, 230, 216, .14);
+  --line-soft: rgba(237, 230, 216, .08);
+}
+
+/* ---------- tipografi ve ölçü ---------- */
+:root {
+  /* TEK AİLE: MARCELLUS — müşteri seçimi, cafe-leo ile aynı.
+     Roma yazıtı geleneği; gövde kalınlığı yatay ve dikeyde birbirine
+     yakın, küçük puntoda Didone'ler gibi incelip kaybolmuyor.
+
+     İTALİĞİ, EKSENİ VE İKİNCİ AĞIRLIĞI YOK: bu dosyada `font-style:
+     italic` ve `font-variation-settings` bulunmuyor, 600 ağırlık
+     kullanılmıyor. Tarayıcının sahte eğim/kalınlık üretmesi oyulmuş
+     harf karakterini bozardı.
+
+     — 11 Eylül 2026: MARCELLUS BIRAKILDI. —
+
+     TEK AİLE: CORMORANT GARAMOND.
+
+     Gerekçe: Marcellus cafe-leo'nun ailesiydi ve iki site onu ortak
+     kullandığı sürece akraba görünüyorlardı. Oysa iki mekanın ortak
+     tarafı LOGODAN İBARET: biri gündüz kafesi, öbürü resmi bir
+     lounge. Harfin de ayrılması gerekiyordu.
+
+     Neden bu aile:
+     · Garamond geleneği — Marcellus'un Roma YAZITI geleneğinden
+       ayrı bir kol: yazıt oyulur, Garamond YAZILIR. Lounge'un
+       istediği "dolma kalem" hissi buradan geliyor.
+     · İTALİĞİ GERÇEK BİR CHANCERY ELİ, eğilmiş bir dik değil.
+       Marcellus'ta italik hiç yoktu; burada italik bir ARAÇ ve
+       kategori başlıklarında kullanılıyor.
+     · Yüksek kalın–ince farkı loş zeminde parlıyor.
+     · Türkçe tam: noktasız ı ile noktalı İ ayrı çiziliyor,
+       ş/ğ kuyrukları düzgün (latin-ext alt kümesi doğrulandı).
+
+     Bedeli: çizgileri Marcellus'tan İNCE. Koyu zeminde küçük punto
+     soluyor, bu yüzden gövde ölçüsü bir basamak büyütüldü ve
+     gövde ağırlığı 400 yerine yer yer 500'e çekildi. Ölçü küçültmek
+     isteyen önce kontrastı ölçmeli. */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+
+  --pad: 20px;
+  --page: 560px;
+  --sq: 4px;              /* ayrık kare nokta */
+}
+
+/* ============================================================
+   TABAN
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  padding-bottom: 72px;
+}
+
+/* Loşta üstten altın hâle: ışık kaynağı okuması burada doğru. */
+body::before {
+  content: "";
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(120% 55% at 50% -12%,
+    color-mix(in srgb, var(--gold-leaf) 9%, transparent), transparent 62%);
+}
+
+a { color: inherit; }
+img { max-width: 100%; }
+
+.wrap { position: relative; z-index: 1; max-width: var(--page); margin: 0 auto; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+
+/* Odak halkası öğenin KENDİ köşesini takip eder. */
+:where(a, button):focus-visible {
+  outline: 2px solid var(--gold-ink);
+  outline-offset: 3px;
+}
+
+/* ---------- kare nokta: sistemin tek ayracı ----------
+   Boyut em'e bağlı değil: her yerde aynı 4px kare olmalı ki motif
+   tekrarlansın, tipografik boyutla ölçeklenmesin. */
+.sq {
+  display: inline-block; flex: none;
+  width: var(--sq); height: var(--sq);
+  background: currentColor;
+  vertical-align: .18em;
+}
+
+/* ---------- logo ----------
+   Kutu ŞİMDİDEN sabit: metinden görsele geçişte sayfa oynamasın
+   (bkz. components/Logo.astro). */
+.logo {
+  --logo-ar: 1.35;
+  display: grid; place-items: center;
+  width: calc(var(--logo-h) * var(--logo-ar));
+  height: var(--logo-h);
+}
+.logo-sm { --logo-h: 30px; place-items: center start; }
+.logo-lg { --logo-h: clamp(64px, 21vw, 106px); }
+
+.logo-mark {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: calc(var(--logo-h) * .9); line-height: 1;
+  color: var(--text);
+}
+
+/* Görsele geçişte gereken tek kural — şimdiden burada duruyor. */
+.logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* ---------- ortak metin biçimleri ---------- */
+.eyebrow {
+  display: flex; align-items: center; gap: 9px; flex-wrap: wrap;
+  font: 500 10px/1 var(--font-body);
+  letter-spacing: .22em; text-transform: uppercase;
+  color: var(--muted);
+}
+.eyebrow .sq { color: var(--gold-leaf); }
+
+.tagline {
+  margin-top: 14px; max-width: 34ch;
+  color: var(--text); font-size: 16px; line-height: 1.55;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 28px var(--pad) 0;
+  border-top: 1px solid var(--line-soft);
+}
+footer .note {
+  margin-top: 12px;
+  color: var(--muted); font-size: 12.5px; line-height: 1.6;
+}
+
+/* ============================================================
+   KIRILIM NOKTALARI
+
+   Ölçü tokenları TEK YERDE genişliyor; bileşenler kendi
+   @media'larını yazmıyor, var(--page) / var(--pad) üzerinden
+   büyüyorlar. cafe-leo ile aynı üç kademe — iki site yan yana
+   açıldığında aynı ritmi tutsun.
+   ============================================================ */
+
+@media (min-width: 720px) {
+  :root { --page: 720px; --pad: 26px; }
+}
+
+@media (min-width: 1100px) {
+  :root { --page: 1080px; --pad: 32px; }
+}

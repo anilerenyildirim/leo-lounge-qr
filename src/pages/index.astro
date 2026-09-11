@@ -1,0 +1,207 @@
+---
+/* ============================================================
+   / — leo-lounge.onlinemenu-qr.com tanıtım sayfası.
+
+   cafe-leo.onlinemenu-qr.com'daki sayfanın AYNISI, roller ters:
+   burada Leo Lounge birinci kart (aktif, kendi yüzeyinde, butonlu),
+   Cafe Leo Teras ikinci kart (inaktif, koyulaştırılmış, tamamı
+   Instagram'a giden tek bağlantı).
+
+   Müşteri kararı: önce kafe bitiriliyor. Bu yüzden bugün Lounge'un
+   menüsü yok ve `MENU_READY` false — "Menü" butonu yerine devre dışı
+   bir "Menü yakında" etiketi duruyor. Olmayan sayfaya buton koyup
+   müşteriyi 404'e göndermiyoruz. Menü yazıldığında tek satır
+   (data/venues.ts → MENU_READY) açılıyor.
+
+   Palet loş: bu adres Lounge'un adresi. İnaktif kart aydınlık
+   temadaki karşıtının aynası — orada zemini KOYULTUYORduk, burada
+   zaten koyu olduğu için AÇIYORuz. İkisinde de yöntem aynı: kartı
+   silmek değil, ayırmak.
+   ============================================================ */
+import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
+import { CAFE, LOUNGE, MENU_READY } from '../data/venues';
+---
+
+<Base
+  venue="lounge"
+  title={`Leo — ${LOUNGE.name} & ${CAFE.name}, Sinanoba`}
+  description={`${LOUNGE.name} ve ${CAFE.name} — Sinanoba, Büyükçekmece. Menü, konum ve iletişim.`}
+>
+  <div class="wrap home">
+    <div class="home-brand">
+      <Logo size="lg" />
+      <p class="eyebrow">
+        <span>Sinanoba</span><span class="sq" aria-hidden="true"></span><span>Büyükçekmece</span>
+      </p>
+    </div>
+
+    <h1 class="sr-only">{LOUNGE.name} ve {CAFE.name}</h1>
+
+    <div class="home-venues">
+      <section class="home-venue card-lounge">
+        <h2>{LOUNGE.name}</h2>
+        <p class="tagline">{LOUNGE.tagline}</p>
+
+        <nav class="home-acts" aria-label={`${LOUNGE.name} bağlantıları`}>
+          {MENU_READY ? (
+            <a class="btn btn-primary" href="/menu">Menü</a>
+          ) : (
+            <span class="btn btn-wait" aria-disabled="true">Menü yakında</span>
+          )}
+          <a class="btn btn-ghost" href={LOUNGE.mapsUrl} target="_blank" rel="noopener">Konum</a>
+        </nav>
+      </section>
+
+      <a class="home-venue card-off" href={CAFE.instagram} target="_blank" rel="noopener">
+        <h2>{CAFE.name}</h2>
+        <p class="tagline">{CAFE.tagline}</p>
+
+        <p class="invite">
+          <span class="invite-txt">Teras'a da bekleriz</span>
+          <span class="sq" aria-hidden="true"></span>
+          <span class="invite-cta">Instagram</span>
+        </p>
+      </a>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .home { padding: 0 var(--pad); }
+
+  .home-brand {
+    margin-top: 9vh;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .home-brand .eyebrow { margin-top: 20px; justify-content: center; text-align: center; }
+
+  .home-venues { margin-top: 10vh; display: grid; gap: 44px; align-items: stretch; }
+
+  .home-venue {
+    display: flex; flex-direction: column;
+    border-radius: 14px;
+    padding: 28px 30px 26px;
+  }
+  .home-venue h2 {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 30px; line-height: 1;
+  }
+  .home-venue .tagline { margin-top: 10px; max-width: 30ch; }
+
+  /* ---------- AKTİF KART (Lounge) ---------- */
+
+  .card-lounge {
+    background:
+      linear-gradient(158deg,
+        rgba(201, 160, 60, .20) 0%,
+        rgba(140, 100, 28, .06) 100%);
+    border: 1px solid rgba(227, 194, 68, .22);
+    border-left: 2px solid var(--gold-leaf);
+    box-shadow: 0 10px 34px -14px rgba(0, 0, 0, .7);
+  }
+
+  .home-acts {
+    margin-top: auto; padding-top: 26px;
+    display: flex; flex-wrap: wrap; gap: 12px;
+  }
+
+  /* 48px: parmak hedefi için alt sınır. Punto 13px ve harf aralığı
+     .1em — küçük harf aralıklı metin linki telefonda hem okunmuyor
+     hem ıskalanıyordu. */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 48px; min-width: 132px;
+    padding: 0 26px;
+    border-radius: 999px;
+    text-decoration: none;
+    font: 500 13px/1 var(--font-body);
+    letter-spacing: .1em; text-transform: uppercase;
+    transition: background-color .25s ease, border-color .25s ease, color .25s ease;
+  }
+
+  .btn-primary {
+    background: var(--gold-leaf);
+    color: var(--on-gold);
+    border: 1px solid var(--gold-leaf);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid color-mix(in oklch, var(--text) 30%, transparent);
+  }
+  /* Beklemedeki menü BUTON DEĞİL: <span>, odaklanmıyor, imleci
+     değişmiyor. Buton gibi görünüp tıklanmayan bir şey koymaktansa
+     buton olmadığını söyleyen bir etiket koyuyoruz. */
+  .btn-wait {
+    background: transparent;
+    color: var(--muted);
+    border: 1px dashed color-mix(in oklch, var(--text) 22%, transparent);
+    cursor: default;
+  }
+
+  @media (hover: hover) {
+    .btn-primary:hover { background: color-mix(in oklch, var(--gold-leaf) 88%, #fff); }
+    .btn-ghost:hover { border-color: var(--gold-leaf); }
+  }
+
+  /* ---------- İNAKTİF KART (Cafe Teras) ----------
+     Aydınlık temadaki karşıtının aynası: orada zemin KOYULTULUYORdu,
+     burada zemin zaten siyah olduğu için AÇILIYOR. Amaç aynı — kartı
+     silmek değil, açık olandan ayırmak. Altın kenar yok: altın bu
+     sayfada "açık mekan" demek. */
+  .card-off {
+    background:
+      linear-gradient(158deg,
+        color-mix(in oklch, var(--text) 12%, var(--surf)) 0%,
+        color-mix(in oklch, var(--text) 6%, var(--surf)) 100%);
+    border: 1px solid color-mix(in oklch, var(--text) 12%, transparent);
+    border-left: 2px solid color-mix(in oklch, var(--text) 26%, transparent);
+    text-decoration: none;
+    color: inherit;
+    transition: background-color .3s ease, border-color .3s ease;
+  }
+  .card-off h2 { color: color-mix(in oklch, var(--text) 66%, transparent); }
+  .card-off .tagline { color: var(--muted); }
+
+  .invite {
+    margin-top: auto; padding-top: 26px;
+    display: flex; flex-wrap: wrap; align-items: center; gap: 11px;
+    font: 500 11.5px/1.5 var(--font-body);
+    letter-spacing: .13em; text-transform: uppercase;
+  }
+  .invite-txt { color: var(--muted); }
+  /* Tek tıklanır şey kartın kendisi — bu bir buton değil, nereye
+     gideceğini söyleyen etiket. */
+  .invite-cta {
+    color: var(--gold-ink);
+    padding-bottom: 3px;
+    border-bottom: 1px solid color-mix(in oklch, var(--gold-ink) 45%, transparent);
+  }
+  .card-off .sq { color: color-mix(in oklch, var(--text) 30%, transparent); }
+
+  @media (hover: hover) {
+    .card-off:hover {
+      background:
+        linear-gradient(158deg,
+          color-mix(in oklch, var(--text) 16%, var(--surf)) 0%,
+          color-mix(in oklch, var(--text) 9%, var(--surf)) 100%);
+      border-color: color-mix(in oklch, var(--gold-ink) 40%, transparent);
+    }
+    .card-off:hover .invite-cta { border-bottom-color: var(--gold-ink); }
+  }
+
+  /* Alt bilgi YOK — cafe-leo ile aynı gerekçe: içeriği olmayan bir
+     ayraç bandı sayfaya "eksik bir şey var" dedirtiyordu. */
+
+  @media (max-width: 359px) {
+    .btn { min-width: 0; flex: 1 1 100%; padding: 0 18px; letter-spacing: .06em; }
+  }
+  @media (min-width: 720px) {
+    .home-venues { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+  @media (min-width: 1100px) {
+    .home-venue { padding: 34px 36px 30px; }
+    .home-venue h2 { font-size: 34px; }
+  }
+</style>

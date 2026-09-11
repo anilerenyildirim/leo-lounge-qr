@@ -1,0 +1,522 @@
+/* ============================================================
+   LEO LOUNGE — menü sayfalarının CSS'i
+
+   global.css tokenları kurar (palet, tipografi, --page, --pad);
+   bu dosya yalnız menüye ait olanı ekler. Ana sayfa bu dosyayı
+   YÜKLEMİYOR.
+
+   TASARIMIN ÇIKIŞ NOKTASI: basılı menü fotoğraf kullanmıyor, salt
+   tipografi. Veri de bunu doğruluyor — 232 ürünün 201'i fotoğrafsız
+   (bütün bar listesi) ve öyle kalacak. Bu yüzden TİPOGRAFİK SATIR
+   ASIL DURUM olarak tasarlandı, fotoğraflı satır ise onun zenginleşmiş
+   hâli. Tersi yapılsaydı (fotoğraf asıl, tipografi "eksik hâl")
+   menünün yüzde seksen beşi kusurlu görünürdü.
+
+   IŞIK KAYNAĞI TEK VE ÜSTTE. Kart yüzeyleri düz dolgu değil, çok
+   hafif dikey degrade; üst kenarda 1px sıcak highlight. Gölgeler hep
+   aşağı düşüyor. Her öğenin kendi rastgele gölgesi olsaydı dağınık
+   görünürdü.
+   ============================================================ */
+
+/* ============================================================
+   ÜST BAR
+   ============================================================ */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.bar-in {
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 10px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bar-logo {
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.bar-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 15px 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--text);
+  font: 500 12px/1 var(--font-body);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color .18s ease, color .18s ease;
+}
+
+.bar-back:hover { border-color: var(--gold-leaf); color: var(--gold-leaf); }
+
+/* ok: ayrı bir varlık değil, iki kenarı döndürülmüş kare */
+.bar-arrow {
+  width: 6px;
+  height: 6px;
+  border-left: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: rotate(45deg);
+  translate: 2px 0;
+}
+
+/* ============================================================
+   SAYFA
+   ============================================================ */
+
+.mpage {
+  padding: 0 var(--pad);
+  padding-bottom: 54px;
+}
+
+.mhead { padding-top: 44px; }
+
+.mhead .eyebrow { justify-content: flex-start; }
+
+.mhead h1 {
+  margin-top: 14px;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(44px, 12vw, 68px);
+  line-height: 1;
+  letter-spacing: .01em;
+  color: var(--text);
+}
+
+.mhead-tag {
+  margin-top: 12px;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 34ch;
+}
+
+/* ============================================================
+   KATEGORİ IZGARASI (/menu)
+
+   İki kart biçimi aynı ızgarada: kapaklı ve tipografik. Eşit
+   yükseklik ZORLANMIYOR — tipografik kart daha kısa duruyor ve
+   ızgara akıyor. Boş bir görsel alanı bırakmak, kartı kısaltmaktan
+   kötü görünürdü.
+   ============================================================ */
+
+.cats {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+.cat {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background: linear-gradient(to bottom, var(--surf), color-mix(in srgb, var(--surf) 72%, var(--bg)));
+  border: 1px solid var(--line-soft);
+  border-top-color: rgba(227, 194, 68, .14);   /* üstten vuran ışık */
+  border-radius: 2px;
+  overflow: hidden;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.cat:hover { border-color: var(--line); transform: translateY(-2px); }
+.cat:hover .cat-title { color: var(--gold-leaf); }
+
+.cat-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px 14px 16px;
+}
+
+.cat-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-wrap: balance;
+  transition: color .2s ease;
+}
+
+.cat-count {
+  font: 500 10px/1 var(--font-body);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Tipografik kart: kapak yok, o yüzden nefes payı ve altın çizgi
+   görsel ağırlığı taşıyor. */
+.cat.no-shot .cat-meta { padding: 22px 16px 24px; }
+
+.cat.no-shot .cat-title {
+  font-size: 23px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.cat.no-shot .cat-meta::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--gold-leaf);
+  opacity: .55;
+  margin-bottom: 9px;
+}
+
+/* ============================================================
+   BÖLÜM (kategori sayfası)
+   ============================================================ */
+
+.mpage-cat { padding-top: 40px; }
+
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.sec-head h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(34px, 9.5vw, 52px);
+  line-height: 1.05;
+  letter-spacing: .01em;
+  text-wrap: balance;
+}
+
+.sec-count {
+  margin-left: auto;
+  flex: none;
+  font: 500 10px/1 var(--font-body);
+  letter-spacing: .2em;
+  color: var(--muted);
+  translate: 0 -4px;
+}
+
+.grp + .grp { margin-top: 38px; }
+
+.grp-title {
+  margin-bottom: 18px;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--gold-leaf);
+}
+
+/* ============================================================
+   ÜRÜN SATIRI
+   ============================================================ */
+
+.items {
+  margin-top: 26px;
+  display: grid;
+  gap: 26px;
+}
+
+/* Fotoğraflı grup: kare üstte, metin altta. Telefonda tek sütun,
+   geniş ekranda iki. */
+.grp-photo .items { gap: 30px; }
+
+.item { min-width: 0; }
+
+.shot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--surf);
+  /* fotoğraflar koyu zeminde parlar; hafif amber halo sıcaklık verir */
+  box-shadow: 0 8px 32px -12px rgba(227, 194, 68, .22);
+  cursor: zoom-in;
+}
+
+.shot-sq { aspect-ratio: 1 / 1; }
+
+.shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: scale .4s ease;
+}
+
+.shot:hover img { scale: 1.03; }
+
+.meta { min-width: 0; }
+
+/* Ad — noktalı bağ — fiyat, tek hatta.
+   Noktalı bağ DEKOR (aria-hidden): göz için ad ile fiyatı bağlıyor. */
+.row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: .005em;
+  min-width: 0;
+}
+
+.gap {
+  flex: 1;
+  height: 1px;
+  min-width: 12px;
+  background: repeating-linear-gradient(to right, var(--muted) 0 1px, transparent 1px 5px);
+  opacity: .5;
+  translate: 0 -4px;
+}
+
+.price {
+  flex: none;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--gold-ink);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.desc {
+  margin-top: 5px;
+  max-width: 56ch;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* ============================================================
+   ALTLIK
+   ============================================================ */
+
+.mfoot {
+  margin-top: 54px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line-soft);
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  text-align: center;
+}
+
+.mfoot-note,
+.mfoot-legal {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.mfoot-links {
+  display: flex;
+  gap: 22px;
+}
+
+.mfoot-links a {
+  font: 500 11px/1 var(--font-body);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--line);
+  transition: color .18s ease, border-color .18s ease;
+}
+
+.mfoot-links a:hover { color: var(--gold-leaf); border-color: var(--gold-leaf); }
+
+/* ============================================================
+   BÜYÜK GÖRÜNÜM
+
+   Zemin ::backdrop DEĞİL, dialog'un kendi zemini: ::backdrop özel
+   özellikleri (--shot-ar) her tarayıcıda miras almıyor.
+   ============================================================ */
+
+#lb {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: var(--pad);
+  border: 0;
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity .16s ease;
+}
+
+#lb.is-open { opacity: 1; }
+#lb::backdrop { background: rgba(0, 0, 0, .72); }
+
+body.lb-lock { overflow: hidden; }
+
+.lb-in {
+  position: relative;
+  width: min(100%, 620px);
+  display: grid;
+  gap: 16px;
+}
+
+.lb-shot {
+  width: 100%;
+  aspect-ratio: var(--shot-ar, 3 / 2);
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--surf);
+  box-shadow: 0 18px 60px -18px rgba(227, 194, 68, .26);
+}
+
+.lb-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.lb-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+}
+
+.lb-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.lb-price {
+  flex: none;
+  font-weight: 500;
+  font-size: 19px;
+  color: var(--gold-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.lb-desc {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* kapat ve gezinme düğmeleri */
+.lb-x,
+.lb-nav {
+  position: absolute;
+  appearance: none;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease;
+}
+
+.lb-x:hover,
+.lb-nav:hover { border-color: var(--gold-leaf); color: var(--gold-leaf); }
+
+.lb-x {
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+}
+
+/* çarpı: iki çizgi, ayrı varlık yok */
+.lb-x::before,
+.lb-x::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 13px;
+  height: 1px;
+  background: currentColor;
+}
+.lb-x::before { translate: -50% -50%; rotate: 45deg; }
+.lb-x::after { translate: -50% -50%; rotate: -45deg; }
+
+.lb-nav {
+  top: calc(50% - 22px);
+  width: 38px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+}
+
+.lb-prev { left: -6px; }
+.lb-next { right: -6px; }
+
+.lb-nav::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.lb-prev::before { rotate: 45deg; translate: 2px 0; }
+.lb-next::before { rotate: -135deg; translate: -2px 0; }
+
+/* ============================================================
+   ÖLÇÜ EŞİKLERİ
+
+   global.css --page/--pad'i zaten büyütüyor; burada yalnız sütun
+   sayısı değişiyor.
+   ============================================================ */
+
+@media (min-width: 600px) {
+  .cats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .grp-photo .items { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 26px; }
+}
+
+@media (min-width: 900px) {
+  .cats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  /* Tipografik liste iki sütuna: 38 viskiyi tek sütunda okutmak
+     masaüstünde gereksiz kaydırma demek. */
+  .grp-type .items { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 40px; }
+  .grp-photo .items { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lb-prev { left: -52px; }
+  .lb-next { right: -52px; }
+}
+
+/* ============================================================
+   HAREKET AZALTMA
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .cat,
+  .shot img,
+  #lb { transition: none; }
+  .cat:hover { transform: none; }
+  .shot:hover img { scale: 1; }
+}

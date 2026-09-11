@@ -1,0 +1,37 @@
+---
+/* ============================================================
+   Üst bar — logo + geri dönüş.
+
+   Menü sayfalarında sabit durur. Logo ANA SAYFAYA gider (kart
+   ızgarasına değil); ızgaraya dönüş ayrı bir bağlantı, çünkü ikisi
+   farklı yerler ve aynı düğmeye bindirilirse kullanıcı nereye
+   gideceğini kestiremez.
+
+   `back` verilmezse dönüş bağlantısı basılmaz — /menu'nün kendisi
+   zaten ızgara.
+   ============================================================ */
+import Logo from './Logo.astro';
+
+interface Props {
+  /** dönülecek adres; verilmezse dönüş bağlantısı yok */
+  back?: string;
+  backLabel?: string;
+}
+
+const { back, backLabel = 'Menü' } = Astro.props;
+---
+
+<header class="bar">
+  <div class="bar-in">
+    <a class="bar-logo" href="/" aria-label="Leo Lounge — ana sayfa">
+      <Logo size="sm" />
+    </a>
+
+    {back && (
+      <a class="bar-back" href={back}>
+        <span class="bar-arrow" aria-hidden="true"></span>
+        {backLabel}
+      </a>
+    )}
+  </div>
+</header>

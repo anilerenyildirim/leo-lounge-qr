@@ -1,0 +1,31 @@
+---
+/* ============================================================
+   Menü altlığı.
+
+   Fiyatların KDV dahil olduğu bilgisi burada, satır satır değil:
+   232 üründe tek tek tekrarlanacak bir bilgi değil.
+
+   KDV ORANI YAZILMIYOR. Lounge'da oran ürüne göre değişiyor
+   (yiyecek ve kokteyl %10, yüksek alkollü ürünlerin bir kısmı %20)
+   ve menu.json bunu bölüm bazında `vat: null` diye bildiriyor.
+   Tek bir oran yazmak yanlış olurdu; "dahildir" doğru ve yeterli.
+   ============================================================ */
+import { LOUNGE } from '../data/menu';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="mfoot">
+  <p class="mfoot-note">Fiyatlara KDV dahildir.</p>
+
+  <nav class="mfoot-links" aria-label="İletişim">
+    {LOUNGE.contact.mapsUrl && (
+      <a href={LOUNGE.contact.mapsUrl} target="_blank" rel="noopener">Konum</a>
+    )}
+    {LOUNGE.contact.instagram && (
+      <a href={LOUNGE.contact.instagram} target="_blank" rel="noopener">Instagram</a>
+    )}
+  </nav>
+
+  <p class="mfoot-legal">{LOUNGE.name} QR Menü — Tüm hakları saklıdır {year}</p>
+</footer>

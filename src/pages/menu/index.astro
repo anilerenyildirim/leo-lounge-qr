@@ -1,0 +1,48 @@
+---
+/* ============================================================
+   /menu — kategori ızgarası.
+
+   Ürün listesi BURADA BASILMIYOR. 232 ürünün tamamını tek sayfaya
+   dökmek telefonda kilometrelerce kaydırma demek; kategori sayfaları
+   (menu/[cat]) bu yüzden var.
+
+   ÖNERİ ŞERİDİ YOK. cafe-leo'da ızgaranın üstünde "Leo'nun
+   Önerdikleri" duruyor; Lounge'da bugün öyle bir seçki YOK
+   (menu.json → featured: []). Boş bir şerit basmaktansa hiç
+   basmamak doğru: müşteri seçkiyi verdiğinde buraya eklenir.
+
+   Izgara SIRASI lib/menuCards.ts'te; burada yeniden sıralanmıyor.
+   ============================================================ */
+import Base from '../../layouts/Base.astro';
+import Bar from '../../components/Bar.astro';
+import CatCard from '../../components/CatCard.astro';
+import MenuFoot from '../../components/MenuFoot.astro';
+import { LOUNGE } from '../../data/menu';
+import { MENU_CARDS } from '../../lib/menuCards';
+import '../../styles/menu.css';
+---
+
+<Base
+  menu
+  venue="lounge"
+  title={`Menü — ${LOUNGE.name}`}
+  description={`${LOUNGE.name} menüsü — kokteyller, yemekler ve bar listesi. Sinanoba, Büyükçekmece.`}
+>
+  <Bar />
+
+  <div class="wrap mpage">
+    <header class="mhead">
+      <p class="eyebrow">
+        <span>{LOUNGE.eyebrow}</span>
+      </p>
+      <h1>Menü</h1>
+      <p class="mhead-tag">{LOUNGE.tagline}</p>
+    </header>
+
+    <nav class="cats" aria-label="Menü kategorileri">
+      {MENU_CARDS.map((card, i) => <CatCard card={card} eager={i < 2} />)}
+    </nav>
+
+    <MenuFoot />
+  </div>
+</Base>

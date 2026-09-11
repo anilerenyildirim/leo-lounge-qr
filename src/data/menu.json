@@ -1,0 +1,2663 @@
+{
+  "schema": 2,
+  "tenant": "leo-lounge",
+  "cdn": "https://cdn.onlinemenu-qr.com",
+  "locales": {
+    "default": "tr",
+    "enabled": [
+      "tr"
+    ]
+  },
+  "venues": [
+    {
+      "slug": "lounge",
+      "name": {
+        "tr": "Leo Lounge"
+      },
+      "eyebrow": {
+        "tr": "Lounge · Ünlüsoy Caddesi"
+      },
+      "tagline": {
+        "tr": "Işık kısılır, gün üzerinden düşer."
+      },
+      "contact": {
+        "address": "Sinanoba, Ünlüsoy Cd., Büyükçekmece",
+        "phone": null,
+        "instagram": "https://www.instagram.com/leolounge.ist/",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=40.9985511,28.5438501&query_place_id=ChIJo3xPAABntRQRV_qZNT6yuG8"
+      },
+      "hours": null,
+      "hoursText": null,
+      "hero": null,
+      "featured": [],
+      "sections": [
+        {
+          "slug": "yiyecekler",
+          "name": {
+            "tr": "Yiyecekler"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "aperatifler",
+              "name": {
+                "tr": "Aperatifler"
+              },
+              "items": [
+                {
+                  "slug": "patates-kizartmasi",
+                  "name": {
+                    "tr": "Patates Kızartması"
+                  },
+                  "price": 39500,
+                  "photo": null,
+                  "note": "kaynak: \"PATATES KIZARTMASI\""
+                },
+                {
+                  "slug": "sosis-tabagi",
+                  "name": {
+                    "tr": "Sosis Tabağı"
+                  },
+                  "price": 57000,
+                  "photo": null,
+                  "note": "kaynak: \"SOSİS TABAĞI\""
+                },
+                {
+                  "slug": "chicken-fingers",
+                  "name": {
+                    "tr": "Chicken Fingers"
+                  },
+                  "price": 62000,
+                  "photo": null,
+                  "note": "kaynak: \"CHICKEN FİNGERS\""
+                },
+                {
+                  "slug": "aperatif-sepeti-2-kisilik",
+                  "name": {
+                    "tr": "Aperatif Sepeti 2 Kişilik"
+                  },
+                  "price": 87000,
+                  "photo": null,
+                  "note": "kaynak: \"APERATİF SEPETİ 2 KİŞİLİK\""
+                },
+                {
+                  "slug": "aperatif-sepeti-4-kisilik",
+                  "name": {
+                    "tr": "Aperatif Sepeti 4 Kişilik"
+                  },
+                  "price": 125000,
+                  "photo": null,
+                  "note": "kaynak: \"APERATİF SEPETİ 4 KİŞİLİK\""
+                }
+              ]
+            },
+            {
+              "slug": "salatalar",
+              "name": {
+                "tr": "Salatalar"
+              },
+              "icon": "deniz-mahsullu-salata",
+              "items": [
+                {
+                  "slug": "deniz-mahsullu-salata",
+                  "name": {
+                    "tr": "Deniz Mahsüllü Salata"
+                  },
+                  "description": {
+                    "tr": "Mix deniz mahsülü, akdeniz yeşillik, yeşil zeytin, kapari çiçeği, kırmızı soğan, yağ limon sos"
+                  },
+                  "price": 99000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "TEYİT: kaynakta \"MAHSÜLLÜ\" — doğrusu \"mahsullü\". | kaynak: \"DENİZ MAHSÜLLÜ SALATA\""
+                },
+                {
+                  "slug": "hellim-salata",
+                  "name": {
+                    "tr": "Hellim Salata"
+                  },
+                  "description": {
+                    "tr": "Izgarada kızarmış hellim peyniri, akdeniz yeşillik, siyah zeytin, salatalık, cherry domates, yağ limon sos"
+                  },
+                  "price": 59000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"HELLİM SALATA\""
+                },
+                {
+                  "slug": "sezar-salata",
+                  "name": {
+                    "tr": "Sezar Salata"
+                  },
+                  "description": {
+                    "tr": "120 gram tavuk bonfile, marul, sezar sos, kroton ekmek, cherry domates"
+                  },
+                  "price": 67000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"SEZAR SALATA\""
+                },
+                {
+                  "slug": "akdeniz-salata",
+                  "name": {
+                    "tr": "Akdeniz Salata"
+                  },
+                  "description": {
+                    "tr": "Akdeniz yeşillik, kırmızı köz biber, siyah zeytin, beyaz peynir, cherry domates, salatalık, yağ limon sos, pul biber, kekik"
+                  },
+                  "price": 57000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"AKDENİZ SALATA\""
+                },
+                {
+                  "slug": "burrata-peynirli-salata",
+                  "name": {
+                    "tr": "Burrata Peynirli Salata"
+                  },
+                  "description": {
+                    "tr": "Buratta peyniri, akdeniz yeşillik, salatalık, domates, incir, kayısı, ceviz, pesto sos, yağ limon sos"
+                  },
+                  "price": 99000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"BURRATA PEYNİRLİ SALATA\""
+                }
+              ]
+            },
+            {
+              "slug": "makarnalar",
+              "name": {
+                "tr": "Makarnalar"
+              },
+              "icon": "karidesli-fettucini",
+              "items": [
+                {
+                  "slug": "karidesli-fettucini",
+                  "name": {
+                    "tr": "Karidesli Fettucini"
+                  },
+                  "description": {
+                    "tr": "Karide, domates sos, acı sos, pesto sos"
+                  },
+                  "price": 87500,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "TEYİT: \"Fettucini\" — İtalyanca yazımı \"Fettuccine\". | kaynak: \"KARİDESLİ FETTUCİNİ\""
+                },
+                {
+                  "slug": "mantarli-fettucini",
+                  "name": {
+                    "tr": "Mantarlı Fettucini"
+                  },
+                  "description": {
+                    "tr": "Krema, kültür mantar, istridye mantar, porçini mantar, pesto sos"
+                  },
+                  "price": 65000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "TEYİT: \"Fettucini\" — İtalyanca yazımı \"Fettuccine\". | kaynak: \"MANTARLI FETTUCİNİ\""
+                },
+                {
+                  "slug": "alfredo-tavuklu",
+                  "name": {
+                    "tr": "Alfredo Tavuklu"
+                  },
+                  "description": {
+                    "tr": "Krema, mantar, renkli biberler, pesto sos"
+                  },
+                  "price": 75000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"ALFREDO TAVUKLU\""
+                },
+                {
+                  "slug": "alfredo-etli",
+                  "name": {
+                    "tr": "Alfredo Etli"
+                  },
+                  "description": {
+                    "tr": "Krema, mantar, soğan, pesto sos"
+                  },
+                  "price": 85000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"ALFREDO ETLİ\""
+                },
+                {
+                  "slug": "bolonez-soslu-spaghetti",
+                  "name": {
+                    "tr": "Bolonez Soslu Spaghetti"
+                  },
+                  "description": {
+                    "tr": "Domates sos, kıyma, pesto sos"
+                  },
+                  "price": 67000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"BOLONEZ SOSLU SPAGHETTİ\""
+                },
+                {
+                  "slug": "penne-arabiata",
+                  "name": {
+                    "tr": "Penne Arabiata"
+                  },
+                  "description": {
+                    "tr": "Domates sos, acı sos, siyah zeytin, pesto sos"
+                  },
+                  "price": 60000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "TEYİT: \"Arabiata\" — İtalyanca yazımı \"Arrabbiata\". | kaynak: \"PENNE ARABİATA\""
+                }
+              ]
+            },
+            {
+              "slug": "pizzalar",
+              "name": {
+                "tr": "Pizzalar"
+              },
+              "icon": "dana-ham-pizza",
+              "items": [
+                {
+                  "slug": "dana-ham-pizza",
+                  "name": {
+                    "tr": "Dana Ham Pizza"
+                  },
+                  "description": {
+                    "tr": "Pizza sos, mozzarella peyniri, dana füme et, fesleğen yaprakları, rende permasan"
+                  },
+                  "price": 99000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"DANA HAM PİZZA\""
+                },
+                {
+                  "slug": "akdeniz-pizza",
+                  "name": {
+                    "tr": "Akdeniz Pizza"
+                  },
+                  "description": {
+                    "tr": "Izgara patlıcan, ricotta peyniri, cherry domates, fesleğen yaprakları, rende permasan"
+                  },
+                  "price": 77000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"AKDENİZ PİZZA\""
+                },
+                {
+                  "slug": "margarita-pizza",
+                  "name": {
+                    "tr": "Margarita Pizza"
+                  },
+                  "description": {
+                    "tr": "Pizza sos, mozzarella peyniri, cherry domates, pesto sos, fesleğen yaprakları, rende permasan"
+                  },
+                  "price": 72000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "TEYİT: \"Margarita\" — pizza için doğrusu \"Margherita\". | kaynak: \"MARGARİTA PİZZA\""
+                },
+                {
+                  "slug": "burrata-peynirli-pizza",
+                  "name": {
+                    "tr": "Burrata Peynirli Pizza"
+                  },
+                  "description": {
+                    "tr": "Buratta peyniri, pizza sos, mozzarella peyniri, mortadella italyan salamı, fesleğen yaprakları, rende permasan"
+                  },
+                  "price": 120000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"BURRATA PEYNİRLİ PİZZA\""
+                },
+                {
+                  "slug": "leo-pizza",
+                  "name": {
+                    "tr": "Leo Pizza"
+                  },
+                  "description": {
+                    "tr": "Pizza sos, mozzarella peyniri, karides, kalamar, fesleğen yaprakları, rende permasan"
+                  },
+                  "price": 130000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"LEO PİZZA\""
+                },
+                {
+                  "slug": "4-peynirli-pizza",
+                  "name": {
+                    "tr": "4 Peynirli Pizza"
+                  },
+                  "price": 85000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"4 PEYNİRLİ PİZZA\""
+                }
+              ]
+            },
+            {
+              "slug": "burgerler",
+              "name": {
+                "tr": "Burgerler"
+              },
+              "icon": "hotdog",
+              "items": [
+                {
+                  "slug": "hotdog",
+                  "name": {
+                    "tr": "Hotdog"
+                  },
+                  "description": {
+                    "tr": "Kıyma, karemelize soğan, dana sosis, füme et, leo sos, soğan kıtırı, baharatlı patates"
+                  },
+                  "price": 65000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"HOTDOG\""
+                },
+                {
+                  "slug": "klasik-burger",
+                  "name": {
+                    "tr": "Klasik Burger"
+                  },
+                  "description": {
+                    "tr": "140 gr burger köftesi, turşu, domates, karemelize soğan, leo sos, baharatlı patates"
+                  },
+                  "price": 72000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"KLASİK BURGER\""
+                },
+                {
+                  "slug": "cheese-burger",
+                  "name": {
+                    "tr": "Cheese Burger"
+                  },
+                  "description": {
+                    "tr": "140 gr burger köftesi, çedar peyniri, turşu, domates, karemelize soğan, leo sos, baharatlı patates"
+                  },
+                  "price": 80000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"CHEESE BURGER\""
+                },
+                {
+                  "slug": "sarkuteri-burger",
+                  "name": {
+                    "tr": "Şarküteri Burger"
+                  },
+                  "description": {
+                    "tr": "140 gr burger köftesi, turşu, domates, karemelize soğan, füme et, dana jambon, suda mozzarella, leo sos, baharatlı patates"
+                  },
+                  "price": 90000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"ŞARKÜTERİ BURGER\""
+                },
+                {
+                  "slug": "clup-sandvic",
+                  "name": {
+                    "tr": "Clup Sandviç"
+                  },
+                  "description": {
+                    "tr": "Tavuk bonfile, marul, turşu, domates, sarımsaklı mayonez, baharatlı patates"
+                  },
+                  "price": 55000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "TEYİT: \"Clup\" — muhtemelen \"Club\". | kaynak: \"CLUP SANDVİÇ\""
+                }
+              ]
+            },
+            {
+              "slug": "bowllar",
+              "name": {
+                "tr": "Bowllar"
+              },
+              "icon": "bonfile-bowl",
+              "items": [
+                {
+                  "slug": "bonfile-bowl",
+                  "name": {
+                    "tr": "Bonfile Bowl"
+                  },
+                  "price": 82000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"BONFİLE BOWL\""
+                },
+                {
+                  "slug": "tavuklu-bowl",
+                  "name": {
+                    "tr": "Tavuklu Bowl"
+                  },
+                  "price": 74000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"TAVUKLU BOWL\""
+                },
+                {
+                  "slug": "karidesli-bowl",
+                  "name": {
+                    "tr": "Karidesli Bowl"
+                  },
+                  "price": 92000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"KARİDESLİ BOWL\""
+                }
+              ]
+            },
+            {
+              "slug": "ana-yemekler",
+              "name": {
+                "tr": "Ana Yemekler"
+              },
+              "icon": "tavuk-schnitzel",
+              "items": [
+                {
+                  "slug": "tavuk-schnitzel",
+                  "name": {
+                    "tr": "Tavuk Schnitzel"
+                  },
+                  "description": {
+                    "tr": "180 gr tavuk bonfile, dilim limon, tereyağ, baharatlı patates"
+                  },
+                  "price": 77000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"TAVUK SCHNİTZEL\""
+                },
+                {
+                  "slug": "antrikot",
+                  "name": {
+                    "tr": "Antrikot"
+                  },
+                  "description": {
+                    "tr": "Marine edilmiş antirikot, babay patates, mantar soağan maydonoz mix"
+                  },
+                  "price": 135000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"ANTRİKOT\""
+                },
+                {
+                  "slug": "izgara-kofte",
+                  "name": {
+                    "tr": "Izgara Köfte"
+                  },
+                  "description": {
+                    "tr": "Leo köftesi, pirinç pilavı, baharatlı patates, köz biber domates"
+                  },
+                  "price": 85000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"IZGARA KÖFTE\""
+                },
+                {
+                  "slug": "bonfile",
+                  "name": {
+                    "tr": "Bonfile"
+                  },
+                  "description": {
+                    "tr": "180 gr marine edilmiş bonfile, baby patates, mantar soğan maydonoz mix"
+                  },
+                  "price": 149000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"BONFİLE\""
+                },
+                {
+                  "slug": "izgara-karides",
+                  "name": {
+                    "tr": "Izgara Karides"
+                  },
+                  "price": 150000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"IZGARA KARİDES\""
+                }
+              ]
+            },
+            {
+              "slug": "sushi",
+              "name": {
+                "tr": "Sushi"
+              },
+              "icon": "leo-sushi",
+              "items": [
+                {
+                  "slug": "leo-sushi",
+                  "name": {
+                    "tr": "Leo Sushi"
+                  },
+                  "description": {
+                    "tr": "Tempura karides, avakado, philadellpia peyniri, salatalık, kibrit patates, havyar"
+                  },
+                  "price": 87000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"LEO SUSHİ\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "kokteyller",
+          "name": {
+            "tr": "Kokteyller"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "kokteyller",
+              "name": {
+                "tr": "Kokteyller"
+              },
+              "items": [
+                {
+                  "slug": "island",
+                  "name": {
+                    "tr": "Island"
+                  },
+                  "description": {
+                    "tr": "Kırmızıı Meyve Çayı İle Demlenmiş vodka, Vişne Marmelatı, Ananas, Limon, Chambord"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "TEYİT: açıklamada \"Kırmızıı\" — fazladan ı. | kaynak: \"ISLAND\""
+                },
+                {
+                  "slug": "green-garden",
+                  "name": {
+                    "tr": "Green Garden"
+                  },
+                  "description": {
+                    "tr": "Taze Kuzu Kulağı, Cin, Cointreau, St. Germain, Limon"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"GREEN GARDEN\""
+                },
+                {
+                  "slug": "negroni",
+                  "name": {
+                    "tr": "Negroni"
+                  },
+                  "description": {
+                    "tr": "Cin, Campari, Tatlı Vermut"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"NEGRONİ\""
+                },
+                {
+                  "slug": "whiskey-sour",
+                  "name": {
+                    "tr": "Whiskey Sour"
+                  },
+                  "description": {
+                    "tr": "Bourbon Viski, Limon, Şeker"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"WHİSKEY SOUR\""
+                },
+                {
+                  "slug": "pornstar-martini",
+                  "name": {
+                    "tr": "Pornstar Martini"
+                  },
+                  "description": {
+                    "tr": "Vanilyalı vodka, Passion fruit likörü, Lime, Şeker, Passion"
+                  },
+                  "price": 80000,
+                  "photo": null,
+                  "note": "kaynak: \"PORNSTAR MARTİNİ\""
+                },
+                {
+                  "slug": "espresso-martini",
+                  "name": {
+                    "tr": "Espresso Martini"
+                  },
+                  "description": {
+                    "tr": "Vodka, Espresso, Kahlua"
+                  },
+                  "price": 62000,
+                  "photo": null,
+                  "note": "kaynak: \"ESPRESSO MARTİNİ\""
+                },
+                {
+                  "slug": "dirty-martini",
+                  "name": {
+                    "tr": "Dirty Martini"
+                  },
+                  "description": {
+                    "tr": "Cin, Extra Dry Vermut, Zeytin Suyu"
+                  },
+                  "price": 62000,
+                  "photo": null,
+                  "note": "kaynak: \"DİRTY MARTİNİ\""
+                },
+                {
+                  "slug": "dry-martini",
+                  "name": {
+                    "tr": "Dry Martini"
+                  },
+                  "description": {
+                    "tr": "Cin, Martini Extra Dry"
+                  },
+                  "price": 60000,
+                  "photo": null,
+                  "note": "kaynak: \"DRY MARTİNİ\""
+                },
+                {
+                  "slug": "margarita",
+                  "name": {
+                    "tr": "Margarita"
+                  },
+                  "description": {
+                    "tr": "Tekila, Lime, Cointreau"
+                  },
+                  "price": 72000,
+                  "photo": null,
+                  "note": "kaynak: \"MARGARİTA\""
+                },
+                {
+                  "slug": "mojito",
+                  "name": {
+                    "tr": "Mojito"
+                  },
+                  "description": {
+                    "tr": "White Rum, Toz Şeker, Nane, Soda"
+                  },
+                  "price": 60000,
+                  "photo": null,
+                  "note": "kaynak: \"MOJİTO\""
+                },
+                {
+                  "slug": "secret-of-aegan",
+                  "name": {
+                    "tr": "Secret of Aegan"
+                  },
+                  "description": {
+                    "tr": "Ouzo, Cin, Damla Sakızı Likörü, Fesleğen"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "TEYİT: \"Aegan\" — muhtemelen \"Aegean\". | kaynak: \"SECRET OF AEGAN\""
+                },
+                {
+                  "slug": "the-alchemist",
+                  "name": {
+                    "tr": "The Alchemist"
+                  },
+                  "description": {
+                    "tr": "Keçiboynuzu Pekmezi, Kakao Bitters, Portakal Bitters, Angoustra Bitters, Rum Blend"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"THE ALCHEMİST\""
+                },
+                {
+                  "slug": "herbarium",
+                  "name": {
+                    "tr": "Herbarium"
+                  },
+                  "description": {
+                    "tr": "Kuru kırmızı meyveler ile demlenmiş cin, Lemon Oleo Saccharum, Şeker, Vişne Likörü"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"HERBARİUM\""
+                },
+                {
+                  "slug": "peach-and-ash",
+                  "name": {
+                    "tr": "Peach and Ash"
+                  },
+                  "description": {
+                    "tr": "Anejo tekila, Kayısı Reçeli, Campari, Lime, Şeker"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"PEACH AND ASH\""
+                },
+                {
+                  "slug": "long-island",
+                  "name": {
+                    "tr": "Long Island"
+                  },
+                  "description": {
+                    "tr": "White Rum, Cointreu, Tekila, Cin, Vodka, Top Cola"
+                  },
+                  "price": 85000,
+                  "photo": null
+                },
+                {
+                  "slug": "gin-fizz",
+                  "name": {
+                    "tr": "Gin Fizz"
+                  },
+                  "price": 62000,
+                  "photo": null,
+                  "note": "kaynak: \"GİN FİZZ\""
+                },
+                {
+                  "slug": "aperol-spritz",
+                  "name": {
+                    "tr": "Aperol Spritz"
+                  },
+                  "price": 65000,
+                  "photo": null,
+                  "note": "kaynak: \"APEROL SPRİTZ\""
+                },
+                {
+                  "slug": "leo-pink",
+                  "name": {
+                    "tr": "Leo Pink"
+                  },
+                  "description": {
+                    "tr": "Gordon's Dry Gin, Aperol, Cointreau, Şeker Şurubu, Limon suyu"
+                  },
+                  "price": 85000,
+                  "photo": null,
+                  "note": "kaynak: \"LEO PİNK\""
+                },
+                {
+                  "slug": "tropikal",
+                  "name": {
+                    "tr": "Tropikal"
+                  },
+                  "description": {
+                    "tr": "Olmeca Altos Reposado Tequila, Cointreau, Galliano, Hibiskus, Portakal Suyu, Lime Suyu"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"TROPİKAL\""
+                },
+                {
+                  "slug": "boulevardier",
+                  "name": {
+                    "tr": "Boulevardier"
+                  },
+                  "description": {
+                    "tr": "Bulleit Bourbon Whiskey, Martini Rosso, Campari"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"BOULEVARDIER\""
+                },
+                {
+                  "slug": "rusty-nail",
+                  "name": {
+                    "tr": "Rusty Nail"
+                  },
+                  "description": {
+                    "tr": "Irish Whiskey, Drambuie, Lemon Zest"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"RUSTY NAIL\""
+                },
+                {
+                  "slug": "blood-mary",
+                  "name": {
+                    "tr": "Blood Mary"
+                  },
+                  "description": {
+                    "tr": "Vodka, Domates Suyu, Tabasco, Tuz, Karabiber, Kereviz Tuzu, Taze Kereviz, Zeytin Suyu, Worcestershire"
+                  },
+                  "price": 62000,
+                  "photo": null,
+                  "note": "TEYİT: \"Blood Mary\" — muhtemelen \"Bloody Mary\". | kaynak: \"BLOOD MARY\""
+                },
+                {
+                  "slug": "alexia",
+                  "name": {
+                    "tr": "Alexia"
+                  },
+                  "description": {
+                    "tr": "Zacapa 23, Potakal likörü, Passion likörü, Fesleğen, Passion püresi, Nohut suyu, Lime"
+                  },
+                  "price": 80000,
+                  "photo": null,
+                  "note": "TEYİT: açıklamada \"POTAKAL\" — doğrusu \"Portakal\". | kaynak: \"ALEXİA\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "ickiler",
+          "name": {
+            "tr": "İçkiler"
+          },
+          "vat": null,
+          "subsections": [
+            {
+              "slug": "viskiler",
+              "name": {
+                "tr": "Viskiler"
+              },
+              "items": [
+                {
+                  "slug": "jack-daniels",
+                  "name": {
+                    "tr": "Jack Daniels"
+                  },
+                  "price": 66000,
+                  "photo": null,
+                  "note": "kaynak: \"JACK DANİELS\""
+                },
+                {
+                  "slug": "jack-daniels-double",
+                  "name": {
+                    "tr": "Jack Daniels Double"
+                  },
+                  "price": 93000,
+                  "photo": null,
+                  "note": "kaynak: \"JACK DANİELS DOUBLE\""
+                },
+                {
+                  "slug": "black-label",
+                  "name": {
+                    "tr": "Black Label"
+                  },
+                  "price": 73000,
+                  "photo": null,
+                  "note": "kaynak: \"BLACK LABEL\""
+                },
+                {
+                  "slug": "black-label-double",
+                  "name": {
+                    "tr": "Black Label Double"
+                  },
+                  "price": 99000,
+                  "photo": null,
+                  "note": "kaynak: \"BLACK LABEL DOUBLE\""
+                },
+                {
+                  "slug": "chivas-12",
+                  "name": {
+                    "tr": "Chivas 12"
+                  },
+                  "price": 73000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 12\""
+                },
+                {
+                  "slug": "chivas-12-double",
+                  "name": {
+                    "tr": "Chivas 12 Double"
+                  },
+                  "price": 99000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 12 DOUBLE\""
+                },
+                {
+                  "slug": "chivas-18",
+                  "name": {
+                    "tr": "Chivas 18"
+                  },
+                  "price": 93000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 18\""
+                },
+                {
+                  "slug": "chivas-18-double",
+                  "name": {
+                    "tr": "Chivas 18 Double"
+                  },
+                  "price": 130000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 18 DOUBLE\""
+                },
+                {
+                  "slug": "glenfiddich-12",
+                  "name": {
+                    "tr": "Glenfiddich 12"
+                  },
+                  "price": 102000,
+                  "photo": null,
+                  "note": "kaynak: \"GLENFİDDİCH 12\""
+                },
+                {
+                  "slug": "glenfiddich-12-double",
+                  "name": {
+                    "tr": "Glenfiddich 12 Double"
+                  },
+                  "price": 126000,
+                  "photo": null,
+                  "note": "kaynak: \"GLENFİDDİCH 12 DOUBLE\""
+                },
+                {
+                  "slug": "ballantines-7",
+                  "name": {
+                    "tr": "Ballantines 7"
+                  },
+                  "price": 66000,
+                  "photo": null,
+                  "note": "kaynak: \"BALLANTİNES 7\""
+                },
+                {
+                  "slug": "ballantines-7-double",
+                  "name": {
+                    "tr": "Ballantines 7 Double"
+                  },
+                  "price": 93000,
+                  "photo": null,
+                  "note": "kaynak: \"BALLANTİNES 7 DOUBLE\""
+                },
+                {
+                  "slug": "ballantines-10",
+                  "name": {
+                    "tr": "Ballantines 10"
+                  },
+                  "price": 73000,
+                  "photo": null,
+                  "note": "kaynak: \"BALLANTİNES 10\""
+                },
+                {
+                  "slug": "ballantines-10-double",
+                  "name": {
+                    "tr": "Ballantines 10 Double"
+                  },
+                  "price": 100000,
+                  "photo": null,
+                  "note": "kaynak: \"BALLANTİNES 10 DOUBLE\""
+                },
+                {
+                  "slug": "gentleman-jack",
+                  "name": {
+                    "tr": "Gentleman Jack"
+                  },
+                  "price": 73000,
+                  "photo": null,
+                  "note": "kaynak: \"GENTLEMAN JACK\""
+                },
+                {
+                  "slug": "gentlemanjack-double",
+                  "name": {
+                    "tr": "Gentlemanjack Double"
+                  },
+                  "price": 100000,
+                  "photo": null,
+                  "note": "TEYİT: \"GentlemanJack\" — boşluk eksik. | kaynak: \"GENTLEMANJACK DOUBLE\""
+                },
+                {
+                  "slug": "chivas-extra-smokey",
+                  "name": {
+                    "tr": "Chivas Extra Smokey"
+                  },
+                  "price": 73000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS EXTRA SMOKEY\""
+                },
+                {
+                  "slug": "chivas-extra-smokey-double",
+                  "name": {
+                    "tr": "Chivas Extra Smokey Double"
+                  },
+                  "price": 100000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS EXTRA SMOKEY DOUBLE\""
+                },
+                {
+                  "slug": "bullet",
+                  "name": {
+                    "tr": "Bullet"
+                  },
+                  "price": 73000,
+                  "photo": null,
+                  "note": "TEYİT: \"Bullet\" — markanın yazımı \"Bulleit\". | kaynak: \"BULLET\""
+                },
+                {
+                  "slug": "bullet-double",
+                  "name": {
+                    "tr": "Bullet Double"
+                  },
+                  "price": 100000,
+                  "photo": null,
+                  "note": "TEYİT: \"Bullet\" — markanın yazımı \"Bulleit\". | kaynak: \"BULLET DOUBLE\""
+                },
+                {
+                  "slug": "ardberg-10",
+                  "name": {
+                    "tr": "Ardberg 10"
+                  },
+                  "price": 93000,
+                  "photo": null,
+                  "note": "TEYİT: \"Ardberg\" — markanın yazımı \"Ardbeg\". | kaynak: \"ARDBERG 10\""
+                },
+                {
+                  "slug": "ardberg-10-double",
+                  "name": {
+                    "tr": "Ardberg 10 Double"
+                  },
+                  "price": 126000,
+                  "photo": null,
+                  "note": "TEYİT: \"Ardberg\" — markanın yazımı \"Ardbeg\". | kaynak: \"ARDBERG 10 DOUBLE\""
+                },
+                {
+                  "slug": "jack-daniels-honey",
+                  "name": {
+                    "tr": "Jack Daniels Honey"
+                  },
+                  "price": 73000,
+                  "photo": null,
+                  "note": "kaynak: \"JACK DANİELS HONEY\""
+                },
+                {
+                  "slug": "jack-daniles-honey-double",
+                  "name": {
+                    "tr": "Jack Daniles Honey Double"
+                  },
+                  "price": 100000,
+                  "photo": null,
+                  "note": "TEYİT: \"Daniles\" — muhtemelen \"Daniel's\". Tek kadehi \"Jack Danields Honey\" yazılmış. | kaynak: \"JACK DANİLES HONEY DOUBLE\""
+                },
+                {
+                  "slug": "red-label",
+                  "name": {
+                    "tr": "Red Label"
+                  },
+                  "price": 63000,
+                  "photo": null,
+                  "note": "TEYİT: kaynakta \"RED LABEL\" iki kez ayrı ürün olarak duruyor (aynı ad, aynı fiyat). Biri silinmeli mi? | kaynak: \"RED LABEL\""
+                },
+                {
+                  "slug": "red-lable-double",
+                  "name": {
+                    "tr": "Red Lable Double"
+                  },
+                  "price": 80000,
+                  "photo": null,
+                  "note": "TEYİT: \"Lable\" — muhtemelen \"Label\". Ayrıca \"Red Label Double\" ikinci kez ayrı ürün olarak duruyor. | kaynak: \"RED LABLE DOUBLE\""
+                },
+                {
+                  "slug": "monkey-shoulder-double",
+                  "name": {
+                    "tr": "Monkey Shoulder Double"
+                  },
+                  "price": 130000,
+                  "photo": null,
+                  "note": "kaynak: \"MONKEY SHOULDER DOUBLE\""
+                },
+                {
+                  "slug": "monkey-shoulder-tek",
+                  "name": {
+                    "tr": "Monkey Shoulder Tek"
+                  },
+                  "price": 88000,
+                  "photo": null,
+                  "note": "kaynak: \"MONKEY SHOULDER TEK\""
+                },
+                {
+                  "slug": "aberlour-12",
+                  "name": {
+                    "tr": "Aberlour 12"
+                  },
+                  "price": 105000,
+                  "photo": null,
+                  "note": "kaynak: \"ABERLOUR 12\""
+                },
+                {
+                  "slug": "aberlour-12-double",
+                  "name": {
+                    "tr": "Aberlour 12 Double"
+                  },
+                  "price": 175000,
+                  "photo": null,
+                  "note": "kaynak: \"ABERLOUR 12 DOUBLE\""
+                },
+                {
+                  "slug": "red-label-double",
+                  "name": {
+                    "tr": "Red Label Double"
+                  },
+                  "price": 80000,
+                  "photo": null,
+                  "note": "kaynak: \"RED LABEL DOUBLE\""
+                },
+                {
+                  "slug": "jameson",
+                  "name": {
+                    "tr": "Jameson"
+                  },
+                  "price": 77000,
+                  "photo": null,
+                  "note": "kaynak: \"JAMESON\""
+                },
+                {
+                  "slug": "ardberg-5",
+                  "name": {
+                    "tr": "Ardberg 5"
+                  },
+                  "price": 93000,
+                  "photo": null,
+                  "note": "TEYİT: \"Ardberg\" — markanın yazımı \"Ardbeg\". | kaynak: \"ARDBERG 5\""
+                },
+                {
+                  "slug": "jameson-double",
+                  "name": {
+                    "tr": "Jameson Double"
+                  },
+                  "price": 99000,
+                  "photo": null,
+                  "note": "kaynak: \"JAMESON DOUBLE\""
+                },
+                {
+                  "slug": "lot-40-tek",
+                  "name": {
+                    "tr": "Lot 40 Tek"
+                  },
+                  "price": 88000,
+                  "photo": null,
+                  "note": "kaynak: \"LOT 40 TEK\""
+                },
+                {
+                  "slug": "lot-40-double",
+                  "name": {
+                    "tr": "Lot 40 Double"
+                  },
+                  "price": 120000,
+                  "photo": null,
+                  "note": "kaynak: \"LOT 40 DOUBLE\""
+                },
+                {
+                  "slug": "hennesy-vs",
+                  "name": {
+                    "tr": "Hennesy VS"
+                  },
+                  "price": 115000,
+                  "photo": null,
+                  "note": "TEYİT: \"Hennesy\" — markanın yazımı \"Hennessy\". | kaynak: \"HENNESY VS\""
+                },
+                {
+                  "slug": "hennesy-vsop",
+                  "name": {
+                    "tr": "Hennesy VSOP"
+                  },
+                  "price": 130000,
+                  "photo": null,
+                  "note": "TEYİT: \"Hennesy\" — markanın yazımı \"Hennessy\". | kaynak: \"HENNESY VSOP\""
+                }
+              ]
+            },
+            {
+              "slug": "viski-siseler",
+              "name": {
+                "tr": "Viski Şişeler"
+              },
+              "items": [
+                {
+                  "slug": "chivas-12-yrs-70-cl",
+                  "name": {
+                    "tr": "Chivas 12 Yrs 70 Cl"
+                  },
+                  "price": 920000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 12 YRS 70 CL\""
+                },
+                {
+                  "slug": "chivas-12-yrs-100-cl",
+                  "name": {
+                    "tr": "Chivas 12 Yrs 100 Cl"
+                  },
+                  "price": 1185000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 12 YRS 100 CL\""
+                },
+                {
+                  "slug": "black-label-50-cl",
+                  "name": {
+                    "tr": "Black Label 50 Cl"
+                  },
+                  "price": 659000,
+                  "photo": null,
+                  "note": "kaynak: \"BLACK LABEL 50 CL\""
+                },
+                {
+                  "slug": "chivas-12-yrs-50-cl",
+                  "name": {
+                    "tr": "Chivas 12 Yrs 50 Cl"
+                  },
+                  "price": 659000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 12 YRS 50 CL\""
+                },
+                {
+                  "slug": "balck-label-70-cl",
+                  "name": {
+                    "tr": "Balck Label 70 Cl"
+                  },
+                  "price": 920000,
+                  "photo": null,
+                  "note": "kaynak: \"BALCK LABEL 70 CL\""
+                },
+                {
+                  "slug": "red-label-2",
+                  "name": {
+                    "tr": "Red Label"
+                  },
+                  "price": 393000,
+                  "photo": null,
+                  "note": "TEYİT: kaynakta \"RED LABEL\" iki kez ayrı ürün olarak duruyor (aynı ad, aynı fiyat). Biri silinmeli mi? | kaynak: \"RED LABEL\""
+                },
+                {
+                  "slug": "red-label-50-cl",
+                  "name": {
+                    "tr": "Red Label 50 Cl"
+                  },
+                  "price": 572000,
+                  "photo": null,
+                  "note": "kaynak: \"RED LABEL 50 CL\""
+                },
+                {
+                  "slug": "red-label-70-cl",
+                  "name": {
+                    "tr": "Red Label 70 Cl"
+                  },
+                  "price": 786000,
+                  "photo": null,
+                  "note": "kaynak: \"RED LABEL 70 CL\""
+                },
+                {
+                  "slug": "glenlivet-12-yrs-70-cl",
+                  "name": {
+                    "tr": "Glenlivet 12 Yrs 70 Cl"
+                  },
+                  "price": 950000,
+                  "photo": null,
+                  "note": "kaynak: \"GLENLİVET 12 YRS 70 CL\""
+                },
+                {
+                  "slug": "monkey-shoulder-70-cl",
+                  "name": {
+                    "tr": "Monkey Shoulder 70 Cl"
+                  },
+                  "price": 1080000,
+                  "photo": null,
+                  "note": "kaynak: \"MONKEY SHOULDER 70 CL\""
+                },
+                {
+                  "slug": "chivas-18-yrs-70-cl",
+                  "name": {
+                    "tr": "Chivas 18 Yrs 70 Cl"
+                  },
+                  "price": 1192000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 18 YRS 70 CL\""
+                },
+                {
+                  "slug": "jack-daniels-35-cl",
+                  "name": {
+                    "tr": "Jack Daniels 35 Cl"
+                  },
+                  "price": 435000,
+                  "photo": null,
+                  "note": "kaynak: \"JACK DANİELS 35 CL\""
+                },
+                {
+                  "slug": "chivas-12-yrs-35cl",
+                  "name": {
+                    "tr": "Chivas 12 Yrs 35cl"
+                  },
+                  "price": 460000,
+                  "photo": null,
+                  "note": "kaynak: \"CHİVAS 12 YRS 35CL\""
+                },
+                {
+                  "slug": "jack-daniels-70-cl",
+                  "name": {
+                    "tr": "Jack Daniels 70 Cl"
+                  },
+                  "price": 870000,
+                  "photo": null,
+                  "note": "kaynak: \"JACK DANİELS 70 CL\""
+                },
+                {
+                  "slug": "jack-daniels-50-cl",
+                  "name": {
+                    "tr": "Jack Daniels 50 Cl"
+                  },
+                  "price": 620000,
+                  "photo": null,
+                  "note": "kaynak: \"JACK DANİELS 50 CL\""
+                },
+                {
+                  "slug": "black-label-35-cl",
+                  "name": {
+                    "tr": "Black Label 35 Cl"
+                  },
+                  "price": 460000,
+                  "photo": null,
+                  "note": "kaynak: \"BLACK LABEL 35 CL\""
+                }
+              ]
+            },
+            {
+              "slug": "cinler",
+              "name": {
+                "tr": "Cinler"
+              },
+              "items": [
+                {
+                  "slug": "ford-s",
+                  "name": {
+                    "tr": "Ford's"
+                  },
+                  "price": 78000,
+                  "photo": null,
+                  "note": "kaynak: \"FORD'S\""
+                },
+                {
+                  "slug": "tanqueray",
+                  "name": {
+                    "tr": "Tanqueray"
+                  },
+                  "price": 103000,
+                  "photo": null,
+                  "note": "kaynak: \"TANQUERAY\""
+                },
+                {
+                  "slug": "bombay",
+                  "name": {
+                    "tr": "Bombay"
+                  },
+                  "price": 85000,
+                  "photo": null,
+                  "note": "kaynak: \"BOMBAY\""
+                },
+                {
+                  "slug": "gordon-s-pink",
+                  "name": {
+                    "tr": "Gordon's Pink"
+                  },
+                  "price": 66000,
+                  "photo": null,
+                  "note": "kaynak: \"GORDON'S PİNK\""
+                },
+                {
+                  "slug": "gin-mare-capri",
+                  "name": {
+                    "tr": "Gin Mare Capri"
+                  },
+                  "price": 103000,
+                  "photo": null,
+                  "note": "kaynak: \"GİN MARE CAPRİ\""
+                },
+                {
+                  "slug": "gin-mare",
+                  "name": {
+                    "tr": "Gin Mare"
+                  },
+                  "price": 97000,
+                  "photo": null,
+                  "note": "kaynak: \"GİN MARE\""
+                },
+                {
+                  "slug": "tek-gin-tonik",
+                  "name": {
+                    "tr": "Tek Gin Tonik"
+                  },
+                  "price": 65000,
+                  "photo": null,
+                  "note": "kaynak: \"TEK GİN TONİK\""
+                },
+                {
+                  "slug": "double-gin-tonik",
+                  "name": {
+                    "tr": "Double Gin Tonik"
+                  },
+                  "price": 121000,
+                  "photo": null,
+                  "note": "kaynak: \"DOUBLE GİN TONİK\""
+                },
+                {
+                  "slug": "bombay-double",
+                  "name": {
+                    "tr": "Bombay Double"
+                  },
+                  "price": 145000,
+                  "photo": null,
+                  "note": "kaynak: \"BOMBAY DOUBLE\""
+                },
+                {
+                  "slug": "tanquary-double",
+                  "name": {
+                    "tr": "Tanquary Double"
+                  },
+                  "price": 150000,
+                  "photo": null,
+                  "note": "kaynak: \"TANQUARY DOUBLE\""
+                }
+              ]
+            },
+            {
+              "slug": "vodkalar",
+              "name": {
+                "tr": "Vodkalar"
+              },
+              "items": [
+                {
+                  "slug": "tek-vodka-redbull",
+                  "name": {
+                    "tr": "Tek Vodka Redbull"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"TEK VODKA REDBULL\""
+                },
+                {
+                  "slug": "ciroc",
+                  "name": {
+                    "tr": "Ciroc"
+                  },
+                  "price": 87000,
+                  "photo": null,
+                  "note": "kaynak: \"CİROC\""
+                },
+                {
+                  "slug": "ketel-one",
+                  "name": {
+                    "tr": "Ketel One"
+                  },
+                  "price": 79000,
+                  "photo": null,
+                  "note": "kaynak: \"KETEL ONE\""
+                },
+                {
+                  "slug": "absolut-tek",
+                  "name": {
+                    "tr": "Absolut Tek"
+                  },
+                  "price": 79000,
+                  "photo": null,
+                  "note": "kaynak: \"ABSOLUT TEK\""
+                },
+                {
+                  "slug": "double-votka-redbull",
+                  "name": {
+                    "tr": "Double Votka Redbull"
+                  },
+                  "price": 120000,
+                  "photo": null,
+                  "note": "kaynak: \"DOUBLE VOTKA REDBULL\""
+                },
+                {
+                  "slug": "absolut-double",
+                  "name": {
+                    "tr": "Absolut Double"
+                  },
+                  "price": 120000,
+                  "photo": null,
+                  "note": "kaynak: \"ABSOLUT DOUBLE\""
+                }
+              ]
+            },
+            {
+              "slug": "romlar",
+              "name": {
+                "tr": "Romlar"
+              },
+              "items": [
+                {
+                  "slug": "bacardi-white",
+                  "name": {
+                    "tr": "Bacardi White"
+                  },
+                  "price": 79000,
+                  "photo": null,
+                  "note": "kaynak: \"BACARDİ WHİTE\""
+                },
+                {
+                  "slug": "bacardi-balck",
+                  "name": {
+                    "tr": "Bacardi Balck"
+                  },
+                  "price": 76000,
+                  "photo": null,
+                  "note": "kaynak: \"BACARDİ BALCK\""
+                },
+                {
+                  "slug": "zacapa",
+                  "name": {
+                    "tr": "Zacapa"
+                  },
+                  "price": 72000,
+                  "photo": null,
+                  "note": "kaynak: \"ZACAPA\""
+                },
+                {
+                  "slug": "captain-morgan-white",
+                  "name": {
+                    "tr": "Captain Morgan White"
+                  },
+                  "price": 72500,
+                  "photo": null,
+                  "note": "kaynak: \"CAPTAİN MORGAN WHİTE\""
+                }
+              ]
+            },
+            {
+              "slug": "raki",
+              "name": {
+                "tr": "Rakı"
+              },
+              "items": [
+                {
+                  "slug": "tek-raki",
+                  "name": {
+                    "tr": "Tek Rakı"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"TEK RAKI\""
+                },
+                {
+                  "slug": "double-raki",
+                  "name": {
+                    "tr": "Double Rakı"
+                  },
+                  "price": 55000,
+                  "photo": null,
+                  "note": "kaynak: \"DOUBLE RAKI\""
+                }
+              ]
+            },
+            {
+              "slug": "likorler",
+              "name": {
+                "tr": "Likörler"
+              },
+              "items": [
+                {
+                  "slug": "cardinal-melon-tek",
+                  "name": {
+                    "tr": "Cardinal Melon Tek"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"CARDİNAL MELON TEK\""
+                },
+                {
+                  "slug": "arcshers-tek",
+                  "name": {
+                    "tr": "Arcshers Tek"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"ARCSHERS TEK\""
+                },
+                {
+                  "slug": "archers-double",
+                  "name": {
+                    "tr": "Archers Double"
+                  },
+                  "price": 80000,
+                  "photo": null,
+                  "note": "kaynak: \"ARCHERS DOUBLE\""
+                },
+                {
+                  "slug": "sheridans",
+                  "name": {
+                    "tr": "Sheridans"
+                  },
+                  "price": 55000,
+                  "photo": null,
+                  "note": "kaynak: \"SHERIDANS\""
+                },
+                {
+                  "slug": "cardinal-melon-double",
+                  "name": {
+                    "tr": "Cardinal Melon Double"
+                  },
+                  "price": 80000,
+                  "photo": null,
+                  "note": "kaynak: \"CARDINAL MELON DOUBLE\""
+                },
+                {
+                  "slug": "baileys-tek",
+                  "name": {
+                    "tr": "Baileys Tek"
+                  },
+                  "price": 55000,
+                  "photo": null,
+                  "note": "kaynak: \"BAILEYS TEK\""
+                },
+                {
+                  "slug": "baileys-double",
+                  "name": {
+                    "tr": "Baileys Double"
+                  },
+                  "price": 85000,
+                  "photo": null,
+                  "note": "kaynak: \"BAILEYS DOUBLE\""
+                },
+                {
+                  "slug": "absolut-special",
+                  "name": {
+                    "tr": "Absolut Special"
+                  },
+                  "price": 65000,
+                  "photo": null,
+                  "note": "kaynak: \"ABSOLUT SPECİAL\""
+                },
+                {
+                  "slug": "jack-daniels-special",
+                  "name": {
+                    "tr": "Jack Daniels Special"
+                  },
+                  "price": 65000,
+                  "photo": null,
+                  "note": "kaynak: \"JACK DANİELS SPECİAL\""
+                },
+                {
+                  "slug": "jagermaister",
+                  "name": {
+                    "tr": "Jagermaister"
+                  },
+                  "price": 62000,
+                  "photo": null,
+                  "note": "kaynak: \"JAGERMAİSTER\""
+                }
+              ]
+            },
+            {
+              "slug": "shotlar",
+              "name": {
+                "tr": "Shotlar"
+              },
+              "items": [
+                {
+                  "slug": "sambuca",
+                  "name": {
+                    "tr": "Sambuca"
+                  },
+                  "price": 32000,
+                  "photo": null,
+                  "note": "kaynak: \"SAMBUCA\""
+                },
+                {
+                  "slug": "don-julio-blue-agave",
+                  "name": {
+                    "tr": "Don Julio Blue Agave"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "TEYİT: kaynakta \"DON JULİO % BLUE AGAVE\" — araya \"%\" kaçmış, kaldırıldı. | kaynak: \"DON JULİO % BLUE AGAVE\""
+                },
+                {
+                  "slug": "olmeca-silver",
+                  "name": {
+                    "tr": "Olmeca Silver"
+                  },
+                  "price": 29000,
+                  "photo": null,
+                  "note": "kaynak: \"OLMECA SİLVER\""
+                },
+                {
+                  "slug": "shanky-s-whip",
+                  "name": {
+                    "tr": "Shanky's Whip"
+                  },
+                  "price": 37000,
+                  "photo": null,
+                  "note": "kaynak: \"SHANKY'S WHİP\""
+                },
+                {
+                  "slug": "skinos",
+                  "name": {
+                    "tr": "Skinos"
+                  },
+                  "price": 38000,
+                  "photo": null,
+                  "note": "kaynak: \"SKİNOS\""
+                },
+                {
+                  "slug": "jager-shot",
+                  "name": {
+                    "tr": "Jager Shot"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"JAGER SHOT\""
+                },
+                {
+                  "slug": "cin-shot",
+                  "name": {
+                    "tr": "Cin Shot"
+                  },
+                  "price": 38000,
+                  "photo": null,
+                  "note": "kaynak: \"CİN SHOT\""
+                },
+                {
+                  "slug": "altos-silver",
+                  "name": {
+                    "tr": "Altos Silver"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"ALTOS SİLVER\""
+                },
+                {
+                  "slug": "altos-anejo",
+                  "name": {
+                    "tr": "Altos Anejo"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"ALTOS ANEJO\""
+                },
+                {
+                  "slug": "casamigos",
+                  "name": {
+                    "tr": "Casamigos"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"CASAMİGOS\""
+                },
+                {
+                  "slug": "votka-shot",
+                  "name": {
+                    "tr": "Votka Shot"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"VOTKA SHOT\""
+                },
+                {
+                  "slug": "b-52",
+                  "name": {
+                    "tr": "B-52"
+                  },
+                  "price": 38000,
+                  "photo": null
+                },
+                {
+                  "slug": "limoncello",
+                  "name": {
+                    "tr": "Limoncello"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"LİMONCELLO\""
+                },
+                {
+                  "slug": "viski-shot",
+                  "name": {
+                    "tr": "Viski Shot"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"VİSKİ SHOT\""
+                }
+              ]
+            },
+            {
+              "slug": "altili-shotlar",
+              "name": {
+                "tr": "6'lı Shotlar"
+              },
+              "items": [
+                {
+                  "slug": "tekila-6-li-shot",
+                  "name": {
+                    "tr": "Tekila 6'lı Shot"
+                  },
+                  "price": 130000,
+                  "photo": null,
+                  "note": "kaynak: \"TEKILA 6 LI SHOT\""
+                },
+                {
+                  "slug": "jager-6-li-shot",
+                  "name": {
+                    "tr": "Jager 6'lı Shot"
+                  },
+                  "price": 180000,
+                  "photo": null,
+                  "note": "kaynak: \"JAGER 6 LI SHOT\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "bira-sarap",
+          "name": {
+            "tr": "Bira & Şarap"
+          },
+          "vat": null,
+          "subsections": [
+            {
+              "slug": "biralar",
+              "name": {
+                "tr": "Biralar"
+              },
+              "items": [
+                {
+                  "slug": "efes-malt",
+                  "name": {
+                    "tr": "Efes Malt"
+                  },
+                  "price": 29000,
+                  "photo": null,
+                  "note": "kaynak: \"EFES MALT\""
+                },
+                {
+                  "slug": "corona",
+                  "name": {
+                    "tr": "Corona"
+                  },
+                  "price": 43000,
+                  "photo": null,
+                  "note": "kaynak: \"CORONA\""
+                },
+                {
+                  "slug": "efes-glutensiz",
+                  "name": {
+                    "tr": "Efes Glütensiz"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"EFES GLÜTENSİZ\""
+                },
+                {
+                  "slug": "guinnes",
+                  "name": {
+                    "tr": "Guinnes"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"GUINNES\""
+                },
+                {
+                  "slug": "carlsberg-sise-50cl",
+                  "name": {
+                    "tr": "Carlsberg Şişe 50cl"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG ŞİŞE 50CL\""
+                },
+                {
+                  "slug": "bud",
+                  "name": {
+                    "tr": "Bud"
+                  },
+                  "price": 36000,
+                  "photo": null,
+                  "note": "kaynak: \"BUD\""
+                },
+                {
+                  "slug": "efes-ozel-seri",
+                  "name": {
+                    "tr": "Efes Özel Seri"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"EFES ÖZEL SERİ\""
+                },
+                {
+                  "slug": "miller",
+                  "name": {
+                    "tr": "Miller"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"MİLLER\""
+                },
+                {
+                  "slug": "bomonti",
+                  "name": {
+                    "tr": "Bomonti"
+                  },
+                  "price": 32000,
+                  "photo": null,
+                  "note": "kaynak: \"BOMONTİ\""
+                },
+                {
+                  "slug": "carlsberg-fici-50-cl",
+                  "name": {
+                    "tr": "Carlsberg Fıçı 50 Cl"
+                  },
+                  "price": 30000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG FIÇI 50 CL\""
+                },
+                {
+                  "slug": "carlsberg-fici-33-cl",
+                  "name": {
+                    "tr": "Carlsberg Fıçı 33 Cl"
+                  },
+                  "price": 28000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG FIÇI 33 CL\""
+                },
+                {
+                  "slug": "amsterdam",
+                  "name": {
+                    "tr": "Amsterdam"
+                  },
+                  "price": 44000,
+                  "photo": null,
+                  "note": "kaynak: \"AMSTERDAM\""
+                },
+                {
+                  "slug": "duvel",
+                  "name": {
+                    "tr": "Duvel"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"DUVEL\""
+                },
+                {
+                  "slug": "tuborg-gold",
+                  "name": {
+                    "tr": "Tuborg Gold"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"TUBORG GOLD\""
+                },
+                {
+                  "slug": "frederik-yakima-ipa",
+                  "name": {
+                    "tr": "Frederik Yakima IPA"
+                  },
+                  "price": 48500,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK YAKIMA IPA\""
+                },
+                {
+                  "slug": "frederik-local",
+                  "name": {
+                    "tr": "Frederik Local"
+                  },
+                  "price": 42000,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK LOCAL\""
+                },
+                {
+                  "slug": "frederik-tropic-ipa",
+                  "name": {
+                    "tr": "Frederik Tropic İpa"
+                  },
+                  "price": 42000,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK TROPİC İPA\""
+                },
+                {
+                  "slug": "heineken",
+                  "name": {
+                    "tr": "Heineken"
+                  },
+                  "price": 43000,
+                  "photo": null,
+                  "note": "kaynak: \"HEİNEKEN\""
+                },
+                {
+                  "slug": "hoegaarden",
+                  "name": {
+                    "tr": "Hoegaarden"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"HOEGAARDEN\""
+                },
+                {
+                  "slug": "frederik-brown-ale",
+                  "name": {
+                    "tr": "Frederik Brown Ale"
+                  },
+                  "price": 42000,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK BROWN ALE\""
+                },
+                {
+                  "slug": "tuborg-ice-33-cl",
+                  "name": {
+                    "tr": "Tuborg İce 33 Cl"
+                  },
+                  "price": 33000,
+                  "photo": null,
+                  "note": "kaynak: \"TUBORG İCE 33 CL\""
+                },
+                {
+                  "slug": "blanc-33-cl",
+                  "name": {
+                    "tr": "Blanc 33 Cl"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"BLANC 33 CL\""
+                },
+                {
+                  "slug": "carlsberg-luna",
+                  "name": {
+                    "tr": "Carlsberg Luna"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG LUNA\""
+                },
+                {
+                  "slug": "carlsberg-elephant",
+                  "name": {
+                    "tr": "Carlsberg Elephant"
+                  },
+                  "price": 46000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG ELEPHANT\""
+                }
+              ]
+            },
+            {
+              "slug": "saraplar",
+              "name": {
+                "tr": "Şaraplar"
+              },
+              "items": [
+                {
+                  "slug": "dlc-okuzgozu-kadeh",
+                  "name": {
+                    "tr": "DLC Öküzgözü (Kadeh)"
+                  },
+                  "description": {
+                    "tr": "Doğu Anadolu, Türkiye"
+                  },
+                  "price": 64000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC ÖKÜZGÖZÜ (KADEH)\""
+                },
+                {
+                  "slug": "dlc-sultaniye-emir-kadeh",
+                  "name": {
+                    "tr": "DLC Sultaniye - Emir (Kadeh)"
+                  },
+                  "description": {
+                    "tr": "Ege, Kapadokya, Türkiye"
+                  },
+                  "price": 64000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SULTANİYE - EMİR (KADEH)\""
+                },
+                {
+                  "slug": "mateus-rose-kadeh",
+                  "name": {
+                    "tr": "Mateus Rose (Kadeh)"
+                  },
+                  "description": {
+                    "tr": "Portugal's Rose"
+                  },
+                  "price": 57000,
+                  "photo": null,
+                  "note": "kaynak: \"MATEUS ROSE (KADEH)\""
+                },
+                {
+                  "slug": "dlc-bogazkere-sise",
+                  "name": {
+                    "tr": "DLC Boğazkere (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Türkiye, Güneydoğu Anadolu, Ege"
+                  },
+                  "price": 297000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC BOĞAZKERE / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-cabernet-sauvignon-merlot-sise",
+                  "name": {
+                    "tr": "DLC Cabernet Sauvignon - Merlot (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Türkiye, Trakya"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC CABERNET SAUVİGNON - MERLOT / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-grenache-sise",
+                  "name": {
+                    "tr": "DLC Grenache (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Türkiye, Saros"
+                  },
+                  "price": 374000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC GRENACHE / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-kalecik-karasi-sise",
+                  "name": {
+                    "tr": "DLC Kalecik Karası (Şişe)"
+                  },
+                  "description": {
+                    "tr": "İç Anadolu, Türkiye"
+                  },
+                  "price": 385000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC KALECİK KARASI / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-moskado-sise",
+                  "name": {
+                    "tr": "DLC Moskado (Şişe)"
+                  },
+                  "description": {
+                    "tr": "İzmir, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "TEYİT: \"Moskado\" — üzüm adının yazımı \"Moscato\". | kaynak: \"DLC MOSKADO / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-narince-sise",
+                  "name": {
+                    "tr": "DLC Narince (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Tokat, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC NARİNCE / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-sauvignon-blanc-sise",
+                  "name": {
+                    "tr": "DLC Sauvignon Blanc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Trakya, Türkiye"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SAUVİGNON BLANC / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-shiraz-sise",
+                  "name": {
+                    "tr": "DLC Shiraz (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Ege, Türkiye"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SHİRAZ / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-sultaniye-emir-sise",
+                  "name": {
+                    "tr": "DLC Sultaniye - Emir (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Ege, Kapadokya, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SULTANİYE - EMİR / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-okuzgozu-sise",
+                  "name": {
+                    "tr": "DLC Öküzgözü (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Doğu Anadolu, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC ÖKÜZGÖZÜ / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-cabernet-sauvignon-sise",
+                  "name": {
+                    "tr": "Sarafin Cabernet Sauvignon (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN CABERNET SAUVİGNON / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-chardonnay-sise",
+                  "name": {
+                    "tr": "Sarafin Chardonnay (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN CHARDONNAY / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-fume-blanc-sise",
+                  "name": {
+                    "tr": "Sarafin Fume Blanc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "TEYİT: kaynakta \"FUME\" — doğrusu \"Fumé Blanc\". | kaynak: \"SARAFİN FUME BLANC / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-merlot-sise",
+                  "name": {
+                    "tr": "Sarafin Merlot (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN MERLOT / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-merlot-cabernet-franc-sise",
+                  "name": {
+                    "tr": "Sarafin Merlot - Cabernet Franc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 473000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN MERLOT - CABERNET FRANC / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-sauvignon-blanc-sise",
+                  "name": {
+                    "tr": "Sarafin Sauvignon Blanc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 473000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN SAUVİGNON BLANC / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-shiraz-sise",
+                  "name": {
+                    "tr": "Sarafin Shiraz (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN SHİRAZ / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-shiraz",
+                  "name": {
+                    "tr": "DLC Shiraz"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SHİRAZ\""
+                },
+                {
+                  "slug": "sampanya",
+                  "name": {
+                    "tr": "Şampanya"
+                  },
+                  "price": 275000,
+                  "photo": null,
+                  "note": "kaynak: \"ŞAMPANYA\""
+                },
+                {
+                  "slug": "alpaca-chile-rose",
+                  "name": {
+                    "tr": "Alpaca (Chile) Rose"
+                  },
+                  "price": 352000,
+                  "photo": null,
+                  "note": "kaynak: \"ALPACA(CHİLE) ROSE\""
+                },
+                {
+                  "slug": "dugladze-saperavi-kirmizi",
+                  "name": {
+                    "tr": "Dugladze Saperavi Kırmızı"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DUGLADZE SAPERAVI KIRMIZI\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "yaninda",
+          "name": {
+            "tr": "Yanında"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "cerez",
+              "name": {
+                "tr": "Çerez"
+              },
+              "items": [
+                {
+                  "slug": "yer-fistigi",
+                  "name": {
+                    "tr": "Yer Fıstığı"
+                  },
+                  "price": 20000,
+                  "photo": null,
+                  "note": "kaynak: \"YER FISTIĞI\""
+                },
+                {
+                  "slug": "cips",
+                  "name": {
+                    "tr": "Cips"
+                  },
+                  "price": 22000,
+                  "photo": null,
+                  "note": "kaynak: \"CİPS\""
+                },
+                {
+                  "slug": "lux-karisik",
+                  "name": {
+                    "tr": "Lux Karışık"
+                  },
+                  "price": 28000,
+                  "photo": null,
+                  "note": "kaynak: \"LUX KARIŞIK\""
+                },
+                {
+                  "slug": "zeytin",
+                  "name": {
+                    "tr": "Zeytin"
+                  },
+                  "price": 20000,
+                  "photo": null,
+                  "note": "kaynak: \"ZEYTİN\""
+                }
+              ]
+            },
+            {
+              "slug": "meyve-ve-meze",
+              "name": {
+                "tr": "Meyve & Meze"
+              },
+              "items": [
+                {
+                  "slug": "raki-tabagi-4-kisilik",
+                  "name": {
+                    "tr": "Rakı Tabağı 4 Kişilik"
+                  },
+                  "price": 125000,
+                  "photo": null,
+                  "note": "kaynak: \"RAKI TABAĞI 4 KİŞİLİK\""
+                },
+                {
+                  "slug": "raki-tabagi-2-kisilik",
+                  "name": {
+                    "tr": "Rakı Tabağı 2 Kişilik"
+                  },
+                  "price": 87000,
+                  "photo": null,
+                  "note": "kaynak: \"RAKI TABAĞI 2 KİŞİLİK\""
+                },
+                {
+                  "slug": "kuru-et",
+                  "name": {
+                    "tr": "Kuru Et"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"KURU ET\""
+                },
+                {
+                  "slug": "peynir-tabagi",
+                  "name": {
+                    "tr": "Peynir Tabağı"
+                  },
+                  "price": 98000,
+                  "photo": null,
+                  "note": "kaynak: \"PEYNİR TABAĞI\""
+                },
+                {
+                  "slug": "meyve-tabagi-kucuk",
+                  "name": {
+                    "tr": "Meyve Tabağı Küçük"
+                  },
+                  "price": 64000,
+                  "photo": null,
+                  "note": "kaynak: \"MEYVE TABAĞI KÜÇÜK\""
+                },
+                {
+                  "slug": "meyve-tabagi-buyuk",
+                  "name": {
+                    "tr": "Meyve Tabağı Büyük"
+                  },
+                  "price": 85000,
+                  "photo": null,
+                  "note": "kaynak: \"MEYVE TABAĞI BÜYÜK\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "alkolsuz",
+          "name": {
+            "tr": "Alkolsüz"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "alkolsuz-icecekler",
+              "name": {
+                "tr": "Alkolsüz İçecekler"
+              },
+              "items": [
+                {
+                  "slug": "turk-kahvesi",
+                  "name": {
+                    "tr": "Türk Kahvesi"
+                  },
+                  "price": 25000,
+                  "photo": null,
+                  "note": "kaynak: \"TÜRK KAHVESİ\""
+                },
+                {
+                  "slug": "duble-turk-kahvesi",
+                  "name": {
+                    "tr": "Duble Türk Kahvesi"
+                  },
+                  "price": 30000,
+                  "photo": null,
+                  "note": "kaynak: \"DUBLE TÜRK KAHVESİ\""
+                },
+                {
+                  "slug": "redbull",
+                  "name": {
+                    "tr": "Redbull"
+                  },
+                  "price": 22000,
+                  "photo": null,
+                  "note": "kaynak: \"REDBULL\""
+                },
+                {
+                  "slug": "mocktail",
+                  "name": {
+                    "tr": "Mocktail"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"MOCKTAİL\""
+                },
+                {
+                  "slug": "kola",
+                  "name": {
+                    "tr": "Kola"
+                  },
+                  "price": 19000,
+                  "photo": null,
+                  "note": "kaynak: \"KOLA\""
+                },
+                {
+                  "slug": "ice-tea-limon",
+                  "name": {
+                    "tr": "Ice Tea Limon"
+                  },
+                  "price": 20000,
+                  "photo": null,
+                  "note": "kaynak: \"ICE TEA LİMON\""
+                },
+                {
+                  "slug": "soda",
+                  "name": {
+                    "tr": "Soda"
+                  },
+                  "price": 19000,
+                  "photo": null,
+                  "note": "kaynak: \"SODA\""
+                },
+                {
+                  "slug": "churchill",
+                  "name": {
+                    "tr": "Churchill"
+                  },
+                  "price": 30000,
+                  "photo": null,
+                  "note": "kaynak: \"CHURCHİLL\""
+                },
+                {
+                  "slug": "su",
+                  "name": {
+                    "tr": "Su"
+                  },
+                  "price": 7500,
+                  "photo": null,
+                  "note": "kaynak: \"SU\""
+                },
+                {
+                  "slug": "fanta",
+                  "name": {
+                    "tr": "Fanta"
+                  },
+                  "price": 19000,
+                  "photo": null,
+                  "note": "kaynak: \"FANTA\""
+                },
+                {
+                  "slug": "sprite",
+                  "name": {
+                    "tr": "Sprite"
+                  },
+                  "price": 19000,
+                  "photo": null,
+                  "note": "kaynak: \"SPRİTE\""
+                },
+                {
+                  "slug": "ice-tea-seftali",
+                  "name": {
+                    "tr": "Ice Tea Şeftali"
+                  },
+                  "price": 20000,
+                  "photo": null,
+                  "note": "kaynak: \"ICE TEA ŞEFTALİ\""
+                },
+                {
+                  "slug": "kola-zero",
+                  "name": {
+                    "tr": "Kola Zero"
+                  },
+                  "price": 19000,
+                  "photo": null,
+                  "note": "kaynak: \"KOLA ZERO\""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "extras": []
+    }
+  ]
+}

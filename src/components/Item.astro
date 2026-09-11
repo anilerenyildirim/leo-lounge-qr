@@ -1,0 +1,45 @@
+---
+/* ============================================================
+   Ürün satırı.
+
+   Görsel kararı ÜRÜN bazında: grup fotoğraf düzeninde olsa bile
+   dosyası olmayan ürün `.no-shot` alıp tipografik satır olarak gelir.
+   Sonradan çöken bir düzen değil — doğuştan öyle basılıyor.
+
+   TİPOGRAFİK SATIR BURADA ASIL DURUM, istisna değil. 232 ürünün
+   201'i fotoğrafsız (bütün içki listesi) ve öyle kalacak. Bu yüzden
+   satırın fotoğrafsız hâli "eksik" görünmemeli: ad, noktalı bağ ve
+   fiyat tek hatta oturuyor, içindekiler altına iniyor. Basılı menü
+   de zaten böyle kurulmuş.
+
+   Noktalı bağ (.gap) bir ayraç DEĞİL dekor: aria-hidden. Fiyat ile
+   ad arasındaki ilişkiyi göz kurar, ekran okuyucu sırayla okur.
+
+   `data-slug` büyük görünümün tek veri kaynağı: ad, fiyat ve
+   açıklama zaten burada duruyor, ikinci bir JSON basılmıyor.
+   ============================================================ */
+import Shot from './Shot.astro';
+import { itemHasPhoto } from '../lib/config';
+import { formatPrice, type MenuItem } from '../data/menu';
+
+interface Props {
+  item: MenuItem;
+  /** alt kategori slug'ı — fotoğraf düzeni kararının anahtarı */
+  group: string;
+}
+
+const { item, group } = Astro.props;
+const photo = itemHasPhoto(item.slug, group);
+---
+
+<div class:list={['item', !photo && 'no-shot']} data-slug={item.slug}>
+  {photo && <Shot slug={item.slug} name={item.name} trigger />}
+  <div class="meta">
+    <p class="row">
+      <span class="name">{item.name}</span>
+      <span class="gap" aria-hidden="true"></span>
+      <span class="price">{formatPrice(item.price)}</span>
+    </p>
+    {item.desc && <p class="desc">{item.desc}</p>}
+  </div>
+</div>

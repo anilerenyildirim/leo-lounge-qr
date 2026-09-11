@@ -1,0 +1,35 @@
+---
+/* ============================================================
+   Kategori kartı — /menu ızgarasının tek hücresi.
+
+   FOTOĞRAFI OLMAYAN KART KIRILMIYOR, DÖNÜŞÜYOR. Lounge'da 23 kartın
+   16'sının kapağı yok (bütün içki listesi) ve olmayacak da — şişe
+   fotoğrafı menüye bilgi katmaz. Bu yüzden tipografik kart bir
+   "bozuk kart" değil, listenin ASIL biçimi: adın altında ürün
+   sayısı, üstünde ince altın çizgi.
+
+   Kapaklı ve kapaksız kartlar aynı ızgarada yan yana duruyor ve
+   AYNI YÜKSEKLİKTE kalıyor: kapaksız kartın görsel alanı boş
+   bırakılmıyor, kartın kendisi kısalıyor ve ızgara akıyor.
+   ============================================================ */
+import Shot from './Shot.astro';
+import { cardPhoto, cardSection, type MenuCard } from '../lib/menuCards';
+
+interface Props {
+  card: MenuCard;
+  /** ızgaranın ilk karesi eager yüklenir */
+  eager?: boolean;
+}
+
+const { card, eager = false } = Astro.props;
+const cover = cardPhoto(card);
+const count = cardSection(card).count;
+---
+
+<a class:list={['cat', !cover && 'no-shot']} href={`/menu/${card.key}/`}>
+  {cover && <Shot slug={cover} name={card.title} eager={eager} decorative />}
+  <span class="cat-meta">
+    <span class="cat-title">{card.title}</span>
+    <span class="cat-count">{count} ürün</span>
+  </span>
+</a>

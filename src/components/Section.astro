@@ -1,0 +1,44 @@
+---
+/* ============================================================
+   Bölüm — başlık + alt gruplar + ürün satırları.
+
+   Kategori sayfasının tamamı bu bileşen. Kartın kapsadığı alt
+   grupların birleştirilmiş hâli geliyor (lib/menuCards → cardSection).
+
+   ALT BAŞLIK TEK GRUPLU BÖLÜMDE BASILMAZ. Bugün 23 kartın hepsi tek
+   gruplu, yani alt başlık hiç görünmüyor — "Pizzalar" sayfasında bir
+   de "Pizzalar" ara başlığı görmek gürültü olurdu. Yapı yine de
+   duruyor: iki grubu birleştiren bir kart tanımlandığı gün
+   (ör. Çerez + Meyve & Meze) başlıklar kendiliğinden geliyor.
+
+   `data-group` fotoğraf düzeni kararının anahtarı ve Item'a alt grup
+   slug'ı olarak iniyor — karar KART anahtarında değil GRUPTA veriliyor
+   (bkz. lib/config.ts).
+   ============================================================ */
+import Item from './Item.astro';
+import { groupIsPhoto } from '../lib/config';
+import type { Section } from '../data/menu';
+
+interface Props {
+  sec: Section;
+}
+
+const { sec } = Astro.props;
+const multi = sec.subs.length > 1;
+---
+
+<section class="sec" id={sec.slug}>
+  <header class="sec-head">
+    <h2>{sec.title}</h2>
+    <span class="sec-count">{sec.count}</span>
+  </header>
+
+  {sec.subs.map((sub) => (
+    <div class:list={['grp', groupIsPhoto(sub.slug, sub.items.map((i) => i.slug)) ? 'grp-photo' : 'grp-type']}>
+      {multi && sub.title && <h3 class="grp-title">{sub.title}</h3>}
+      <div class="items">
+        {sub.items.map((item) => <Item item={item} group={sub.slug} />)}
+      </div>
+    </div>
+  ))}
+</section>

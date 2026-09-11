@@ -1,0 +1,88 @@
+---
+/* ============================================================
+   Ortak iskelet — leo-lounge.
+
+   Menü eklendi; iskelet buna göre büyüdü:
+     · ClientRouter VAR   — /menu ve 23 kategori sayfası arasında
+                            geçiş, tam sayfa yeniden boyama olmadan
+     · <dialog id="lb">   — büyük görünüm, YALNIZ menü sayfalarında
+     · app.ts             — büyük görünüm + geri tuşu
+
+   Ana sayfa bunların hiçbirini kullanmıyor ve kullanmamalı: orada
+   tek bir fotoğraf, tek bir liste yok. `menu` bayrağı ikisini de
+   sayfanın kendisine bırakıyor — ana sayfa SIFIR JavaScript ile
+   çalışmaya devam ediyor.
+
+   data-venue <html>'de basılı geliyor: sayfa boyanmadan önce doğru
+   palet yerinde olur, ilk karede sıçrama olmaz.
+
+   Dış istek yalnız Google Fonts — tek aile:
+   · Cormorant Garamond (300/400/600 + italik)
+     cafe-leo Marcellus kullanıyor; Lounge ondan AYRILIYOR. Gerekçe
+     global.css'te.
+   ============================================================ */
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  venue: 'cafe' | 'lounge';
+  /** menü sayfası mı? büyük görünüm ve app.ts yalnız orada yüklenir */
+  menu?: boolean;
+}
+
+const { title, description, venue, menu = false } = Astro.props;
+const themeColor = venue === 'lounge' ? '#0B0907' : '#FCFBF9';
+---
+
+<!doctype html>
+<html lang="tr" data-venue={venue}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="theme-color" content={themeColor} />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <ClientRouter />
+</head>
+<body>
+  <slot />
+
+  {menu && (
+    <dialog id="lb" aria-label="Ürün görseli">
+      <div class="lb-in">
+        <button class="lb-x" type="button" data-lb-close aria-label="Kapat"></button>
+
+        <div class="lb-shot">
+          <img id="lbImg" src="" alt="" />
+        </div>
+
+        <div class="lb-meta">
+          <p class="lb-row">
+            <span id="lbName" class="lb-name"></span>
+            <span id="lbPrice" class="lb-price"></span>
+          </p>
+          <p id="lbDesc" class="lb-desc"></p>
+        </div>
+
+        <button class="lb-nav lb-prev" type="button" data-lb-prev aria-label="Önceki görsel"></button>
+        <button class="lb-nav lb-next" type="button" data-lb-next aria-label="Sonraki görsel"></button>
+      </div>
+    </dialog>
+
+    <script>
+      import '../scripts/app.ts';
+    </script>
+  )}
+</body>
+</html>
