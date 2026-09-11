@@ -180,6 +180,17 @@ function missingShots(): void {
     if (img.complete && img.naturalWidth === 0) drop();
     else img.addEventListener('error', drop, { once: true });
   }
+
+  /* Kategori kartında kare sökülünce yerine BAŞ HARF geçiyor
+     (CatCard.astro): harf zaten altta basılı, `cat-noimg` onu açıyor. */
+  for (const img of document.querySelectorAll<HTMLImageElement>('.cat-media img')) {
+    const drop = () => {
+      img.closest('.cat')?.classList.add('cat-noimg');
+      img.remove();
+    };
+    if (img.complete && img.naturalWidth === 0) drop();
+    else img.addEventListener('error', drop, { once: true });
+  }
 }
 
 /* ============================================================

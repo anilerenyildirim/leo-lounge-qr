@@ -2,33 +2,68 @@
 /* ============================================================
    Kategori kartı — /menu ızgarasının tek hücresi.
 
-   FOTOĞRAFI OLMAYAN KART KIRILMIYOR, DÖNÜŞÜYOR. Lounge'da 23 kartın
-   16'sının kapağı yok (bütün içki listesi) ve olmayacak da — şişe
-   fotoğrafı menüye bilgi katmaz. Bu yüzden tipografik kart bir
-   "bozuk kart" değil, listenin ASIL biçimi: adın altında ürün
-   sayısı, üstünde ince altın çizgi.
+   YAZI SOLDA, GÖRSEL SAĞDA.
+   Fotoğraf kartın sağ üçte ikisini kaplıyor ve SOLA DOĞRU kartın
+   zeminine karışarak sönüyor (menu.css → .cat-media maskesi): yazının
+   zemini kesintisiz biçimde fotoğrafa dönüşüyor, arada kenar yok.
 
-   Kapaklı ve kapaksız kartlar aynı ızgarada yan yana duruyor ve
-   AYNI YÜKSEKLİKTE kalıyor: kapaksız kartın görsel alanı boş
-   bırakılmıyor, kartın kendisi kısalıyor ve ızgara akıyor.
+   KART OPAK. Önceki tur cam (backdrop-filter) idi; arkadaki hareketli
+   çizgilerle birlikte bulanık bir sis oluyor ve "şablon" görünüyordu.
+   Işığı artık arka plan veriyor, kart onun önünde düz bir levha.
+
+   SAĞ YARI — öncelik sırasıyla (bkz. lib/menuCards.ts):
+     1. fotoğraf   2. bardak ikonu (içecekler)   3. baş harf (yemekler)
+   Harf her fotoğraflı kartta da altta basılı: kare CDN'de yoksa app.ts
+   görseli söküyor ve `cat-noimg` ile harfi açıyor — kırık ikon yok.
+
+   Görsel DEKORATİF (aria-hidden, alt=""): erişilebilir ad kartın
+   kendisinde.
    ============================================================ */
-import Shot from './Shot.astro';
+import { photoOf } from '../data/menu';
 import { cardPhoto, cardSection, type MenuCard } from '../lib/menuCards';
+import { iconSvg } from '../lib/icons';
 
 interface Props {
   card: MenuCard;
-  /** ızgaranın ilk karesi eager yüklenir */
+  /** ızgaranın ilk kareleri eager yüklenir */
   eager?: boolean;
 }
 
 const { card, eager = false } = Astro.props;
 const cover = cardPhoto(card);
+const photo = cover ? photoOf(cover) : null;
+const icon = !photo && card.icon ? iconSvg(card.icon) : null;
 const count = cardSection(card).count;
+/* "Çerez" → Ç, "Meyve & Meze" → M. charAt yeterli: Türkçe harflerin
+   hepsi tek UTF-16 birimi. */
+const initial = card.title.charAt(0);
 ---
 
-<a class:list={['cat', !cover && 'no-shot']} href={`/menu/${card.key}/`}>
-  {cover && <Shot slug={cover} name={card.title} eager={eager} decorative />}
-  <span class="cat-meta">
+<a
+  class:list={['cat', card.wide && 'cat-wide', !photo && 'cat-noimg', icon && 'cat-hasicon']}
+  href={`/menu/${card.key}/`}
+>
+  <span class="cat-media" aria-hidden="true">
+    {!icon && <span class="cat-letter">{initial}</span>}
+    {/* HEPSİ EAGER: açılış ekranı "bütün kartlar yüklenene kadar"
+        bekliyor (scripts/splash.ts). Lazy kare ekran dışında hiç
+        başlamaz ve bekleme ya zaman aşımına düşer ya da eksik kalırdı.
+        Yalnız 7 kare (~80 KB), bedeli küçük. `eager` artık yalnız
+        öncelik veriyor. */}
+    {photo && (
+      <img
+        src={photo.src}
+        alt=""
+        width={photo.w}
+        height={photo.h}
+        loading="eager"
+        fetchpriority={eager ? 'high' : 'auto'}
+        decoding="async"
+      />
+    )}
+  </span>
+  {icon && <span class="cat-icon" aria-hidden="true" set:html={icon} />}
+  <span class="cat-body">
     <span class="cat-title">{card.title}</span>
     <span class="cat-count">{count} ürün</span>
   </span>

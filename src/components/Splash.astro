@@ -1,0 +1,50 @@
+---
+/* ============================================================
+   Açılış ekranı — menüye İLK girişte, görseller yüklenirken.
+
+   Ortada-üstte büyük logo, altında dönen beyaz halka. Yükleme
+   bitince halka DÜZLEME YATIYOR: önce tam daireye kapanıyor, sonra
+   dikeyde basılıp yatay bir çizgiye dönüyor ve rengi beyazdan
+   mekanın loş ışık sarısına (dalgaların altını) geçiyor. Çizgi iki
+   yana ekranın kenarına kadar uzuyor; ekran o çizgiden ikiye ayrılıp
+   yukarı ve aşağı açılıyor, menü görünüyor.
+   (Karadelik animasyonu DEĞİL — müşteri açıkça istemedi: girdap,
+   bükülme, içe çekilme yok. Yalnız düz bir yatay açılış.)
+
+   Sıralama scripts/splash.ts'te. Yalnız GERÇEK sayfa yüklemesinde
+   çalışır; ClientRouter ile sayfa değiştirirken gelen yeni belgedeki
+   kopyası takas öncesi siliniyor.
+
+   ASLA TAKILI KALMAZ:
+   · JS yoksa <noscript> gizliyor.
+   · JS gelmez ya da hata verirse CSS'teki emniyet animasyonu 7 sn
+     sonra ekranı kendisi kaldırıyor (splash.css → splash-failsafe);
+     script devraldığında o animasyonu iptal ediyor.
+   · Bir görsel hiç gelmezse script en fazla 4,5 sn bekliyor.
+
+   İki panel (üst/alt) zemini taşıyor; aralarındaki dikiş çizginin
+   yüksekliğine JS ile hizalanıyor (--split).
+   ============================================================ */
+import Logo from './Logo.astro';
+import '../styles/splash.css';
+---
+
+<div class="splash" id="splash" role="status" aria-live="polite">
+  <span class="sr-only">Menü yükleniyor</span>
+
+  <div class="splash-panel splash-top"></div>
+  <div class="splash-panel splash-bottom"></div>
+
+  <div class="splash-stage">
+    <Logo size="xl" class="splash-logo" />
+    <div class="splash-loader" aria-hidden="true">
+      <svg class="splash-ring" viewBox="0 0 48 48" width="48" height="48" focusable="false">
+        <circle cx="24" cy="24" r="20"></circle>
+      </svg>
+    </div>
+  </div>
+
+  <span class="splash-line" aria-hidden="true"></span>
+</div>
+
+<noscript><style>#splash{display:none!important}</style></noscript>

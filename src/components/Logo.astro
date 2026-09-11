@@ -1,30 +1,33 @@
 ---
 /* ============================================================
-   LEO logosu — TEK DEĞİŞTİRME NOKTASI.
+   LEO LOUNGE logosu — TEK DEĞİŞTİRME NOKTASI.
 
-   Şu an TİPOGRAFİK YER TUTUCU: gerçek logo (public/brand/leologo.jpg)
-   opak beyaz zeminli bir JPG, loş temada beyaz kutu olarak durur.
-   Yerine şimdilik Marcellus ile dizilmiş "leo" yazısı duruyor.
+   GERÇEK LOGO (public/brand/leo-lounge-logo.png, 506×600, saydam).
 
-   GERÇEK LOGOYA GEÇİŞ tek dosyada, üç satırda olur:
-     1. aşağıdaki <span class="logo-mark">leo</span> yerine
-        <img src="/brand/leo.svg" alt="" />
-     2. global.css → .logo { --logo-ar: … }  değerini varlığın
-        gerçek en/boy oranına çek
-     3. başka hiçbir yere dokunma
+   Kaynak dosya müşteriden `LeoLogo.PNG` adıyla geldi ama aslında
+   BEYAZ ZEMİNLİ BİR JPEG'di — koyu sitede beyaz kutu olarak dururdu.
+   Saydam PNG'ye çevrildi (tek seferlik, sharp ile):
+     · altın kısımlar (dikey "l", kare nokta, "eo") → aynı altın
+       rgb(227,184,47), kenar yumuşatmaları korunarak
+     · siyah "lounge" yazısı → sitenin beyazı (#EDE6D8); siyah
+       antrasit zeminde görünmüyordu (müşteri izni)
+     · beyaz zemin → saydam; kaynağın kenarındaki ince gri çerçeve
+       kırpıldı
+   İşlem tools/logo.cjs'te; kaynak dosya repoda değil (yerelde,
+   .gitignore). Logo değişirse aynı betik yeniden koşturulur.
 
-   Yerleşim kaymaması için kutu ŞİMDİDEN sabit: yüksekliği `--logo-h`,
-   genişliği `--logo-h * --logo-ar`. İçerik ne olursa olsun kutu aynı
-   yeri kaplar; metinden görsele geçişte sayfa oynamaz.
+   Kutu ölçüsü CSS'te (global.css → .logo): yükseklik `--logo-h`,
+   genişlik `--logo-h * --logo-ar`. Görsel yüklenmeden de yer ayrılı —
+   sayfa oynamıyor.
 
    Erişilebilir ad BURADA DEĞİL: logo her zaman kendisini saran
-   öğenin (bar'daki <a>, ana sayfadaki sr-only <h1>) adının içinde
-   kalır. İki kez okunmasın diye burası aria-hidden.
+   öğenin (bar'daki <a>, ana sayfadaki sr-only <h1>, açılış ekranının
+   durum metni) adının içinde kalır. İki kez okunmasın diye alt="".
    ============================================================ */
 
 interface Props {
-  /** lg: ana sayfa hero'su · sm: üst bar */
-  size?: 'lg' | 'sm';
+  /** xl: açılış ekranı · lg: ana sayfa hero'su · sm: üst bar */
+  size?: 'xl' | 'lg' | 'sm';
   class?: string;
 }
 
@@ -32,5 +35,12 @@ const { size = 'sm', class: cls = '' } = Astro.props;
 ---
 
 <span class:list={['logo', `logo-${size}`, cls]} aria-hidden="true">
-  <span class="logo-mark">leo</span>
+  <img
+    src="/brand/leo-lounge-logo.png"
+    alt=""
+    width="506"
+    height="600"
+    decoding="async"
+    fetchpriority={size === 'sm' ? 'auto' : 'high'}
+  />
 </span>

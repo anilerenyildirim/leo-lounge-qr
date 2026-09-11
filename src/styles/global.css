@@ -1,14 +1,13 @@
 /* ============================================================
    LEO LOUNGE — token katmanı + landing CSS'i
 
-   Bu dosya cafe-leo/src/styles/global.css'in landing page'e düşen
-   ALT KÜMESİ. Menü sayfasına ait olan her şey (ray, bölüm bantları,
-   ürün satırı, büyük görünüm, öneri şeridi) burada YOK — bu projede
-   menü sayfası da yok.
+   Tokenlar + ana sayfanın CSS'i. Menüye ait olan her şey (kartlar,
+   ürün satırı, büyük görünüm, dalga zemini, açılış ekranı)
+   styles/menu.css ve styles/splash.css'te; ana sayfa onları yüklemiyor.
 
-   TASARIM DİLİ logodan türetildi (public/brand/leologo.jpg):
+   TASARIM DİLİ logodan türetildi (public/brand/leo-lounge-logo.png):
      a) ayrık KARE nokta   → sistemin tek ayraç karakteri
-     b) oyulmuş serif      → Marcellus
+     b) altın + sıcak beyaz → paletin iki ucu
 
    PALET: bu adres Lounge'un adresi, o yüzden varsayılan tema LOŞ.
    cafe-leo'da varsayılan aydınlıktı ve lounge bir ikinci temaydı;
@@ -134,21 +133,15 @@ img { max-width: 100%; }
    Kutu ŞİMDİDEN sabit: metinden görsele geçişte sayfa oynamasın
    (bkz. components/Logo.astro). */
 .logo {
-  --logo-ar: 1.35;
+  --logo-ar: .8433;   /* gerçek logo: 506×600 (Logo.astro) */
   display: grid; place-items: center;
   width: calc(var(--logo-h) * var(--logo-ar));
   height: var(--logo-h);
 }
-.logo-sm { --logo-h: 30px; place-items: center start; }
-.logo-lg { --logo-h: clamp(64px, 21vw, 106px); }
+.logo-sm { --logo-h: 48px; place-items: center start; }   /* "lounge" okunsun diye 30px → 48px */
+.logo-lg { --logo-h: clamp(112px, 32vw, 176px); }
+.logo-xl { --logo-h: clamp(150px, 40vw, 230px); }   /* açılış ekranı */
 
-.logo-mark {
-  font-family: var(--font-display); font-weight: 500;
-  font-size: calc(var(--logo-h) * .9); line-height: 1;
-  color: var(--text);
-}
-
-/* Görsele geçişte gereken tek kural — şimdiden burada duruyor. */
 .logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 /* ---------- ortak metin biçimleri ---------- */

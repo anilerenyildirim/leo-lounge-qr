@@ -2,42 +2,52 @@
 /* ============================================================
    Ortak iskelet — leo-lounge.
 
-   Menü eklendi; iskelet buna göre büyüdü:
-     · ClientRouter VAR   — /menu ve 23 kategori sayfası arasında
-                            geçiş, tam sayfa yeniden boyama olmadan
-     · <dialog id="lb">   — büyük görünüm, YALNIZ menü sayfalarında
-     · app.ts             — büyük görünüm + geri tuşu
+   Menü sayfalarında (menu bayrağı):
+     · <Splash>          — ilk girişte açılış ekranı (logo + yükleme)
+     · .ambient          — hareketli çizgi dalgaları (scripts/waves.ts).
+                           `transition:persist`: sayfalar arasında aynı
+                           tuval yaşıyor, dalga sayfa değişince kesilmiyor,
+                           WebGL bağlamı her sayfada yeniden kurulmuyor.
+     · <dialog id="lb">  — büyük görünüm
+     · app.ts            — büyük görünüm + eksik kare + geri tuşu
 
-   Ana sayfa bunların hiçbirini kullanmıyor ve kullanmamalı: orada
-   tek bir fotoğraf, tek bir liste yok. `menu` bayrağı ikisini de
-   sayfanın kendisine bırakıyor — ana sayfa SIFIR JavaScript ile
-   çalışmaya devam ediyor.
+   `dim`: kategori sayfaları. Ürün listesi doğrudan zeminin üstünde
+   durduğu için dalga orada kısılıyor (data-waves="dim", menu.css).
+   Izgarada kartlar opak, dalga tam güçte kalabiliyor.
 
-   data-venue <html>'de basılı geliyor: sayfa boyanmadan önce doğru
-   palet yerinde olur, ilk karede sıçrama olmaz.
+   Ana sayfa bunların hiçbirini yüklemiyor — SIFIR JavaScript.
 
-   Dış istek yalnız Google Fonts — tek aile:
-   · Cormorant Garamond (300/400/600 + italik)
-     cafe-leo Marcellus kullanıyor; Lounge ondan AYRILIYOR. Gerekçe
-     global.css'te.
+   YAZI TİPLERİ
+   · Cormorant Garamond — ürün adları, açıklamalar, gövde.
+   · Josefin Sans (yalnız menü) — kategori etiketleri, başlıklar.
+     Müşteri seçimi (11 Eylül, Deco); gerekçe menu.css → --font-label.
    ============================================================ */
 import { ClientRouter } from 'astro:transitions';
+import Splash from '../components/Splash.astro';
 import '../styles/global.css';
 
 interface Props {
   title: string;
   description: string;
   venue: 'cafe' | 'lounge';
-  /** menü sayfası mı? büyük görünüm ve app.ts yalnız orada yüklenir */
+  /** menü sayfası mı? açılış, dalga, büyük görünüm ve app.ts yalnız orada */
   menu?: boolean;
+  /** dalgayı kıs — metin doğrudan zeminde duruyorsa */
+  dim?: boolean;
 }
 
-const { title, description, venue, menu = false } = Astro.props;
-const themeColor = venue === 'lounge' ? '#0B0907' : '#FCFBF9';
+const { title, description, venue, menu = false, dim = false } = Astro.props;
+/* Menüde tarayıcı çubuğu antrasit zeminle aynı renk. */
+const themeColor = menu ? '#15181B' : venue === 'lounge' ? '#0B0907' : '#FCFBF9';
+
+const fonts = [
+  'family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400',
+  ...(menu ? ['family=Josefin+Sans:wght@300;400'] : []),
+].join('&');
 ---
 
 <!doctype html>
-<html lang="tr" data-venue={venue}>
+<html lang="tr" data-venue={venue} data-waves={menu ? (dim ? 'dim' : 'full') : undefined}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -48,14 +58,14 @@ const themeColor = venue === 'lounge' ? '#0B0907' : '#FCFBF9';
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap"
-    rel="stylesheet"
-  />
+  <link href={`https://fonts.googleapis.com/css2?${fonts}&display=swap`} rel="stylesheet" />
 
   <ClientRouter />
 </head>
 <body>
+  {menu && <Splash />}
+  {menu && <div class="ambient" aria-hidden="true" transition:persist="ambient"></div>}
+
   <slot />
 
   {menu && (
@@ -81,7 +91,9 @@ const themeColor = venue === 'lounge' ? '#0B0907' : '#FCFBF9';
     </dialog>
 
     <script>
+      import '../scripts/splash.ts';
       import '../scripts/app.ts';
+      import '../scripts/waves.ts';
     </script>
   )}
 </body>

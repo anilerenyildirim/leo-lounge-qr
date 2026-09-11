@@ -182,7 +182,17 @@ const isRef = (e: RawEntry): e is string => typeof e === 'string';
  * yerde tutmamak için. Mekan slug'ı gerektiğinden URL kurma bu modülde.
  */
 export const photoSrc = (venueSlug: string, itemSlug: string): string =>
-  `${raw.cdn}/${raw.tenant}/${venueSlug}/${itemSlug}.webp`;
+  `${CDN}/${raw.tenant}/${venueSlug}/${itemSlug}.webp`;
+
+/* YEREL FOTOĞRAF ÖNİZLEMESİ — yalnız `astro dev`'de.
+
+   Kareler CDN'e yüklenmeden tasarımı fotoğraflı görebilmek için:
+     PUBLIC_FOTO_LOCAL=1 npx astro dev
+   Adres CDN yerine `public/leo-lounge/…` olur (klasör gitignore'da).
+   `DEV` kapısı yüzünden build'e ASLA sızmaz — değişken açık unutulsa
+   bile üretim çıktısı CDN'i gösterir. */
+const CDN =
+  import.meta.env.DEV && import.meta.env['PUBLIC_FOTO_LOCAL'] === '1' ? '' : raw.cdn;
 
 const toItem = (r: RawItem, vat: 10 | 20 | null, venueSlug: string): MenuItem => {
   const desc = tOpt(r.description);

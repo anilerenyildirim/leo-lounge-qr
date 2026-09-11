@@ -36,3 +36,15 @@ kaynak yarın kapanırsa veri yine elimizde.
 - `LATIN_I`      — Türkçe I→ı kuralının bozduğu yabancı sözcükler
                    (PASSION → passıon olurdu); 43 sözcük tek tek
                    gözden geçirilip 12'si listeye alındı
+
+## Logo
+
+```
+npm i --no-save sharp
+node tools/logo.cjs          # kökteki LeoLogo.PNG → public/brand/leo-lounge-logo.png
+```
+
+Müşterinin dosyası adına rağmen beyaz zeminli bir JPEG. Betik zemini
+saydam yapıyor, altını koruyor, siyah "lounge" yazısını sitenin beyazına
+çeviriyor. Kaynak dosya repoda değil (.gitignore). Oran değişirse
+`global.css → .logo { --logo-ar }` ve `Logo.astro` width/height güncellenir.
