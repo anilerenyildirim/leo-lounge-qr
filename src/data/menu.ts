@@ -33,6 +33,8 @@
    Kokteyllerin 14/23'ünün karesi qrall'da duruyor, CDN'e taşınmadı.
    ============================================================ */
 
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import rawFile from './menu.json';
 
 /* ------------------------------------------------------------
@@ -181,18 +183,30 @@ const isRef = (e: RawEntry): e is string => typeof e === 'string';
  * Fotoğraf adresi ŞEMADAN DEĞİL slug'dan türetilir — aynı gerçeği iki
  * yerde tutmamak için. Mekan slug'ı gerektiğinden URL kurma bu modülde.
  */
-export const photoSrc = (venueSlug: string, itemSlug: string): string =>
-  `${CDN}/${raw.tenant}/${venueSlug}/${itemSlug}.webp`;
+export const photoSrc = (venueSlug: string, itemSlug: string): string => {
+  const local = `/foto/${venueSlug}/${itemSlug}.webp`;
+  return existsSync(join(PUBLIC_DIR, local))
+    ? local
+    : `${raw.cdn}/${raw.tenant}/${venueSlug}/${itemSlug}.webp`;
+};
 
-/* YEREL FOTOĞRAF ÖNİZLEMESİ — yalnız `astro dev`'de.
+/* GEÇİCİ KAYNAK — SİTENİN KENDİ KLASÖRÜ (public/foto/<mekan>/).
 
-   Kareler CDN'e yüklenmeden tasarımı fotoğraflı görebilmek için:
-     PUBLIC_FOTO_LOCAL=1 npx astro dev
-   Adres CDN yerine `public/leo-lounge/…` olur (klasör gitignore'da).
-   `DEV` kapısı yüzünden build'e ASLA sızmaz — değişken açık unutulsa
-   bile üretim çıktısı CDN'i gösterir. */
-const CDN =
-  import.meta.env.DEV && import.meta.env['PUBLIC_FOTO_LOCAL'] === '1' ? '' : raw.cdn;
+   Panel henüz yok ve CDN'e yazma erişimi yok; elimizdeki 31 kare
+   siteyle birlikte yayınlanıyor (müşteri kararı, 11 Eylül). Karar
+   DOSYA BAZINDA ve BUILD ZAMANINDA:
+     · public/foto/lounge/<slug>.webp varsa → oradan
+     · yoksa                               → CDN (panelin yükleyeceği yer)
+
+   PANEL CANLIYA GEÇİNCE: panel kareleri CDN'e yükler; hazırlık
+   push'unda public/foto/ klasörü silinir ve her kare kendiliğinden
+   CDN'den gelir — kodda başka değişiklik yok.
+   Panelin YENİ yüklediği bir kare (bugün fotoğrafı olmayan 15 üründen
+   biri) burada hiç bulunmadığı için klasör silinmeden de CDN'den gelir.
+
+   Kontrol sunucu tarafında (Astro build): bu modül yalnız .astro
+   bileşenlerinden okunuyor, tarayıcıya gitmiyor. */
+const PUBLIC_DIR = join(process.cwd(), 'public');
 
 const toItem = (r: RawItem, vat: 10 | 20 | null, venueSlug: string): MenuItem => {
   const desc = tOpt(r.description);

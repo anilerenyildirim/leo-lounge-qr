@@ -7,8 +7,9 @@ import { photoOf } from '../data/menu';
 /**
  * Fotoğraf genel anahtarı. Kapatılırsa site tamamen tipografik kalır.
  *
- * Fotoğraflar CDN'de (`cdn.onlinemenu-qr.com/leo-lounge/lounge/…`).
- * Adres menu.json + slug'dan türetiliyor, bkz. `data/menu.ts → photoSrc`.
+ * Fotoğraflar bugün sitenin kendi klasöründe (public/foto/lounge/),
+ * panel canlıya geçince CDN'de. Adres slug'dan türetiliyor ve kaynak
+ * kararı dosya bazında veriliyor, bkz. `data/menu.ts → photoSrc`.
  */
 export const FOTO_VAR = true;
 

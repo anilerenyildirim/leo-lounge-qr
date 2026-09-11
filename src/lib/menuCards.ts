@@ -21,9 +21,9 @@
    KARTIN SAĞ YARISI — üç durum, öncelik sırasıyla:
      1. fotoğraf  — kapak ürünün karesi (cover ya da fotoğraflı ilk ürün)
      2. ikon      — fotoğrafı olmayan İÇECEK kartları (lib/icons.ts)
-     3. baş harf  — fotoğrafı henüz gelmemiş YEMEK kartları
-   İçeceklere harf konmuyor: müşteri kararı, "kategorisine uygun bardak"
-   daha okunur. Yemekte ikon yok, çünkü onların fotoğrafı gelecek.
+     3. hiçbiri   — fotoğrafı henüz gelmemiş YEMEK kartları: fotoğrafsız,
+                    yalnız yazı. Yer tutucu yok (müşteri kararı, 11 Eylül).
+   Yemekte ikon yok, çünkü onların fotoğrafı gelecek.
    ============================================================ */
 
 import { LOUNGE, type MenuItem, type Section, type Subsection } from '../data/menu';
@@ -124,7 +124,7 @@ export const cardItems = (card: MenuCard): MenuItem[] =>
 
 /**
  * Kart kapağı: açıkça verilmişse o, yoksa fotoğrafı olan ilk ürün.
- * Hiçbiri yoksa null — sağ yarıyı ikon ya da baş harf dolduruyor.
+ * Hiçbiri yoksa null — sağ yarıda ikon ya da hiçbir şey durur.
  */
 export const cardPhoto = (card: MenuCard): string | null => {
   if (card.cover && hasPhoto(card.cover)) return card.cover;

@@ -156,8 +156,9 @@ function lightbox(): void {
    Build zamanı kararı menu.json'a bakıyor: "photo alanı doluysa
    <img> bas". Ama menu.json ile CDN BİRBİRİNİ TUTMAYABİLİR —
    şema dosyanın yüklendiğini söylerken dosya henüz orada olmayabilir.
-   Bugün tam olarak bu durumdayız: 31 karenin şemadaki kaydı var,
-   CDN'e yüklenmeleri bekleniyor.
+   Bugün 31 kare sitenin kendi klasöründen geliyor (data/menu.ts →
+   photoSrc); bu dal panel canlıya geçip o klasör silindiğinde, CDN
+   henüz tamamlanmamışsa devreye girer.
 
    O aralıkta kart ve satır KIRIK İKON ya da boş kutu göstermiyor;
    görsel söküllüp `no-shot` giyiliyor, yani doğuştan tipografik
@@ -181,12 +182,13 @@ function missingShots(): void {
     else img.addEventListener('error', drop, { once: true });
   }
 
-  /* Kategori kartında kare sökülünce yerine BAŞ HARF geçiyor
-     (CatCard.astro): harf zaten altta basılı, `cat-noimg` onu açıyor. */
+  /* Kategori kartında kare sökülünce kart FOTOĞRAFSIZ hâle düşüyor
+     (CatCard.astro): görsel kutusu kalkıyor, yalnız yazı kalıyor. */
   for (const img of document.querySelectorAll<HTMLImageElement>('.cat-media img')) {
     const drop = () => {
-      img.closest('.cat')?.classList.add('cat-noimg');
-      img.remove();
+      const card = img.closest('.cat');
+      card?.classList.add('cat-noimg');
+      img.closest('.cat-media')?.remove();
     };
     if (img.complete && img.naturalWidth === 0) drop();
     else img.addEventListener('error', drop, { once: true });

@@ -265,24 +265,8 @@ html body { padding-bottom: 0; }
 
 .cat:hover .cat-media img { scale: 1.04; }
 
-/* Fotoğrafı henüz gelmemiş YEMEK kartı: baş harf.
-   Fotoğraflı kartta harf gizli bekliyor; kare CDN'de yoksa app.ts
-   `cat-noimg` ekliyor ve harf açılıyor. */
-.cat-letter {
-  position: absolute;
-  right: 12%;
-  top: 50%;
-  translate: 0 -50%;
-  font-family: var(--font-label);
-  font-weight: 300;
-  font-size: 92px;
-  line-height: 1;
-  color: rgba(var(--wave), .42);
-  opacity: 0;
-  transition: opacity .3s ease;
-}
-
-.cat-noimg .cat-letter { opacity: 1; }
+/* Fotoğrafı henüz gelmemiş YEMEK kartı: FOTOĞRAFSIZ — yalnız yazı.
+   Yer tutucu yok (müşteri kararı, 11 Eylül). */
 
 /* İÇECEK kartı: bardak ikonu. Müşterinin referansındaki gibi ince
    çizgi ve etrafında hafif ışık; renk dalganın kendi altını. */
@@ -693,7 +677,6 @@ body.lb-lock { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .cat,
   .cat-media img,
-  .cat-letter,
   .cat-icon,
   .shot img,
   #lb { transition: none; }

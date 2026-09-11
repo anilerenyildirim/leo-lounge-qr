@@ -31,9 +31,6 @@ Thumbs.db
 FOTO-MANIFESTO.md
 tools/manifest.json
 
-# yerel fotoğraf önizlemesi (PUBLIC_FOTO_LOCAL=1 astro dev) — kareler
-# CDN'e gidiyor, repoya değil
-public/leo-lounge/
 
 # müşteriden gelen kaynak görseller — işlenmiş hâli public/brand'de,
 # dönüştürme tools/logo.cjs'te. Kaynaklar yerelde kalıyor.
