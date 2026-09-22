@@ -12,11 +12,13 @@
    ürün ekleyip fiyat değiştirebiliyor, kategori okuması yerinde
    kalıyor.
 
-   KART SAYISI 23 ve kaynaktaki kategorilerle BİREBİR. Birleştirme
-   gerekirse (ör. Shotlar + 6'lı Shotlar) burada tek kayıt değişir.
+   KART SAYISI 24: kaynaktaki 23 kategori, Kokteyller ikiye bölünmüş
+   (İmza Kokteyller + Kokteyller). Birleştirme gerekirse (ör. Shotlar +
+   6'lı Shotlar) burada tek kayıt değişir.
 
-   SIRA KAYNAKTAKİ SIRA DEĞİL. Kokteyller başa alındı (mekanın imzası),
-   yemekler bir arada, içkiler bir arada.
+   SIRA KAYNAKTAKİ SIRA DEĞİL (müşteri kararı, 22 Eylül): menü
+   yemekle açılıyor (Aperatifler, Salatalar, Bowllar, Sushi, …),
+   meze bitince kokteyller, ardından bar.
 
    KARTIN SAĞ YARISI — üç durum, öncelik sırasıyla:
      1. fotoğraf  — kapak ürünün karesi (cover ya da fotoğraflı ilk ürün)
@@ -50,39 +52,70 @@ export interface MenuCard {
    */
   icon?: IconName;
   /**
-   * Izgarada TAM GENİŞLİK kart. Yalnız mekanın imzası (Kokteyller).
-   * Yan etkisi de istenen bir şey: 23 kart iki sütunda tek kartı
-   * son satırda yalnız bırakıyordu; geniş kart 1 + 22 yapıyor.
+   * Izgarada TAM GENİŞLİK kart. Yalnız iki kokteyl kartı: sofra ile
+   * barın arasında ayraç gibi duruyorlar. İkisi birlikte geniş olunca
+   * iki sütunlu ızgara 10 + 2 + 12 — hiçbir satırda tek kart kalmıyor.
    */
   wide?: boolean;
+  /** yalnız bu ürünler (slug) — bir kaynak kategoriyi iki karta bölmek için */
+  only?: string[];
+  /** bu ürünler hariç — `only`'nin tümleyeni */
+  except?: string[];
+  /**
+   * Kadeh/şişe eşleme: "X (Kadeh)" ürününün hemen ardına "X (Şişe)"
+   * gelir; kadehi olmayanlar sonra, kaynaktaki sırayla (Şaraplar).
+   */
+  glassFirst?: boolean;
 }
 
-/** Okuma sırası — imza önce, sonra sofra, sonra bar. */
-export const MENU_CARDS: MenuCard[] = [
-  { key: 'kokteyller',         title: 'Kokteyller',          sectionSlug: 'kokteyller', subs: ['kokteyller'], icon: 'martini', wide: true },
+/**
+ * İmza kokteyller (ürün slug'ları). Listede olmayan her kokteyl
+ * "Kokteyller" kartına düşer. Sıra kaynaktaki sıra.
+ */
+const SIGNATURE: string[] = [
+  'island',
+  'green-garden',
+  'secret-of-aegan',
+  'the-alchemist',
+  'herbarium',
+  'peach-and-ash',
+  'leo-pink',
+  'tropikal',
+  'alexia',
+];
 
+/** Okuma sırası — sofra önce, sonra kokteyller, sonra bar
+    (müşteri kararı, 22 Eylül). */
+export const MENU_CARDS: MenuCard[] = [
   /* Kapaklar elle seçildi: varsayılan "fotoğraflı ilk ürün" Burgerler'de
-     hot dog'u, Ana Yemekler'de schnitzel'i kapağa çıkarıyordu. */
+     hot dog'u, Ana Yemekler'de schnitzel'i, Bowllar'da bonfileyi
+     kapağa çıkarıyordu. */
   { key: 'aperatifler',        title: 'Aperatifler',         sectionSlug: 'yiyecekler', subs: ['aperatifler'] },
   { key: 'salatalar',          title: 'Salatalar',           sectionSlug: 'yiyecekler', subs: ['salatalar'] },
+  { key: 'bowllar',            title: 'Bowllar',             sectionSlug: 'yiyecekler', subs: ['bowllar'],      cover: 'karidesli-bowl' },
+  { key: 'sushi',              title: 'Sushi',               sectionSlug: 'yiyecekler', subs: ['sushi'] },
   { key: 'makarnalar',         title: 'Makarnalar',          sectionSlug: 'yiyecekler', subs: ['makarnalar'] },
   { key: 'pizzalar',           title: 'Pizzalar',            sectionSlug: 'yiyecekler', subs: ['pizzalar'],     cover: 'leo-pizza' },
   { key: 'burgerler',          title: 'Burgerler',           sectionSlug: 'yiyecekler', subs: ['burgerler'],    cover: 'cheese-burger' },
-  { key: 'bowllar',            title: 'Bowllar',             sectionSlug: 'yiyecekler', subs: ['bowllar'] },
   { key: 'ana-yemekler',       title: 'Ana Yemekler',        sectionSlug: 'yiyecekler', subs: ['ana-yemekler'], cover: 'antrikot' },
-  { key: 'sushi',              title: 'Sushi',               sectionSlug: 'yiyecekler', subs: ['sushi'] },
 
   { key: 'cerez',              title: 'Çerez',               sectionSlug: 'yaninda',    subs: ['cerez'] },
   { key: 'meyve-ve-meze',      title: 'Meyve & Meze',        sectionSlug: 'yaninda',    subs: ['meyve-ve-meze'] },
 
+  /* Kaynakta TEK kategori, burada iki kart. Ayrım `only`/`except` ile:
+     panelin yeni eklediği kokteyl kendiliğinden "Kokteyller"e düşer,
+     imzaya ancak SIGNATURE listesine yazılınca geçer. */
+  { key: 'imza-kokteyller',    title: 'İmza Kokteyller',     sectionSlug: 'kokteyller', subs: ['kokteyller'], only: SIGNATURE,   icon: 'martini', wide: true },
+  { key: 'kokteyller',         title: 'Kokteyller',          sectionSlug: 'kokteyller', subs: ['kokteyller'], except: SIGNATURE, icon: 'martini', wide: true },
+
   /* İkonlar: Phosphor (thin) ya da müşterinin referansından çizilenler
      (tumbler, highball, shot, cordial). Ayrıntı lib/icons.ts'te. */
   { key: 'biralar',            title: 'Biralar',             sectionSlug: 'bira-sarap', subs: ['biralar'],            icon: 'beer-stein' },
-  { key: 'saraplar',           title: 'Şaraplar',            sectionSlug: 'bira-sarap', subs: ['saraplar'],           icon: 'wine' },
+  { key: 'saraplar',           title: 'Şaraplar',            sectionSlug: 'bira-sarap', subs: ['saraplar'],           icon: 'wine', glassFirst: true },
 
   { key: 'viskiler',           title: 'Viskiler',            sectionSlug: 'ickiler',    subs: ['viskiler'],           icon: 'tumbler' },
   { key: 'viski-siseler',      title: 'Viski Şişeler',       sectionSlug: 'ickiler',    subs: ['viski-siseler'],      icon: 'beer-bottle' },
-  { key: 'cinler',             title: 'Cinler',              sectionSlug: 'ickiler',    subs: ['cinler'],             icon: 'brandy' },
+  { key: 'cinler',             title: 'Cinler',              sectionSlug: 'ickiler',    subs: ['cinler'],             icon: 'tumbler' },
   { key: 'vodkalar',           title: 'Vodkalar',            sectionSlug: 'ickiler',    subs: ['vodkalar'],           icon: 'pint-glass' },
   { key: 'romlar',             title: 'Romlar',              sectionSlug: 'ickiler',    subs: ['romlar'],             icon: 'tumbler' },
   { key: 'raki',               title: 'Rakı',                sectionSlug: 'ickiler',    subs: ['raki'],               icon: 'highball' },
@@ -105,9 +138,15 @@ const sectionOf = (slug: string): Section => {
  */
 export const cardSection = (card: MenuCard): Section => {
   const sec = sectionOf(card.sectionSlug);
+  const keep = (i: MenuItem) =>
+    (!card.only || card.only.includes(i.slug)) && !card.except?.includes(i.slug);
   const subs: Subsection[] = card.subs
     .map((s) => sec.subs.find((x) => x.slug === s))
-    .filter((x): x is Subsection => Boolean(x));
+    .filter((x): x is Subsection => Boolean(x))
+    .map((sub) => {
+      const items = sub.items.filter(keep);
+      return { ...sub, items: card.glassFirst ? glassFirst(items) : items };
+    });
 
   return {
     slug: card.key,
@@ -116,6 +155,23 @@ export const cardSection = (card: MenuCard): Section => {
     subs,
     count: subs.reduce((n, s) => n + s.items.length, 0),
   };
+};
+
+const GLASS = /\s*\(Kadeh\)$/;
+const BOTTLE = /\s*\(Şişe\)$/;
+
+/** Kadeh → aynı adlı şişe → kadehi olmayanlar (kaynaktaki sırayla). */
+const glassFirst = (items: MenuItem[]): MenuItem[] => {
+  const rest = [...items];
+  const out: MenuItem[] = [];
+  for (const g of items.filter((i) => GLASS.test(i.name))) {
+    const base = g.name.replace(GLASS, '');
+    out.push(g);
+    rest.splice(rest.indexOf(g), 1);
+    const b = rest.findIndex((i) => BOTTLE.test(i.name) && i.name.replace(BOTTLE, '') === base);
+    if (b >= 0) out.push(...rest.splice(b, 1));
+  }
+  return [...out, ...rest];
 };
 
 /** Kartın kapsadığı bütün ürünler, DOM sırasında. */

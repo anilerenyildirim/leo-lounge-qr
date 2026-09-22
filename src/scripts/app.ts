@@ -1,10 +1,11 @@
 /* ============================================================
    LEO LOUNGE — menü sayfalarının davranış katmanı.
 
-   Üç iş var, üçü de menüye ait:
+   Dört iş var, dördü de menüye ait:
      1  büyük görünüm — fotoğrafa tıklayınca (§1)
      2  eksik kare    — CDN şemanın gerisindeyse (§2)
      3  geri tuşu     — doğrudan açılan kategori sayfası (§3)
+     4  dönüş konumu  — ızgara, açılan kartın hizasında (§4)
 
    cafe-leo'nun app.ts'inde bunlardan başka scroll spy, öneri şeridi,
    mekan anahtarı morph'u ve açık/kapalı durumu da var. Hiçbiri buraya
@@ -199,24 +200,88 @@ function missingShots(): void {
    3 — GERİ TUŞU
 
    Kategori sayfası doğrudan açıldığında (QR, paylaşılan bağlantı,
-   arama sonucu) altında geçmiş kaydı olmaz ve geri tuşu SİTEDEN
-   ÇIKARIR. Burada ızgara sayfası geçmişe bir kez yerleştiriliyor,
-   böylece geri tuşu menüye dönüyor.
+   arama sonucu) altında sitenin hiçbir kaydı olmaz ve geri tuşu
+   SİTEDEN ÇIKARIR. Burada ızgara sayfası geçmişe bir kez
+   yerleştiriliyor, böylece geri tuşu menüye dönüyor.
 
-   Yalnız geçmiş BOŞSA çalışır: siteden gelen ziyaretçinin geçmişine
-   dokunulmuyor, yoksa geri tuşu iki kez basılmayı gerektirirdi.
+   "Doğrudan açıldı" = ClientRouter'ın geçmiş sırası 0. Siteden
+   gelinmişse sıra > 0 ve geçmişe dokunulmuyor, yoksa geri tuşu iki
+   kez basılmayı gerektirirdi. (Eski koşul `history.length > 1` idi;
+   sekmenin başka sitelerden kalan geçmişi de sayıldığı için çoğu
+   telefonda hiç devreye girmiyordu.)
+
+   İKİ TUZAK, İKİSİ DE CANLIDA YAŞANDI (22 Eylül):
+   · Durum nesnesi ClientRouter'ın biçiminde ({ index, scrollX,
+     scrollY }). `null` durumlu kaydı yönlendirici YOK SAYIYOR: adres
+     /menu/ oluyor, sayfa kategoride kalıyordu; ikinci basış siteden
+     çıkarıyordu.
+   · Kayıt İLK DOKUNUŞTA ekleniyor. Chrome, kullanıcı sayfaya hiç
+     dokunmadan eklenen geçmiş kaydını geri tuşunda ATLIYOR (geçmiş
+     istismarına karşı önlem). Dokunmadan geri basan ziyaretçi yine
+     çıkar; bunu aşmanın meşru yolu yok.
 
    Adres `data-back`'ten okunuyor — yol sayfada bir kez yazılı,
    burada ikinci kez değil.
    ============================================================ */
 
+type RouterState = { index?: number } | null;
+
+/** Kullanıcı etkileşimi sayılan olaylar (HTML "activation-triggering"). */
+const ACTIVATION = ['pointerdown', 'touchend', 'keydown', 'mousedown'] as const;
+
 function backstop(): void {
   const el = document.querySelector<HTMLElement>('[data-back]');
   const to = el?.dataset['back'];
-  if (!to || history.length > 1) return;
+  if (!to || (history.state as RouterState)?.index) return;
 
-  history.replaceState(null, '', to);
-  history.pushState(null, '', location.href);
+  const here = location.href;
+  const plant = () => {
+    for (const ev of ACTIVATION) removeEventListener(ev, plant, true);
+    // bu arada başka sayfaya geçildiyse (ClientRouter) iş bitmiş demek
+    if (location.href !== here || (history.state as RouterState)?.index) return;
+    history.replaceState({ index: 0, scrollX: 0, scrollY: 0 }, '', to);
+    history.pushState({ index: 1, scrollX, scrollY }, '', here);
+  };
+
+  if (navigator.userActivation?.hasBeenActive) plant();
+  else for (const ev of ACTIVATION) addEventListener(ev, plant, { capture: true, passive: true });
+}
+
+/* ============================================================
+   4 — IZGARAYA DÖNÜŞTE KONUM
+
+   Kategoriden ızgaraya dönen ziyaretçi (üst bardaki "Menü" ya da geri
+   tuşu) ızgaranın BAŞINA değil, az önce açtığı kartın hizasına iner.
+   "Menü" bağlantısı ileri gezinme olduğu için ClientRouter onu en üste
+   açıyordu; telefonda kategorilerin yarısı kaydırılıp yeniden
+   aranıyordu (müşteri şikâyeti, 22 Eylül).
+
+   Kategori sayfası kendi anahtarını oturuma bırakıyor (`data-cat`),
+   ızgara onu bir kez okuyup siliyor. Bir kez: sonraki yenileme ya da
+   ana sayfadan gelen yeni giriş yine baştan açılır.
+   ============================================================ */
+
+const LAST = 'leo-cat';
+
+function returnPoint(): void {
+  const cat = document.querySelector<HTMLElement>('[data-cat]')?.dataset['cat'];
+  if (cat) {
+    try { sessionStorage.setItem(LAST, cat); } catch { /* gizli sekme */ }
+    return;
+  }
+
+  const grid = document.querySelector('.cats');
+  if (!grid) return;
+  let key: string | null = null;
+  try {
+    key = sessionStorage.getItem(LAST);
+    sessionStorage.removeItem(LAST);
+  } catch { /* yok say */ }
+  if (!key) return;
+
+  grid
+    .querySelector<HTMLElement>(`a.cat[href="/menu/${CSS.escape(key)}/"]`)
+    ?.scrollIntoView({ block: 'center', behavior: 'instant' });
 }
 
 /* ============================================================
@@ -227,6 +292,7 @@ function boot(): void {
   missingShots();
   lightbox();
   backstop();
+  returnPoint();
 }
 
 document.addEventListener('astro:page-load', boot);

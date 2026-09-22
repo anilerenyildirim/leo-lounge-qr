@@ -16,7 +16,7 @@
    lib/menuCards.ts'teki `icon` alanı değişir:
    · Viski Şişeler → beer-bottle (Phosphor'da başka şişe yok; eğik duruyor)
    · Vodkalar      → pint-glass
-   · Romlar        → tumbler (Viskiler ile aynı)
+   · Romlar, Cinler → tumbler (Viskiler ile aynı; Cinler müşteri isteğiyle, 22 Eylül)
    · 6'lı Shotlar  → cheers (birlikte içilen)
 
    ------------------------------------------------------------

@@ -19,6 +19,9 @@
    bildiriyor; orada ızgara sayfası geçmişe yerleştiriliyor. Öznitelik
    değeri dönülecek adres — yol burada bir kez yazılıyor, JS'te ikinci
    kez değil.
+
+   `data-cat` ızgaraya dönüşte konum için: ızgara bu kartın hizasında
+   açılıyor (app.ts §4).
    ============================================================ */
 import type { GetStaticPaths } from 'astro';
 import Base from '../../layouts/Base.astro';
@@ -50,7 +53,7 @@ const sec = cardSection(card);
 
   <h1 class="sr-only">{card.title} — {LOUNGE.name}</h1>
 
-  <div class="wrap mpage mpage-cat" data-back="/menu/">
+  <div class="wrap mpage mpage-cat" data-back="/menu/" data-cat={card.key}>
     <Section sec={sec} />
     <MenuFoot />
   </div>
