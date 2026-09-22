@@ -81,6 +81,21 @@
    Izgarada kartlar opak — orada tam güç. */
 [data-waves="dim"] .ambient canvas { opacity: .38; }
 
+/* ARA PERDE — kategori sayfalarında dalga ile ürün listesinin arasında
+   %25 siyah (müşteri isteği, 22 Eylül: loş ışıkta açıklamalar zor
+   okunuyordu; önce %20 denendi, %5 koyulaştırıldı). Tuvalin üstünde, içeriğin altında; ızgarada kapalı.
+   .ambient sayfalar arasında yaşadığı için (transition:persist) perde
+   geçişte sönüp yanıyor, sıçramıyor. */
+.ambient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  transition: opacity .6s ease;
+}
+[data-waves="dim"] .ambient::after { opacity: .25; }
+
 /* ============================================================
    ÜST BAR
    ============================================================ */
@@ -447,7 +462,7 @@ html body { padding-bottom: 0; }
 .name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;   /* ürün yazıları 22 Eylül'de 2px büyüdü (loş ışık) */
   line-height: 1.3;
   letter-spacing: .005em;
   min-width: 0;
@@ -465,7 +480,7 @@ html body { padding-bottom: 0; }
 .price {
   flex: none;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--gold-ink);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -474,10 +489,12 @@ html body { padding-bottom: 0; }
 .desc {
   margin-top: 5px;
   max-width: 56ch;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
-  color: var(--muted);
+  /* Beyaza yakın, ad renginin (--text) bir tık altında: loş ışıkta
+     okunsun, adla hiyerarşi yine korunsun (müşteri isteği, 22 Eylül). */
+  color: #E2DBCE;
 }
 
 /* ============================================================
