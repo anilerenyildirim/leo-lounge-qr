@@ -4,20 +4,26 @@
    İKİ KAYNAK, TEK ÇİZGİ KALINLIĞI:
    · Phosphor Icons, "thin" ağırlık — setin karşılığı olan bardaklar
      (martini, şarap, bira, ...). Path'ler setin kendisinden, değişmedi.
-   · Müşterinin çizdiği referanstan (missingicons.png) yeniden çizilen
-     dört bardak: tumbler, highball (rakı), shot, cordial (likör).
-     Phosphor'da karşılıkları YOK. Aynı 256'lık ızgarada, Phosphor
+   · Elle çizilenler: önce müşterinin referansından (missingicons.png)
+     tumbler, highball (rakı), shot, cordial; sonra 22 Eylül
+     revizyonundakiler (aşağıda). Phosphor'da karşılıkları YOK. Aynı 256'lık ızgarada, Phosphor
      thin'in çizgi kalınlığıyla (8 birim) çizildi ki yan yana durunca
      aynı elden çıkmış görünsünler.
 
    Renk CSS'ten gelir (currentColor), SVG'de sabit renk yok.
 
-   ZAYIF EŞLEŞMELER — müşteriye soruldu, değişirse yalnız
-   lib/menuCards.ts'teki `icon` alanı değişir:
-   · Viski Şişeler → beer-bottle (Phosphor'da başka şişe yok; eğik duruyor)
-   · Vodkalar      → pint-glass
-   · Romlar, Cinler → tumbler (Viskiler ile aynı; Cinler müşteri isteğiyle, 22 Eylül)
-   · 6'lı Shotlar  → cheers (birlikte içilen)
+   22 EYLÜL REVİZYONU (müşteri isteği) — elle çizilenlere eklenenler:
+   · İmza Kokteyller → cocktail-olive (zeytinli kürdan)
+   · Kokteyller      → cocktail (köşeye saplı yarım limon)
+   · Şaraplar        → wine-glass (uzun saplı kadeh)
+   · Vodkalar        → vodka (ince uzun, buzlu)
+   · Likörler        → liqueur (ince uzun, daralan)
+   · 6'lı Shotlar    → shots-clink (tokuşan iki shot)
+   · Viski Şişeler   → ice-bucket (buz kovasında şişe)
+   · Cinler, Romlar  → tumbler (Viskiler ile aynı)
+   Eski Phosphor ikonları (martini, wine, pint-glass, beer-bottle,
+   cheers, brandy) ve cordial müşteri onayı gelene kadar duruyor —
+   geri dönmek tek satır. Onaydan sonra silinebilir.
 
    ------------------------------------------------------------
    Phosphor Icons — MIT License
@@ -63,6 +69,44 @@ const PHOSPHOR = {
     'M248,84H8a4,4,0,0,0-4,4,124,124,0,0,0,248,0A4,4,0,0,0,248,84ZM71.53,150.13,124,97.66V171.9A83.67,83.67,0,0,1,71.53,150.13Zm-5.66-5.66A83.67,83.67,0,0,1,44.1,92h74.24ZM132,97.66l52.47,52.47A83.67,83.67,0,0,1,132,171.9Zm58.130,46.81L137.66,92H211.9A83.67,83.67,0,0,1,190.13,144.47ZM128,204A116.14,116.14,0,0,1,12.07,92h24a92,92,0,0,0,183.82,0h24A116.14,116.14,0,0,1,128,204Z',
 } as const;
 
+/** Tokuşan shotların tek bardağı; orijin taban ortası, ağız y=-100. */
+const SHOT_LOCAL =
+  '<ellipse cx="0" cy="-100" rx="32" ry="7"/>' +
+  '<path d="M-32 -100 L-21 0 M32 -100 L21 0"/>' +
+  '<path d="M-21 0 A21 5 0 0 0 21 0"/>' +
+  '<path d="M-23 -18 A23 5 0 0 0 23 -18"/>';
+
+/** Damla: sivri ucu yukarıda, (x,y) gövdenin ortası. */
+const drop = (x: number, y: number): string =>
+  `<path d="M${x} ${y - 12} C${x + 8} ${y - 1} ${x + 7} ${y + 8} ${x} ${y + 8} C${x - 7} ${y + 8} ${x - 8} ${y - 1} ${x} ${y - 12} Z"/>`;
+
+/** Çizgi martini kadehi — iki kokteyl ikonunun ortak gövdesi. */
+const MARTINI =
+  '<path d="M60 72 H196"/>' +
+  '<path d="M128 140 V214 M88 216 H168"/>';
+
+/* Limon: YARIM DİLİM, kadehin sağ köşesine saplı. Düz kenarı köşeye
+   dik (köşenin açıortayına, -22.5°), kavisi dışarı bakıyor; kadehin
+   ağzı ve duvarı dilimin düz kenarında bitiyor — cam dilimin yarığına
+   girmiş görünüyor. Tam daire "tekerlek" gibi okunuyordu (22 Eylül).
+   Merkez (222.5,42.3), r 30; kabuk çizgisi r 22; iki dilim çizgisi. */
+const LEMON =
+  '<path d="M28 40 H221.5 M28 40 L128 140 L223.4 44.6"/>' +
+  '<path d="M211 14.6 A30 30 0 0 1 234 70 Z"/>' +
+  '<path d="M214.1 22 A22 22 0 0 1 230.9 62.6"/>' +
+  '<path d="M222.5 42.3 L244.3 45.2 M222.5 42.3 L235.9 24.9"/>';
+
+/** Kadehin ağzı ve duvarı, garnitürsüz. */
+const RIM = '<path d="M28 40 H228 L128 140 Z"/>';
+
+/* Zeytinli kürdan: ağzın üstünden sıvıya çapraz iniyor; tepede boncuk,
+   zeytinde kırmızıbiber deliği. */
+const OLIVE =
+  '<circle cx="80" cy="10" r="6"/>' +
+  '<path d="M84 16 L140 106"/>' +
+  '<ellipse cx="129" cy="88" rx="21" ry="15" transform="rotate(58 129 88)"/>' +
+  '<circle cx="129" cy="88" r="5"/>';
+
 /**
  * Müşterinin referansından çizilenler — ÇİZGİ (stroke) olarak.
  * Kalınlık iconSvg()'de tek yerden veriliyor: 8 birim = Phosphor thin.
@@ -102,6 +146,63 @@ const CUSTOM = {
     '<path d="M89 102 C108 110 148 110 167 102"/>' +
     '<path d="M128 140 V203"/>' +
     '<ellipse cx="128" cy="210" rx="34" ry="7"/>',
+
+  /* Şarap kadehi: Phosphor'unkinin sapı kısaydı (müşteri, 22 Eylül).
+     Hazne üstte, sap ızgaranın neredeyse yarısı. */
+  'wine-glass':
+    '<ellipse cx="128" cy="26" rx="46" ry="8"/>' +
+    '<path d="M82 26 C68 62 70 104 100 116 Q114 122 128 122 Q142 122 156 116 C186 104 188 62 174 26"/>' +
+    '<path d="M74 66 C104 76 152 76 182 66"/>' +
+    '<path d="M128 122 V216"/>' +
+    '<ellipse cx="128" cy="220" rx="38" ry="7"/>',
+
+  /* Kokteyl: martini kadehi, köşesine saplı yarım limon dilimi
+     (müşteri, 22 Eylül). Phosphor'un martinisi dolgulu çizimdi;
+     garnitür aynı elden çıksın diye kadeh burada çizgiyle yeniden
+     çizildi. Dilimin geometrisi LEMON'un başında. */
+  cocktail: MARTINI + LEMON,
+
+  /* İmza Kokteyller: aynı kadeh, içinde zeytinli kürdan. */
+  'cocktail-olive': MARTINI + RIM + OLIVE,
+
+  /* Vodka: ince uzun, dik kenar; tek buz. Rakı bardağından dar ve uzun. */
+  vodka:
+    '<ellipse cx="128" cy="24" rx="33" ry="7"/>' +
+    '<path d="M95 24 V218 M161 24 V218"/>' +
+    '<path d="M95 218 A33 7 0 0 0 161 218"/>' +
+    '<path d="M95 200 A33 7 0 0 0 161 200"/>' +
+    '<path d="M95 78 A33 7 0 0 0 161 78"/>' +
+    '<rect x="111" y="98" width="34" height="34" rx="5" transform="rotate(12 128 115)"/>',
+
+  /* Likör: ince uzun, aşağı daralan, kalın taban — uzun bir shot. */
+  liqueur:
+    '<ellipse cx="128" cy="28" rx="40" ry="8"/>' +
+    '<path d="M88 28 L104 216 M168 28 L152 216"/>' +
+    '<path d="M104 216 A24 6 0 0 0 152 216"/>' +
+    '<path d="M102 188 A26 6 0 0 0 154 188"/>' +
+    '<path d="M91 68 A37 7 0 0 0 165 68"/>',
+
+  /* 6'lı Shotlar: iki shot ağızdan tokuşuyor, iki damla sıçrıyor. */
+  'shots-clink':
+    '<g transform="translate(60 226) rotate(20)">' + SHOT_LOCAL + '</g>' +
+    '<g transform="translate(196 226) rotate(-20)">' + SHOT_LOCAL + '</g>' +
+    drop(106, 74) + drop(152, 62) +
+    '<path d="M108 124 L96 112 M148 124 L160 112 M128 118 V102"/>',
+
+  /* Viski Şişeler: buz kovasında çapraz duran şişe, ağızda buzlar. */
+  'ice-bucket':
+    '<g transform="translate(124 142) rotate(16)">' +
+      '<path d="M-28 4 V-44 C-28 -62 -11 -64 -11 -78 V-106 M28 4 V-44 C28 -62 11 -64 11 -78 V-106"/>' +
+      '<rect x="-14" y="-126" width="28" height="20" rx="3"/>' +
+      '<path d="M-28 -26 H28"/>' +
+    '</g>' +
+    '<rect x="70" y="118" width="24" height="24" rx="4" transform="rotate(-15 82 130)"/>' +
+    '<rect x="168" y="120" width="20" height="20" rx="4" transform="rotate(14 178 130)"/>' +
+    '<ellipse cx="128" cy="140" rx="66" ry="11"/>' +
+    '<path d="M62 140 L78 222 M194 140 L178 222"/>' +
+    '<path d="M78 222 A50 9 0 0 0 178 222"/>' +
+    '<path d="M71 186 A58 9 0 0 0 185 186"/>' +
+    '<path d="M64 156 C46 156 46 176 67 176 M192 156 C210 156 210 176 189 176"/>',
 } as const;
 
 type PhosphorName = keyof typeof PHOSPHOR;

@@ -105,11 +105,31 @@
   gap: 16px;
 }
 
+/* LOGO ŞERİTTEN SARKIYOR (müşteri isteği, 22 Eylül).
+   Logo 84px ve akıştan çıkarılmış: şerit yüksekliği eskisi gibi 48px'lik
+   kutuya göre kuruluyor, logo o kutuya asılı duruyor. Ölçüler logonun
+   kendi oranından: "leo" görselin %76'sında bitiyor, yani 84px'te
+   ~64px — üstten 4px ile şeridin alt çizgisine (68px) oturuyor ve
+   "lounge" çizginin ALTINA düşüyor (~18px). Sarkma yalnız solda;
+   asimetri buradan geliyor.
+   Sarkan kısım kaydırılan içeriğin üstünden geçiyor, gölge okunaklı
+   tutuyor. Sayfa başlıkları 40px+ boşlukla başladığı için ilk ekranda
+   hiçbir şeyin üstüne binmiyor. */
 .bar-logo {
-  display: inline-flex;
+  position: relative;
+  display: block;
+  width: calc(84px * .8433);
+  height: 48px;
   text-decoration: none;
   border-radius: 8px;
 }
+.bar-logo .logo {
+  --logo-h: 84px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+.bar-logo .logo img { filter: drop-shadow(0 2px 6px rgba(0, 0, 0, .6)); }
 
 .bar-back {
   display: inline-flex;

@@ -36,3 +36,6 @@ tools/manifest.json
 # dönüştürme tools/logo.cjs'te. Kaynaklar yerelde kalıyor.
 LeoLogo.PNG
 missingicons.png
+
+# müşteri onayına giden karşılaştırma dosyaları — yerelde kalıyor
+onay/

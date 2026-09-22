@@ -105,23 +105,23 @@ export const MENU_CARDS: MenuCard[] = [
   /* Kaynakta TEK kategori, burada iki kart. Ayrım `only`/`except` ile:
      panelin yeni eklediği kokteyl kendiliğinden "Kokteyller"e düşer,
      imzaya ancak SIGNATURE listesine yazılınca geçer. */
-  { key: 'imza-kokteyller',    title: 'İmza Kokteyller',     sectionSlug: 'kokteyller', subs: ['kokteyller'], only: SIGNATURE,   icon: 'martini', wide: true },
-  { key: 'kokteyller',         title: 'Kokteyller',          sectionSlug: 'kokteyller', subs: ['kokteyller'], except: SIGNATURE, icon: 'martini', wide: true },
+  { key: 'imza-kokteyller',    title: 'İmza Kokteyller',     sectionSlug: 'kokteyller', subs: ['kokteyller'], only: SIGNATURE,   icon: 'cocktail-olive', wide: true },
+  { key: 'kokteyller',         title: 'Kokteyller',          sectionSlug: 'kokteyller', subs: ['kokteyller'], except: SIGNATURE, icon: 'cocktail', wide: true },
 
-  /* İkonlar: Phosphor (thin) ya da müşterinin referansından çizilenler
-     (tumbler, highball, shot, cordial). Ayrıntı lib/icons.ts'te. */
+  /* İkonlar: Phosphor (thin) ya da elle çizilenler. Ayrıntı
+     lib/icons.ts'te. */
   { key: 'biralar',            title: 'Biralar',             sectionSlug: 'bira-sarap', subs: ['biralar'],            icon: 'beer-stein' },
-  { key: 'saraplar',           title: 'Şaraplar',            sectionSlug: 'bira-sarap', subs: ['saraplar'],           icon: 'wine', glassFirst: true },
+  { key: 'saraplar',           title: 'Şaraplar',            sectionSlug: 'bira-sarap', subs: ['saraplar'],           icon: 'wine-glass', glassFirst: true },
 
   { key: 'viskiler',           title: 'Viskiler',            sectionSlug: 'ickiler',    subs: ['viskiler'],           icon: 'tumbler' },
-  { key: 'viski-siseler',      title: 'Viski Şişeler',       sectionSlug: 'ickiler',    subs: ['viski-siseler'],      icon: 'beer-bottle' },
+  { key: 'viski-siseler',      title: 'Viski Şişeler',       sectionSlug: 'ickiler',    subs: ['viski-siseler'],      icon: 'ice-bucket' },
   { key: 'cinler',             title: 'Cinler',              sectionSlug: 'ickiler',    subs: ['cinler'],             icon: 'tumbler' },
-  { key: 'vodkalar',           title: 'Vodkalar',            sectionSlug: 'ickiler',    subs: ['vodkalar'],           icon: 'pint-glass' },
+  { key: 'vodkalar',           title: 'Vodkalar',            sectionSlug: 'ickiler',    subs: ['vodkalar'],           icon: 'vodka' },
   { key: 'romlar',             title: 'Romlar',              sectionSlug: 'ickiler',    subs: ['romlar'],             icon: 'tumbler' },
   { key: 'raki',               title: 'Rakı',                sectionSlug: 'ickiler',    subs: ['raki'],               icon: 'highball' },
-  { key: 'likorler',           title: 'Likörler',            sectionSlug: 'ickiler',    subs: ['likorler'],           icon: 'cordial' },
+  { key: 'likorler',           title: 'Likörler',            sectionSlug: 'ickiler',    subs: ['likorler'],           icon: 'liqueur' },
   { key: 'shotlar',            title: 'Shotlar',             sectionSlug: 'ickiler',    subs: ['shotlar'],            icon: 'shot' },
-  { key: 'altili-shotlar',     title: "6'lı Shotlar",        sectionSlug: 'ickiler',    subs: ['altili-shotlar'],     icon: 'cheers' },
+  { key: 'altili-shotlar',     title: "6'lı Shotlar",        sectionSlug: 'ickiler',    subs: ['altili-shotlar'],     icon: 'shots-clink' },
 
   { key: 'alkolsuz-icecekler', title: 'Alkolsüz İçecekler',  sectionSlug: 'alkolsuz',   subs: ['alkolsuz-icecekler'], icon: 'orange-slice' },
 ];
