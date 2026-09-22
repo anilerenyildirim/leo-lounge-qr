@@ -342,6 +342,44 @@ function returnPoint(): void {
 }
 
 /* ============================================================
+   5 — ADRES İLE EKRAN AYRIŞIRSA
+
+   iPhone'daki Chrome'da (22 Eylül, canlıda) geri tuşu adresi
+   değiştiriyor ama ClientRouter sayfayı yüklemiyordu: her basışta
+   adres kısalıyor, ekranda yenileyene kadar aynı kategori kalıyordu.
+   Masaüstü Chrome'da ve Safari motorunda (WebKit) tekrar üretilemedi —
+   iOS Chrome geçmişi kendisi yönetiyor ve geri tuşunun olayı
+   yönlendiricinin beklediği durumu taşımıyor olmalı (durumsuz olayı
+   yönlendirici yok sayıyor).
+
+   Sebebe değil sonuca bağlanıyor: ekrandaki sayfanın yolu biliniyor;
+   adres ondan farklıysa ve yönlendirici bir geçiş başlatmadıysa sayfa
+   adresten yeniden yükleniyor. Yönlendirici geçişi eşzamanlı olarak
+   başlatıyor (astro:before-preparation), o yüzden kısa bir bekleme
+   yetiyor. Geçiş sürerken adres zaten öndedir — o aralık `busy`.
+
+   popstate hiç gelmezse diye adres yarım saniyede bir de
+   karşılaştırılıyor; iş yok, yalnız iki metin kıyaslanıyor.
+   ============================================================ */
+
+let shown = location.pathname;
+let busy = false;
+
+function mismatch(): void {
+  if (busy || trim(location.pathname) === trim(shown)) return;
+  location.reload();
+}
+
+document.addEventListener('astro:before-preparation', () => { busy = true; });
+document.addEventListener('astro:after-swap', () => { shown = location.pathname; });
+document.addEventListener('astro:page-load', () => {
+  shown = location.pathname;
+  busy = false;
+});
+addEventListener('popstate', () => setTimeout(mismatch, 150));
+setInterval(mismatch, 500);
+
+/* ============================================================
    KURULUM
    ============================================================ */
 
