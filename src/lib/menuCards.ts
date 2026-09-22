@@ -115,9 +115,9 @@ export const MENU_CARDS: MenuCard[] = [
 
   { key: 'viskiler',           title: 'Viskiler',            sectionSlug: 'ickiler',    subs: ['viskiler'],           icon: 'tumbler' },
   { key: 'viski-siseler',      title: 'Viski Şişeler',       sectionSlug: 'ickiler',    subs: ['viski-siseler'],      icon: 'ice-bucket' },
-  { key: 'cinler',             title: 'Cinler',              sectionSlug: 'ickiler',    subs: ['cinler'],             icon: 'tumbler' },
+  { key: 'cinler',             title: 'Cinler',              sectionSlug: 'ickiler',    subs: ['cinler'],             icon: 'tumbler-gin' },
   { key: 'vodkalar',           title: 'Vodkalar',            sectionSlug: 'ickiler',    subs: ['vodkalar'],           icon: 'vodka' },
-  { key: 'romlar',             title: 'Romlar',              sectionSlug: 'ickiler',    subs: ['romlar'],             icon: 'tumbler' },
+  { key: 'romlar',             title: 'Romlar',              sectionSlug: 'ickiler',    subs: ['romlar'],             icon: 'tumbler-rum' },
   { key: 'raki',               title: 'Rakı',                sectionSlug: 'ickiler',    subs: ['raki'],               icon: 'highball' },
   { key: 'likorler',           title: 'Likörler',            sectionSlug: 'ickiler',    subs: ['likorler'],           icon: 'liqueur' },
   { key: 'shotlar',            title: 'Shotlar',             sectionSlug: 'ickiler',    subs: ['shotlar'],            icon: 'shot' },

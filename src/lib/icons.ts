@@ -20,7 +20,8 @@
    · Likörler        → liqueur (ince uzun, daralan)
    · 6'lı Shotlar    → shots-clink (tokuşan iki shot)
    · Viski Şişeler   → ice-bucket (buz kovasında şişe)
-   · Cinler, Romlar  → tumbler (Viskiler ile aynı)
+   · Cinler          → tumbler-gin (dik, üç buz, kabarcık)
+   · Romlar          → tumbler-rum (alçak, kalın taban, BUZSUZ)
    Eski Phosphor ikonları (martini, wine, pint-glass, beer-bottle,
    cheers, brandy) ve cordial müşteri onayı gelene kadar duruyor —
    geri dönmek tek satır. Onaydan sonra silinebilir.
@@ -121,6 +122,29 @@ const CUSTOM = {
     '<path d="M67 124 A61 11 0 0 0 189 124"/>' +
     '<rect x="136" y="116" width="36" height="36" rx="5" transform="rotate(18 154 134)"/>' +
     '<rect x="100" y="134" width="30" height="30" rx="5" transform="rotate(-14 115 149)"/>',
+
+  /* Cin: viski bardağından biraz uzun ve dik; üç buz, tonik kabarcığı. */
+  'tumbler-gin':
+    '<ellipse cx="128" cy="52" rx="54" ry="10"/>' +
+    '<path d="M74 52 L80 208 M182 52 L176 208"/>' +
+    '<path d="M80 208 A48 9 0 0 0 176 208"/>' +
+    '<path d="M79 192 A49 8 0 0 0 177 192"/>' +
+    '<path d="M76 96 A52 10 0 0 0 180 96"/>' +
+    '<rect x="98" y="106" width="30" height="30" rx="5" transform="rotate(-12 113 121)"/>' +
+    '<rect x="134" y="118" width="28" height="28" rx="5" transform="rotate(16 148 132)"/>' +
+    '<rect x="106" y="144" width="28" height="28" rx="5" transform="rotate(8 120 158)"/>' +
+    '<circle cx="156" cy="166" r="4"/>' +
+    '<circle cx="146" cy="180" r="3"/>',
+
+  /* Rom: buzsuz. Viski bardağından alçak ve geniş, kalın taban,
+     dipte az bir dolum. */
+  'tumbler-rum':
+    '<ellipse cx="128" cy="96" rx="68" ry="12"/>' +
+    '<path d="M60 96 L68 204 M196 96 L188 204"/>' +
+    '<path d="M68 204 A60 10 0 0 0 188 204"/>' +
+    '<path d="M69 178 A59 9 0 0 0 187 178"/>' +
+    '<path d="M65 150 A63 11 0 0 0 191 150"/>' +
+    '<path d="M80 116 L84 164"/>',
 
   /* Rakı bardağı: uzun, düz; dalgalı yüzey, tek buz. */
   highball:

@@ -1,10 +1,11 @@
 /* ============================================================
    LEO LOUNGE — menü sayfalarının davranış katmanı.
 
-   Dört iş var, dördü de menüye ait:
+   Beş iş var, beşi de menüye ait:
      1  büyük görünüm — fotoğrafa tıklayınca (§1)
      2  eksik kare    — CDN şemanın gerisindeyse (§2)
      3  geri tuşu     — doğrudan açılan kategori sayfası (§3)
+     3b üst bar Menü  — önceki kayıt ızgaraysa geri adım (§3b)
      4  dönüş konumu  — ızgara, açılan kartın hizasında (§4)
 
    cafe-leo'nun app.ts'inde bunlardan başka scroll spy, öneri şeridi,
@@ -222,29 +223,85 @@ function missingShots(): void {
 
    Adres `data-back`'ten okunuyor — yol sayfada bir kez yazılı,
    burada ikinci kez değil.
+
+   ÜÇÜNCÜ TUZAK (22 Eylül, telefonda): dokunmatikte `pointerdown`
+   ve kaydırmayı bitiren `touchend` etkileşim SAYILMIYOR (fareninki
+   sayılıyor — masaüstünde hata görünmüyordu). Kayıt etkileşimden önce
+   ekleniyor, Chrome ızgara kaydını atlanacak diye işaretliyordu: geri
+   tuşu ızgaraya dönmüyor, sayfada takılıyordu. Artık olaya değil
+   `userActivation`'ın kendisine bakılıyor; etkileşim gelene kadar
+   beklemeye devam ediliyor.
+
+   Yerleştirilen kayıtlar `leoBack` taşıyor: aynı kayda ikinci kez
+   yerleştirme yapılmasın, üst bardaki "Menü" de geri adım atabilsin
+   (§3b).
    ============================================================ */
 
-type RouterState = { index?: number } | null;
+type RouterState = { index?: number; leoBack?: true } | null;
 
-/** Kullanıcı etkileşimi sayılan olaylar (HTML "activation-triggering"). */
-const ACTIVATION = ['pointerdown', 'touchend', 'keydown', 'mousedown'] as const;
+/** Etkileşimi tamamlayabilecek olaylar; asıl ölçü userActivation. */
+const ACTIVATION = ['pointerup', 'touchend', 'click', 'keydown'] as const;
+
+const active = (): boolean =>
+  // userActivation yoksa (eski Safari) atlama önlemi de yok
+  !navigator.userActivation || navigator.userActivation.hasBeenActive;
 
 function backstop(): void {
   const el = document.querySelector<HTMLElement>('[data-back]');
   const to = el?.dataset['back'];
-  if (!to || (history.state as RouterState)?.index) return;
+  const st = history.state as RouterState;
+  if (!to || st?.index || st?.leoBack) return;
 
   const here = location.href;
-  const plant = () => {
+  const stop = () => {
     for (const ev of ACTIVATION) removeEventListener(ev, plant, true);
+  };
+  const plant = () => {
     // bu arada başka sayfaya geçildiyse (ClientRouter) iş bitmiş demek
-    if (location.href !== here || (history.state as RouterState)?.index) return;
-    history.replaceState({ index: 0, scrollX: 0, scrollY: 0 }, '', to);
-    history.pushState({ index: 1, scrollX, scrollY }, '', here);
+    const now = history.state as RouterState;
+    if (location.href !== here || now?.index || now?.leoBack) return stop();
+    if (!active()) return; // kaydırma dokunuşu — gerçek etkileşimi bekle
+    stop();
+    history.replaceState({ index: 0, scrollX: 0, scrollY: 0, leoBack: true }, '', to);
+    history.pushState({ index: 1, scrollX, scrollY, leoBack: true }, '', here);
   };
 
-  if (navigator.userActivation?.hasBeenActive) plant();
+  if (active()) plant();
   else for (const ev of ACTIVATION) addEventListener(ev, plant, { capture: true, passive: true });
+}
+
+/* ============================================================
+   3b — ÜST BARDAKİ "MENÜ"
+
+   Bağlantı ileri gezinme: ızgara → kategori → Menü → kategori → Menü
+   geçmişe her seferinde yeni kayıt ekliyordu. Geri tuşu sonra aynı
+   iki sayfa arasında gidip geliyor, ziyaretçi "hep aynı sayfaya
+   dönüyor" diye görüyordu (22 Eylül). Bir önceki kayıt zaten ızgaraysa
+   bağlantı yeni kayıt açmıyor, geri adım atıyor.
+
+   Önceki kaydın ızgara olduğu iki durumda biliniyor: bu sayfaya
+   ızgaradan gelindi (ileri ya da geri), ya da §3 ızgarayı altına
+   yerleştirdi. Başka her durumda bağlantı normal çalışıyor.
+   ============================================================ */
+
+let prevPath = '';
+const trim = (p: string) => p.replace(/\/+$/, '');
+
+function barBack(): void {
+  const from = prevPath;
+  prevPath = location.pathname;
+
+  const link = document.querySelector<HTMLAnchorElement>('.bar-back');
+  if (!link) return;
+  const grid = trim(new URL(link.href).pathname);
+
+  link.addEventListener('click', (e) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const onTop = (history.state as RouterState)?.leoBack || (from && trim(from) === grid);
+    if (!onTop) return;
+    e.preventDefault(); // ClientRouter itmesin
+    history.back();
+  });
 }
 
 /* ============================================================
@@ -292,6 +349,7 @@ function boot(): void {
   missingShots();
   lightbox();
   backstop();
+  barBack();
   returnPoint();
 }
 
