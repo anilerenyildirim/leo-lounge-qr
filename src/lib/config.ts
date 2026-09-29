@@ -41,7 +41,10 @@ export const NO_PHOTO: string[] = [
   /* Kokteyller: 23 üründen 14'ünün karesi qrall'da duruyor ama
      CDN'e taşınmadı; bugün elimizde dosya YOK. Dosyalar gelince
      karar yeniden verilecek — 14/23 yarım grup olduğu için önce
-     eksik 9 kare çekilmeli, yoksa burada kalmalı. */
+     eksik 9 kare çekilmeli, yoksa burada kalmalı.
+     İmza kokteyller 29 Eylül'den beri veride ayrı grup; karar ikisi
+     için aynı. */
+  'imza-kokteyller',
   'kokteyller',
 ];
 

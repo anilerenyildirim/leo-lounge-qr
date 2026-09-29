@@ -1,7 +1,13 @@
 # tools — menü verisi üreteci
 
-`src/data/menu.json` ELLE DÜZENLENMEZ. Kaynağı Lounge'un eski QR
-menüsü (qrall.co) ve bu klasördeki üreteç.
+> **Emekli (29 Eylül 2026).** `src/data/menu.json`'un kaynağı artık
+> **panel** (`panel.onlinemenu-qr.com`, kiracı `leo-lounge`). Menü
+> panelden düzenlenir, "Yayınla" dosyayı bu depoya commit'ler. Üreteç
+> kilitli: koşarsa paneldeki düzenlemeleri ve 24 bölümlük okuma
+> düzenini ezerdi. Aşağısı tarihsel kayıt — ilk verinin nereden geldiği.
+
+`src/data/menu.json` ELLE DÜZENLENMEZ. İlk kaynağı Lounge'un eski QR
+menüsü (qrall.co) ve bu klasördeki üreteçti.
 
 ## Kullanım
 

@@ -32,9 +32,9 @@
       "featured": [],
       "sections": [
         {
-          "slug": "yiyecekler",
+          "slug": "aperatifler",
           "name": {
-            "tr": "Yiyecekler"
+            "tr": "Aperatifler"
           },
           "vat": 10,
           "subsections": [
@@ -90,7 +90,16 @@
                   "note": "kaynak: \"APERATİF SEPETİ 4 KİŞİLİK\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "salatalar",
+          "name": {
+            "tr": "Salatalar"
+          },
+          "vat": 10,
+          "subsections": [
             {
               "slug": "salatalar",
               "name": {
@@ -174,7 +183,103 @@
                   "note": "kaynak: \"BURRATA PEYNİRLİ SALATA\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "bowllar",
+          "name": {
+            "tr": "Bowllar"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "bowllar",
+              "name": {
+                "tr": "Bowllar"
+              },
+              "icon": "bonfile-bowl",
+              "items": [
+                {
+                  "slug": "bonfile-bowl",
+                  "name": {
+                    "tr": "Bonfile Bowl"
+                  },
+                  "price": 82000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"BONFİLE BOWL\""
+                },
+                {
+                  "slug": "tavuklu-bowl",
+                  "name": {
+                    "tr": "Tavuklu Bowl"
+                  },
+                  "price": 74000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"TAVUKLU BOWL\""
+                },
+                {
+                  "slug": "karidesli-bowl",
+                  "name": {
+                    "tr": "Karidesli Bowl"
+                  },
+                  "price": 92000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"KARİDESLİ BOWL\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "sushi",
+          "name": {
+            "tr": "Sushi"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "sushi",
+              "name": {
+                "tr": "Sushi"
+              },
+              "icon": "leo-sushi",
+              "items": [
+                {
+                  "slug": "leo-sushi",
+                  "name": {
+                    "tr": "Leo Sushi"
+                  },
+                  "description": {
+                    "tr": "Tempura karides, avakado, philadellpia peyniri, salatalık, kibrit patates, havyar"
+                  },
+                  "price": 87000,
+                  "photo": {
+                    "w": 1200,
+                    "h": 800
+                  },
+                  "note": "kaynak: \"LEO SUSHİ\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "makarnalar",
+          "name": {
+            "tr": "Makarnalar"
+          },
+          "vat": 10,
+          "subsections": [
             {
               "slug": "makarnalar",
               "name": {
@@ -273,7 +378,16 @@
                   "note": "TEYİT: \"Arabiata\" — İtalyanca yazımı \"Arrabbiata\". | kaynak: \"PENNE ARABİATA\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "pizzalar",
+          "name": {
+            "tr": "Pizzalar"
+          },
+          "vat": 10,
+          "subsections": [
             {
               "slug": "pizzalar",
               "name": {
@@ -369,7 +483,16 @@
                   "note": "kaynak: \"4 PEYNİRLİ PİZZA\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "burgerler",
+          "name": {
+            "tr": "Burgerler"
+          },
+          "vat": 10,
+          "subsections": [
             {
               "slug": "burgerler",
               "name": {
@@ -453,52 +576,16 @@
                   "note": "TEYİT: \"Clup\" — muhtemelen \"Club\". | kaynak: \"CLUP SANDVİÇ\""
                 }
               ]
-            },
-            {
-              "slug": "bowllar",
-              "name": {
-                "tr": "Bowllar"
-              },
-              "icon": "bonfile-bowl",
-              "items": [
-                {
-                  "slug": "bonfile-bowl",
-                  "name": {
-                    "tr": "Bonfile Bowl"
-                  },
-                  "price": 82000,
-                  "photo": {
-                    "w": 1200,
-                    "h": 800
-                  },
-                  "note": "kaynak: \"BONFİLE BOWL\""
-                },
-                {
-                  "slug": "tavuklu-bowl",
-                  "name": {
-                    "tr": "Tavuklu Bowl"
-                  },
-                  "price": 74000,
-                  "photo": {
-                    "w": 1200,
-                    "h": 800
-                  },
-                  "note": "kaynak: \"TAVUKLU BOWL\""
-                },
-                {
-                  "slug": "karidesli-bowl",
-                  "name": {
-                    "tr": "Karidesli Bowl"
-                  },
-                  "price": 92000,
-                  "photo": {
-                    "w": 1200,
-                    "h": 800
-                  },
-                  "note": "kaynak: \"KARİDESLİ BOWL\""
-                }
-              ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "ana-yemekler",
+          "name": {
+            "tr": "Ana Yemekler"
+          },
+          "vat": 10,
+          "subsections": [
             {
               "slug": "ana-yemekler",
               "name": {
@@ -579,42 +666,142 @@
                   "note": "kaynak: \"IZGARA KARİDES\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "cerez",
+          "name": {
+            "tr": "Çerez"
+          },
+          "vat": 10,
+          "subsections": [
             {
-              "slug": "sushi",
+              "slug": "cerez",
               "name": {
-                "tr": "Sushi"
+                "tr": "Çerez"
               },
-              "icon": "leo-sushi",
               "items": [
                 {
-                  "slug": "leo-sushi",
+                  "slug": "yer-fistigi",
                   "name": {
-                    "tr": "Leo Sushi"
+                    "tr": "Yer Fıstığı"
                   },
-                  "description": {
-                    "tr": "Tempura karides, avakado, philadellpia peyniri, salatalık, kibrit patates, havyar"
+                  "price": 20000,
+                  "photo": null,
+                  "note": "kaynak: \"YER FISTIĞI\""
+                },
+                {
+                  "slug": "cips",
+                  "name": {
+                    "tr": "Cips"
                   },
-                  "price": 87000,
-                  "photo": {
-                    "w": 1200,
-                    "h": 800
+                  "price": 22000,
+                  "photo": null,
+                  "note": "kaynak: \"CİPS\""
+                },
+                {
+                  "slug": "lux-karisik",
+                  "name": {
+                    "tr": "Lux Karışık"
                   },
-                  "note": "kaynak: \"LEO SUSHİ\""
+                  "price": 28000,
+                  "photo": null,
+                  "note": "kaynak: \"LUX KARIŞIK\""
+                },
+                {
+                  "slug": "zeytin",
+                  "name": {
+                    "tr": "Zeytin"
+                  },
+                  "price": 20000,
+                  "photo": null,
+                  "note": "kaynak: \"ZEYTİN\""
                 }
               ]
             }
           ]
         },
         {
-          "slug": "kokteyller",
+          "slug": "meyve-ve-meze",
           "name": {
-            "tr": "Kokteyller"
+            "tr": "Meyve & Meze"
           },
           "vat": 10,
           "subsections": [
             {
-              "slug": "kokteyller",
+              "slug": "meyve-ve-meze",
+              "name": {
+                "tr": "Meyve & Meze"
+              },
+              "items": [
+                {
+                  "slug": "raki-tabagi-4-kisilik",
+                  "name": {
+                    "tr": "Rakı Tabağı 4 Kişilik"
+                  },
+                  "price": 125000,
+                  "photo": null,
+                  "note": "kaynak: \"RAKI TABAĞI 4 KİŞİLİK\""
+                },
+                {
+                  "slug": "raki-tabagi-2-kisilik",
+                  "name": {
+                    "tr": "Rakı Tabağı 2 Kişilik"
+                  },
+                  "price": 87000,
+                  "photo": null,
+                  "note": "kaynak: \"RAKI TABAĞI 2 KİŞİLİK\""
+                },
+                {
+                  "slug": "kuru-et",
+                  "name": {
+                    "tr": "Kuru Et"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"KURU ET\""
+                },
+                {
+                  "slug": "peynir-tabagi",
+                  "name": {
+                    "tr": "Peynir Tabağı"
+                  },
+                  "price": 98000,
+                  "photo": null,
+                  "note": "kaynak: \"PEYNİR TABAĞI\""
+                },
+                {
+                  "slug": "meyve-tabagi-kucuk",
+                  "name": {
+                    "tr": "Meyve Tabağı Küçük"
+                  },
+                  "price": 64000,
+                  "photo": null,
+                  "note": "kaynak: \"MEYVE TABAĞI KÜÇÜK\""
+                },
+                {
+                  "slug": "meyve-tabagi-buyuk",
+                  "name": {
+                    "tr": "Meyve Tabağı Büyük"
+                  },
+                  "price": 85000,
+                  "photo": null,
+                  "note": "kaynak: \"MEYVE TABAĞI BÜYÜK\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "imza-kokteyller",
+          "name": {
+            "tr": "İmza Kokteyller"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "imza-kokteyller",
               "name": {
                 "tr": "Kokteyller"
               },
@@ -643,6 +830,107 @@
                   "photo": null,
                   "note": "kaynak: \"GREEN GARDEN\""
                 },
+                {
+                  "slug": "secret-of-aegan",
+                  "name": {
+                    "tr": "Secret of Aegan"
+                  },
+                  "description": {
+                    "tr": "Ouzo, Cin, Damla Sakızı Likörü, Fesleğen"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "TEYİT: \"Aegan\" — muhtemelen \"Aegean\". | kaynak: \"SECRET OF AEGAN\""
+                },
+                {
+                  "slug": "the-alchemist",
+                  "name": {
+                    "tr": "The Alchemist"
+                  },
+                  "description": {
+                    "tr": "Keçiboynuzu Pekmezi, Kakao Bitters, Portakal Bitters, Angoustra Bitters, Rum Blend"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"THE ALCHEMİST\""
+                },
+                {
+                  "slug": "herbarium",
+                  "name": {
+                    "tr": "Herbarium"
+                  },
+                  "description": {
+                    "tr": "Kuru kırmızı meyveler ile demlenmiş cin, Lemon Oleo Saccharum, Şeker, Vişne Likörü"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"HERBARİUM\""
+                },
+                {
+                  "slug": "peach-and-ash",
+                  "name": {
+                    "tr": "Peach and Ash"
+                  },
+                  "description": {
+                    "tr": "Anejo tekila, Kayısı Reçeli, Campari, Lime, Şeker"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"PEACH AND ASH\""
+                },
+                {
+                  "slug": "leo-pink",
+                  "name": {
+                    "tr": "Leo Pink"
+                  },
+                  "description": {
+                    "tr": "Gordon's Dry Gin, Aperol, Cointreau, Şeker Şurubu, Limon suyu"
+                  },
+                  "price": 85000,
+                  "photo": null,
+                  "note": "kaynak: \"LEO PİNK\""
+                },
+                {
+                  "slug": "tropikal",
+                  "name": {
+                    "tr": "Tropikal"
+                  },
+                  "description": {
+                    "tr": "Olmeca Altos Reposado Tequila, Cointreau, Galliano, Hibiskus, Portakal Suyu, Lime Suyu"
+                  },
+                  "price": 75000,
+                  "photo": null,
+                  "note": "kaynak: \"TROPİKAL\""
+                },
+                {
+                  "slug": "alexia",
+                  "name": {
+                    "tr": "Alexia"
+                  },
+                  "description": {
+                    "tr": "Zacapa 23, Potakal likörü, Passion likörü, Fesleğen, Passion püresi, Nohut suyu, Lime"
+                  },
+                  "price": 80000,
+                  "photo": null,
+                  "note": "TEYİT: açıklamada \"POTAKAL\" — doğrusu \"Portakal\". | kaynak: \"ALEXİA\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "kokteyller",
+          "name": {
+            "tr": "Kokteyller"
+          },
+          "vat": 10,
+          "subsections": [
+            {
+              "slug": "kokteyller",
+              "name": {
+                "tr": "Kokteyller"
+              },
+              "items": [
                 {
                   "slug": "negroni",
                   "name": {
@@ -740,54 +1028,6 @@
                   "note": "kaynak: \"MOJİTO\""
                 },
                 {
-                  "slug": "secret-of-aegan",
-                  "name": {
-                    "tr": "Secret of Aegan"
-                  },
-                  "description": {
-                    "tr": "Ouzo, Cin, Damla Sakızı Likörü, Fesleğen"
-                  },
-                  "price": 75000,
-                  "photo": null,
-                  "note": "TEYİT: \"Aegan\" — muhtemelen \"Aegean\". | kaynak: \"SECRET OF AEGAN\""
-                },
-                {
-                  "slug": "the-alchemist",
-                  "name": {
-                    "tr": "The Alchemist"
-                  },
-                  "description": {
-                    "tr": "Keçiboynuzu Pekmezi, Kakao Bitters, Portakal Bitters, Angoustra Bitters, Rum Blend"
-                  },
-                  "price": 75000,
-                  "photo": null,
-                  "note": "kaynak: \"THE ALCHEMİST\""
-                },
-                {
-                  "slug": "herbarium",
-                  "name": {
-                    "tr": "Herbarium"
-                  },
-                  "description": {
-                    "tr": "Kuru kırmızı meyveler ile demlenmiş cin, Lemon Oleo Saccharum, Şeker, Vişne Likörü"
-                  },
-                  "price": 75000,
-                  "photo": null,
-                  "note": "kaynak: \"HERBARİUM\""
-                },
-                {
-                  "slug": "peach-and-ash",
-                  "name": {
-                    "tr": "Peach and Ash"
-                  },
-                  "description": {
-                    "tr": "Anejo tekila, Kayısı Reçeli, Campari, Lime, Şeker"
-                  },
-                  "price": 75000,
-                  "photo": null,
-                  "note": "kaynak: \"PEACH AND ASH\""
-                },
-                {
                   "slug": "long-island",
                   "name": {
                     "tr": "Long Island"
@@ -815,30 +1055,6 @@
                   "price": 65000,
                   "photo": null,
                   "note": "kaynak: \"APEROL SPRİTZ\""
-                },
-                {
-                  "slug": "leo-pink",
-                  "name": {
-                    "tr": "Leo Pink"
-                  },
-                  "description": {
-                    "tr": "Gordon's Dry Gin, Aperol, Cointreau, Şeker Şurubu, Limon suyu"
-                  },
-                  "price": 85000,
-                  "photo": null,
-                  "note": "kaynak: \"LEO PİNK\""
-                },
-                {
-                  "slug": "tropikal",
-                  "name": {
-                    "tr": "Tropikal"
-                  },
-                  "description": {
-                    "tr": "Olmeca Altos Reposado Tequila, Cointreau, Galliano, Hibiskus, Portakal Suyu, Lime Suyu"
-                  },
-                  "price": 75000,
-                  "photo": null,
-                  "note": "kaynak: \"TROPİKAL\""
                 },
                 {
                   "slug": "boulevardier",
@@ -875,27 +1091,541 @@
                   "price": 62000,
                   "photo": null,
                   "note": "TEYİT: \"Blood Mary\" — muhtemelen \"Bloody Mary\". | kaynak: \"BLOOD MARY\""
-                },
-                {
-                  "slug": "alexia",
-                  "name": {
-                    "tr": "Alexia"
-                  },
-                  "description": {
-                    "tr": "Zacapa 23, Potakal likörü, Passion likörü, Fesleğen, Passion püresi, Nohut suyu, Lime"
-                  },
-                  "price": 80000,
-                  "photo": null,
-                  "note": "TEYİT: açıklamada \"POTAKAL\" — doğrusu \"Portakal\". | kaynak: \"ALEXİA\""
                 }
               ]
             }
           ]
         },
         {
-          "slug": "ickiler",
+          "slug": "biralar",
           "name": {
-            "tr": "İçkiler"
+            "tr": "Biralar"
+          },
+          "vat": null,
+          "subsections": [
+            {
+              "slug": "biralar",
+              "name": {
+                "tr": "Biralar"
+              },
+              "items": [
+                {
+                  "slug": "efes-malt",
+                  "name": {
+                    "tr": "Efes Malt"
+                  },
+                  "price": 29000,
+                  "photo": null,
+                  "note": "kaynak: \"EFES MALT\""
+                },
+                {
+                  "slug": "corona",
+                  "name": {
+                    "tr": "Corona"
+                  },
+                  "price": 43000,
+                  "photo": null,
+                  "note": "kaynak: \"CORONA\""
+                },
+                {
+                  "slug": "efes-glutensiz",
+                  "name": {
+                    "tr": "Efes Glütensiz"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"EFES GLÜTENSİZ\""
+                },
+                {
+                  "slug": "guinnes",
+                  "name": {
+                    "tr": "Guinnes"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"GUINNES\""
+                },
+                {
+                  "slug": "carlsberg-sise-50cl",
+                  "name": {
+                    "tr": "Carlsberg Şişe 50cl"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG ŞİŞE 50CL\""
+                },
+                {
+                  "slug": "bud",
+                  "name": {
+                    "tr": "Bud"
+                  },
+                  "price": 36000,
+                  "photo": null,
+                  "note": "kaynak: \"BUD\""
+                },
+                {
+                  "slug": "efes-ozel-seri",
+                  "name": {
+                    "tr": "Efes Özel Seri"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"EFES ÖZEL SERİ\""
+                },
+                {
+                  "slug": "miller",
+                  "name": {
+                    "tr": "Miller"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"MİLLER\""
+                },
+                {
+                  "slug": "bomonti",
+                  "name": {
+                    "tr": "Bomonti"
+                  },
+                  "price": 32000,
+                  "photo": null,
+                  "note": "kaynak: \"BOMONTİ\""
+                },
+                {
+                  "slug": "carlsberg-fici-50-cl",
+                  "name": {
+                    "tr": "Carlsberg Fıçı 50 Cl"
+                  },
+                  "price": 30000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG FIÇI 50 CL\""
+                },
+                {
+                  "slug": "carlsberg-fici-33-cl",
+                  "name": {
+                    "tr": "Carlsberg Fıçı 33 Cl"
+                  },
+                  "price": 28000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG FIÇI 33 CL\""
+                },
+                {
+                  "slug": "amsterdam",
+                  "name": {
+                    "tr": "Amsterdam"
+                  },
+                  "price": 44000,
+                  "photo": null,
+                  "note": "kaynak: \"AMSTERDAM\""
+                },
+                {
+                  "slug": "duvel",
+                  "name": {
+                    "tr": "Duvel"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"DUVEL\""
+                },
+                {
+                  "slug": "tuborg-gold",
+                  "name": {
+                    "tr": "Tuborg Gold"
+                  },
+                  "price": 35000,
+                  "photo": null,
+                  "note": "kaynak: \"TUBORG GOLD\""
+                },
+                {
+                  "slug": "frederik-yakima-ipa",
+                  "name": {
+                    "tr": "Frederik Yakima IPA"
+                  },
+                  "price": 48500,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK YAKIMA IPA\""
+                },
+                {
+                  "slug": "frederik-local",
+                  "name": {
+                    "tr": "Frederik Local"
+                  },
+                  "price": 42000,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK LOCAL\""
+                },
+                {
+                  "slug": "frederik-tropic-ipa",
+                  "name": {
+                    "tr": "Frederik Tropic İpa"
+                  },
+                  "price": 42000,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK TROPİC İPA\""
+                },
+                {
+                  "slug": "heineken",
+                  "name": {
+                    "tr": "Heineken"
+                  },
+                  "price": 43000,
+                  "photo": null,
+                  "note": "kaynak: \"HEİNEKEN\""
+                },
+                {
+                  "slug": "hoegaarden",
+                  "name": {
+                    "tr": "Hoegaarden"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"HOEGAARDEN\""
+                },
+                {
+                  "slug": "frederik-brown-ale",
+                  "name": {
+                    "tr": "Frederik Brown Ale"
+                  },
+                  "price": 42000,
+                  "photo": null,
+                  "note": "kaynak: \"FREDERİK BROWN ALE\""
+                },
+                {
+                  "slug": "tuborg-ice-33-cl",
+                  "name": {
+                    "tr": "Tuborg İce 33 Cl"
+                  },
+                  "price": 33000,
+                  "photo": null,
+                  "note": "kaynak: \"TUBORG İCE 33 CL\""
+                },
+                {
+                  "slug": "blanc-33-cl",
+                  "name": {
+                    "tr": "Blanc 33 Cl"
+                  },
+                  "price": 45000,
+                  "photo": null,
+                  "note": "kaynak: \"BLANC 33 CL\""
+                },
+                {
+                  "slug": "carlsberg-luna",
+                  "name": {
+                    "tr": "Carlsberg Luna"
+                  },
+                  "price": 39000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG LUNA\""
+                },
+                {
+                  "slug": "carlsberg-elephant",
+                  "name": {
+                    "tr": "Carlsberg Elephant"
+                  },
+                  "price": 46000,
+                  "photo": null,
+                  "note": "kaynak: \"CARLSBERG ELEPHANT\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "saraplar",
+          "name": {
+            "tr": "Şaraplar"
+          },
+          "vat": null,
+          "subsections": [
+            {
+              "slug": "saraplar",
+              "name": {
+                "tr": "Şaraplar"
+              },
+              "items": [
+                {
+                  "slug": "dlc-okuzgozu-kadeh",
+                  "name": {
+                    "tr": "DLC Öküzgözü (Kadeh)"
+                  },
+                  "description": {
+                    "tr": "Doğu Anadolu, Türkiye"
+                  },
+                  "price": 64000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC ÖKÜZGÖZÜ (KADEH)\""
+                },
+                {
+                  "slug": "dlc-okuzgozu-sise",
+                  "name": {
+                    "tr": "DLC Öküzgözü (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Doğu Anadolu, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC ÖKÜZGÖZÜ / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-sultaniye-emir-kadeh",
+                  "name": {
+                    "tr": "DLC Sultaniye - Emir (Kadeh)"
+                  },
+                  "description": {
+                    "tr": "Ege, Kapadokya, Türkiye"
+                  },
+                  "price": 64000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SULTANİYE - EMİR (KADEH)\""
+                },
+                {
+                  "slug": "dlc-sultaniye-emir-sise",
+                  "name": {
+                    "tr": "DLC Sultaniye - Emir (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Ege, Kapadokya, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SULTANİYE - EMİR / ŞİŞE\""
+                },
+                {
+                  "slug": "mateus-rose-kadeh",
+                  "name": {
+                    "tr": "Mateus Rose (Kadeh)"
+                  },
+                  "description": {
+                    "tr": "Portugal's Rose"
+                  },
+                  "price": 57000,
+                  "photo": null,
+                  "note": "kaynak: \"MATEUS ROSE (KADEH)\""
+                },
+                {
+                  "slug": "dlc-bogazkere-sise",
+                  "name": {
+                    "tr": "DLC Boğazkere (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Türkiye, Güneydoğu Anadolu, Ege"
+                  },
+                  "price": 297000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC BOĞAZKERE / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-cabernet-sauvignon-merlot-sise",
+                  "name": {
+                    "tr": "DLC Cabernet Sauvignon - Merlot (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Türkiye, Trakya"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC CABERNET SAUVİGNON - MERLOT / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-grenache-sise",
+                  "name": {
+                    "tr": "DLC Grenache (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Türkiye, Saros"
+                  },
+                  "price": 374000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC GRENACHE / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-kalecik-karasi-sise",
+                  "name": {
+                    "tr": "DLC Kalecik Karası (Şişe)"
+                  },
+                  "description": {
+                    "tr": "İç Anadolu, Türkiye"
+                  },
+                  "price": 385000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC KALECİK KARASI / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-moskado-sise",
+                  "name": {
+                    "tr": "DLC Moskado (Şişe)"
+                  },
+                  "description": {
+                    "tr": "İzmir, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "TEYİT: \"Moskado\" — üzüm adının yazımı \"Moscato\". | kaynak: \"DLC MOSKADO / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-narince-sise",
+                  "name": {
+                    "tr": "DLC Narince (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Tokat, Türkiye"
+                  },
+                  "price": 375000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC NARİNCE / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-sauvignon-blanc-sise",
+                  "name": {
+                    "tr": "DLC Sauvignon Blanc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Trakya, Türkiye"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SAUVİGNON BLANC / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-shiraz-sise",
+                  "name": {
+                    "tr": "DLC Shiraz (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Ege, Türkiye"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SHİRAZ / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-cabernet-sauvignon-sise",
+                  "name": {
+                    "tr": "Sarafin Cabernet Sauvignon (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN CABERNET SAUVİGNON / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-chardonnay-sise",
+                  "name": {
+                    "tr": "Sarafin Chardonnay (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN CHARDONNAY / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-fume-blanc-sise",
+                  "name": {
+                    "tr": "Sarafin Fume Blanc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "TEYİT: kaynakta \"FUME\" — doğrusu \"Fumé Blanc\". | kaynak: \"SARAFİN FUME BLANC / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-merlot-sise",
+                  "name": {
+                    "tr": "Sarafin Merlot (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN MERLOT / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-merlot-cabernet-franc-sise",
+                  "name": {
+                    "tr": "Sarafin Merlot - Cabernet Franc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 473000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN MERLOT - CABERNET FRANC / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-sauvignon-blanc-sise",
+                  "name": {
+                    "tr": "Sarafin Sauvignon Blanc (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 473000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN SAUVİGNON BLANC / ŞİŞE\""
+                },
+                {
+                  "slug": "sarafin-shiraz-sise",
+                  "name": {
+                    "tr": "Sarafin Shiraz (Şişe)"
+                  },
+                  "description": {
+                    "tr": "Saros, Türkiye"
+                  },
+                  "price": 500000,
+                  "photo": null,
+                  "note": "kaynak: \"SARAFİN SHİRAZ / ŞİŞE\""
+                },
+                {
+                  "slug": "dlc-shiraz",
+                  "name": {
+                    "tr": "DLC Shiraz"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DLC SHİRAZ\""
+                },
+                {
+                  "slug": "sampanya",
+                  "name": {
+                    "tr": "Şampanya"
+                  },
+                  "price": 275000,
+                  "photo": null,
+                  "note": "kaynak: \"ŞAMPANYA\""
+                },
+                {
+                  "slug": "alpaca-chile-rose",
+                  "name": {
+                    "tr": "Alpaca (Chile) Rose"
+                  },
+                  "price": 352000,
+                  "photo": null,
+                  "note": "kaynak: \"ALPACA(CHİLE) ROSE\""
+                },
+                {
+                  "slug": "dugladze-saperavi-kirmizi",
+                  "name": {
+                    "tr": "Dugladze Saperavi Kırmızı"
+                  },
+                  "price": 396000,
+                  "photo": null,
+                  "note": "kaynak: \"DUGLADZE SAPERAVI KIRMIZI\""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "viskiler",
+          "name": {
+            "tr": "Viskiler"
           },
           "vat": null,
           "subsections": [
@@ -1248,7 +1978,16 @@
                   "note": "TEYİT: \"Hennesy\" — markanın yazımı \"Hennessy\". | kaynak: \"HENNESY VSOP\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "viski-siseler",
+          "name": {
+            "tr": "Viski Şişeler"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "viski-siseler",
               "name": {
@@ -1400,7 +2139,16 @@
                   "note": "kaynak: \"BLACK LABEL 35 CL\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "cinler",
+          "name": {
+            "tr": "Cinler"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "cinler",
               "name": {
@@ -1498,7 +2246,16 @@
                   "note": "kaynak: \"TANQUARY DOUBLE\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "vodkalar",
+          "name": {
+            "tr": "Vodkalar"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "vodkalar",
               "name": {
@@ -1560,7 +2317,16 @@
                   "note": "kaynak: \"ABSOLUT DOUBLE\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "romlar",
+          "name": {
+            "tr": "Romlar"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "romlar",
               "name": {
@@ -1604,7 +2370,16 @@
                   "note": "kaynak: \"CAPTAİN MORGAN WHİTE\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "raki",
+          "name": {
+            "tr": "Rakı"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "raki",
               "name": {
@@ -1630,7 +2405,16 @@
                   "note": "kaynak: \"DOUBLE RAKI\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "likorler",
+          "name": {
+            "tr": "Likörler"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "likorler",
               "name": {
@@ -1728,7 +2512,16 @@
                   "note": "kaynak: \"JAGERMAİSTER\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "shotlar",
+          "name": {
+            "tr": "Shotlar"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "shotlar",
               "name": {
@@ -1861,7 +2654,16 @@
                   "note": "kaynak: \"VİSKİ SHOT\""
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "slug": "altili-shotlar",
+          "name": {
+            "tr": "6'lı Shotlar"
+          },
+          "vat": null,
+          "subsections": [
             {
               "slug": "altili-shotlar",
               "name": {
@@ -1891,641 +2693,9 @@
           ]
         },
         {
-          "slug": "bira-sarap",
+          "slug": "alkolsuz-icecekler",
           "name": {
-            "tr": "Bira & Şarap"
-          },
-          "vat": null,
-          "subsections": [
-            {
-              "slug": "biralar",
-              "name": {
-                "tr": "Biralar"
-              },
-              "items": [
-                {
-                  "slug": "efes-malt",
-                  "name": {
-                    "tr": "Efes Malt"
-                  },
-                  "price": 29000,
-                  "photo": null,
-                  "note": "kaynak: \"EFES MALT\""
-                },
-                {
-                  "slug": "corona",
-                  "name": {
-                    "tr": "Corona"
-                  },
-                  "price": 43000,
-                  "photo": null,
-                  "note": "kaynak: \"CORONA\""
-                },
-                {
-                  "slug": "efes-glutensiz",
-                  "name": {
-                    "tr": "Efes Glütensiz"
-                  },
-                  "price": 39000,
-                  "photo": null,
-                  "note": "kaynak: \"EFES GLÜTENSİZ\""
-                },
-                {
-                  "slug": "guinnes",
-                  "name": {
-                    "tr": "Guinnes"
-                  },
-                  "price": 45000,
-                  "photo": null,
-                  "note": "kaynak: \"GUINNES\""
-                },
-                {
-                  "slug": "carlsberg-sise-50cl",
-                  "name": {
-                    "tr": "Carlsberg Şişe 50cl"
-                  },
-                  "price": 35000,
-                  "photo": null,
-                  "note": "kaynak: \"CARLSBERG ŞİŞE 50CL\""
-                },
-                {
-                  "slug": "bud",
-                  "name": {
-                    "tr": "Bud"
-                  },
-                  "price": 36000,
-                  "photo": null,
-                  "note": "kaynak: \"BUD\""
-                },
-                {
-                  "slug": "efes-ozel-seri",
-                  "name": {
-                    "tr": "Efes Özel Seri"
-                  },
-                  "price": 35000,
-                  "photo": null,
-                  "note": "kaynak: \"EFES ÖZEL SERİ\""
-                },
-                {
-                  "slug": "miller",
-                  "name": {
-                    "tr": "Miller"
-                  },
-                  "price": 35000,
-                  "photo": null,
-                  "note": "kaynak: \"MİLLER\""
-                },
-                {
-                  "slug": "bomonti",
-                  "name": {
-                    "tr": "Bomonti"
-                  },
-                  "price": 32000,
-                  "photo": null,
-                  "note": "kaynak: \"BOMONTİ\""
-                },
-                {
-                  "slug": "carlsberg-fici-50-cl",
-                  "name": {
-                    "tr": "Carlsberg Fıçı 50 Cl"
-                  },
-                  "price": 30000,
-                  "photo": null,
-                  "note": "kaynak: \"CARLSBERG FIÇI 50 CL\""
-                },
-                {
-                  "slug": "carlsberg-fici-33-cl",
-                  "name": {
-                    "tr": "Carlsberg Fıçı 33 Cl"
-                  },
-                  "price": 28000,
-                  "photo": null,
-                  "note": "kaynak: \"CARLSBERG FIÇI 33 CL\""
-                },
-                {
-                  "slug": "amsterdam",
-                  "name": {
-                    "tr": "Amsterdam"
-                  },
-                  "price": 44000,
-                  "photo": null,
-                  "note": "kaynak: \"AMSTERDAM\""
-                },
-                {
-                  "slug": "duvel",
-                  "name": {
-                    "tr": "Duvel"
-                  },
-                  "price": 45000,
-                  "photo": null,
-                  "note": "kaynak: \"DUVEL\""
-                },
-                {
-                  "slug": "tuborg-gold",
-                  "name": {
-                    "tr": "Tuborg Gold"
-                  },
-                  "price": 35000,
-                  "photo": null,
-                  "note": "kaynak: \"TUBORG GOLD\""
-                },
-                {
-                  "slug": "frederik-yakima-ipa",
-                  "name": {
-                    "tr": "Frederik Yakima IPA"
-                  },
-                  "price": 48500,
-                  "photo": null,
-                  "note": "kaynak: \"FREDERİK YAKIMA IPA\""
-                },
-                {
-                  "slug": "frederik-local",
-                  "name": {
-                    "tr": "Frederik Local"
-                  },
-                  "price": 42000,
-                  "photo": null,
-                  "note": "kaynak: \"FREDERİK LOCAL\""
-                },
-                {
-                  "slug": "frederik-tropic-ipa",
-                  "name": {
-                    "tr": "Frederik Tropic İpa"
-                  },
-                  "price": 42000,
-                  "photo": null,
-                  "note": "kaynak: \"FREDERİK TROPİC İPA\""
-                },
-                {
-                  "slug": "heineken",
-                  "name": {
-                    "tr": "Heineken"
-                  },
-                  "price": 43000,
-                  "photo": null,
-                  "note": "kaynak: \"HEİNEKEN\""
-                },
-                {
-                  "slug": "hoegaarden",
-                  "name": {
-                    "tr": "Hoegaarden"
-                  },
-                  "price": 45000,
-                  "photo": null,
-                  "note": "kaynak: \"HOEGAARDEN\""
-                },
-                {
-                  "slug": "frederik-brown-ale",
-                  "name": {
-                    "tr": "Frederik Brown Ale"
-                  },
-                  "price": 42000,
-                  "photo": null,
-                  "note": "kaynak: \"FREDERİK BROWN ALE\""
-                },
-                {
-                  "slug": "tuborg-ice-33-cl",
-                  "name": {
-                    "tr": "Tuborg İce 33 Cl"
-                  },
-                  "price": 33000,
-                  "photo": null,
-                  "note": "kaynak: \"TUBORG İCE 33 CL\""
-                },
-                {
-                  "slug": "blanc-33-cl",
-                  "name": {
-                    "tr": "Blanc 33 Cl"
-                  },
-                  "price": 45000,
-                  "photo": null,
-                  "note": "kaynak: \"BLANC 33 CL\""
-                },
-                {
-                  "slug": "carlsberg-luna",
-                  "name": {
-                    "tr": "Carlsberg Luna"
-                  },
-                  "price": 39000,
-                  "photo": null,
-                  "note": "kaynak: \"CARLSBERG LUNA\""
-                },
-                {
-                  "slug": "carlsberg-elephant",
-                  "name": {
-                    "tr": "Carlsberg Elephant"
-                  },
-                  "price": 46000,
-                  "photo": null,
-                  "note": "kaynak: \"CARLSBERG ELEPHANT\""
-                }
-              ]
-            },
-            {
-              "slug": "saraplar",
-              "name": {
-                "tr": "Şaraplar"
-              },
-              "items": [
-                {
-                  "slug": "dlc-okuzgozu-kadeh",
-                  "name": {
-                    "tr": "DLC Öküzgözü (Kadeh)"
-                  },
-                  "description": {
-                    "tr": "Doğu Anadolu, Türkiye"
-                  },
-                  "price": 64000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC ÖKÜZGÖZÜ (KADEH)\""
-                },
-                {
-                  "slug": "dlc-sultaniye-emir-kadeh",
-                  "name": {
-                    "tr": "DLC Sultaniye - Emir (Kadeh)"
-                  },
-                  "description": {
-                    "tr": "Ege, Kapadokya, Türkiye"
-                  },
-                  "price": 64000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC SULTANİYE - EMİR (KADEH)\""
-                },
-                {
-                  "slug": "mateus-rose-kadeh",
-                  "name": {
-                    "tr": "Mateus Rose (Kadeh)"
-                  },
-                  "description": {
-                    "tr": "Portugal's Rose"
-                  },
-                  "price": 57000,
-                  "photo": null,
-                  "note": "kaynak: \"MATEUS ROSE (KADEH)\""
-                },
-                {
-                  "slug": "dlc-bogazkere-sise",
-                  "name": {
-                    "tr": "DLC Boğazkere (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Türkiye, Güneydoğu Anadolu, Ege"
-                  },
-                  "price": 297000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC BOĞAZKERE / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-cabernet-sauvignon-merlot-sise",
-                  "name": {
-                    "tr": "DLC Cabernet Sauvignon - Merlot (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Türkiye, Trakya"
-                  },
-                  "price": 396000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC CABERNET SAUVİGNON - MERLOT / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-grenache-sise",
-                  "name": {
-                    "tr": "DLC Grenache (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Türkiye, Saros"
-                  },
-                  "price": 374000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC GRENACHE / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-kalecik-karasi-sise",
-                  "name": {
-                    "tr": "DLC Kalecik Karası (Şişe)"
-                  },
-                  "description": {
-                    "tr": "İç Anadolu, Türkiye"
-                  },
-                  "price": 385000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC KALECİK KARASI / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-moskado-sise",
-                  "name": {
-                    "tr": "DLC Moskado (Şişe)"
-                  },
-                  "description": {
-                    "tr": "İzmir, Türkiye"
-                  },
-                  "price": 375000,
-                  "photo": null,
-                  "note": "TEYİT: \"Moskado\" — üzüm adının yazımı \"Moscato\". | kaynak: \"DLC MOSKADO / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-narince-sise",
-                  "name": {
-                    "tr": "DLC Narince (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Tokat, Türkiye"
-                  },
-                  "price": 375000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC NARİNCE / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-sauvignon-blanc-sise",
-                  "name": {
-                    "tr": "DLC Sauvignon Blanc (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Trakya, Türkiye"
-                  },
-                  "price": 396000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC SAUVİGNON BLANC / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-shiraz-sise",
-                  "name": {
-                    "tr": "DLC Shiraz (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Ege, Türkiye"
-                  },
-                  "price": 396000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC SHİRAZ / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-sultaniye-emir-sise",
-                  "name": {
-                    "tr": "DLC Sultaniye - Emir (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Ege, Kapadokya, Türkiye"
-                  },
-                  "price": 375000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC SULTANİYE - EMİR / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-okuzgozu-sise",
-                  "name": {
-                    "tr": "DLC Öküzgözü (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Doğu Anadolu, Türkiye"
-                  },
-                  "price": 375000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC ÖKÜZGÖZÜ / ŞİŞE\""
-                },
-                {
-                  "slug": "sarafin-cabernet-sauvignon-sise",
-                  "name": {
-                    "tr": "Sarafin Cabernet Sauvignon (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Saros, Türkiye"
-                  },
-                  "price": 500000,
-                  "photo": null,
-                  "note": "kaynak: \"SARAFİN CABERNET SAUVİGNON / ŞİŞE\""
-                },
-                {
-                  "slug": "sarafin-chardonnay-sise",
-                  "name": {
-                    "tr": "Sarafin Chardonnay (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Saros, Türkiye"
-                  },
-                  "price": 500000,
-                  "photo": null,
-                  "note": "kaynak: \"SARAFİN CHARDONNAY / ŞİŞE\""
-                },
-                {
-                  "slug": "sarafin-fume-blanc-sise",
-                  "name": {
-                    "tr": "Sarafin Fume Blanc (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Saros, Türkiye"
-                  },
-                  "price": 500000,
-                  "photo": null,
-                  "note": "TEYİT: kaynakta \"FUME\" — doğrusu \"Fumé Blanc\". | kaynak: \"SARAFİN FUME BLANC / ŞİŞE\""
-                },
-                {
-                  "slug": "sarafin-merlot-sise",
-                  "name": {
-                    "tr": "Sarafin Merlot (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Saros, Türkiye"
-                  },
-                  "price": 500000,
-                  "photo": null,
-                  "note": "kaynak: \"SARAFİN MERLOT / ŞİŞE\""
-                },
-                {
-                  "slug": "sarafin-merlot-cabernet-franc-sise",
-                  "name": {
-                    "tr": "Sarafin Merlot - Cabernet Franc (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Saros, Türkiye"
-                  },
-                  "price": 473000,
-                  "photo": null,
-                  "note": "kaynak: \"SARAFİN MERLOT - CABERNET FRANC / ŞİŞE\""
-                },
-                {
-                  "slug": "sarafin-sauvignon-blanc-sise",
-                  "name": {
-                    "tr": "Sarafin Sauvignon Blanc (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Saros, Türkiye"
-                  },
-                  "price": 473000,
-                  "photo": null,
-                  "note": "kaynak: \"SARAFİN SAUVİGNON BLANC / ŞİŞE\""
-                },
-                {
-                  "slug": "sarafin-shiraz-sise",
-                  "name": {
-                    "tr": "Sarafin Shiraz (Şişe)"
-                  },
-                  "description": {
-                    "tr": "Saros, Türkiye"
-                  },
-                  "price": 500000,
-                  "photo": null,
-                  "note": "kaynak: \"SARAFİN SHİRAZ / ŞİŞE\""
-                },
-                {
-                  "slug": "dlc-shiraz",
-                  "name": {
-                    "tr": "DLC Shiraz"
-                  },
-                  "price": 396000,
-                  "photo": null,
-                  "note": "kaynak: \"DLC SHİRAZ\""
-                },
-                {
-                  "slug": "sampanya",
-                  "name": {
-                    "tr": "Şampanya"
-                  },
-                  "price": 275000,
-                  "photo": null,
-                  "note": "kaynak: \"ŞAMPANYA\""
-                },
-                {
-                  "slug": "alpaca-chile-rose",
-                  "name": {
-                    "tr": "Alpaca (Chile) Rose"
-                  },
-                  "price": 352000,
-                  "photo": null,
-                  "note": "kaynak: \"ALPACA(CHİLE) ROSE\""
-                },
-                {
-                  "slug": "dugladze-saperavi-kirmizi",
-                  "name": {
-                    "tr": "Dugladze Saperavi Kırmızı"
-                  },
-                  "price": 396000,
-                  "photo": null,
-                  "note": "kaynak: \"DUGLADZE SAPERAVI KIRMIZI\""
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "slug": "yaninda",
-          "name": {
-            "tr": "Yanında"
-          },
-          "vat": 10,
-          "subsections": [
-            {
-              "slug": "cerez",
-              "name": {
-                "tr": "Çerez"
-              },
-              "items": [
-                {
-                  "slug": "yer-fistigi",
-                  "name": {
-                    "tr": "Yer Fıstığı"
-                  },
-                  "price": 20000,
-                  "photo": null,
-                  "note": "kaynak: \"YER FISTIĞI\""
-                },
-                {
-                  "slug": "cips",
-                  "name": {
-                    "tr": "Cips"
-                  },
-                  "price": 22000,
-                  "photo": null,
-                  "note": "kaynak: \"CİPS\""
-                },
-                {
-                  "slug": "lux-karisik",
-                  "name": {
-                    "tr": "Lux Karışık"
-                  },
-                  "price": 28000,
-                  "photo": null,
-                  "note": "kaynak: \"LUX KARIŞIK\""
-                },
-                {
-                  "slug": "zeytin",
-                  "name": {
-                    "tr": "Zeytin"
-                  },
-                  "price": 20000,
-                  "photo": null,
-                  "note": "kaynak: \"ZEYTİN\""
-                }
-              ]
-            },
-            {
-              "slug": "meyve-ve-meze",
-              "name": {
-                "tr": "Meyve & Meze"
-              },
-              "items": [
-                {
-                  "slug": "raki-tabagi-4-kisilik",
-                  "name": {
-                    "tr": "Rakı Tabağı 4 Kişilik"
-                  },
-                  "price": 125000,
-                  "photo": null,
-                  "note": "kaynak: \"RAKI TABAĞI 4 KİŞİLİK\""
-                },
-                {
-                  "slug": "raki-tabagi-2-kisilik",
-                  "name": {
-                    "tr": "Rakı Tabağı 2 Kişilik"
-                  },
-                  "price": 87000,
-                  "photo": null,
-                  "note": "kaynak: \"RAKI TABAĞI 2 KİŞİLİK\""
-                },
-                {
-                  "slug": "kuru-et",
-                  "name": {
-                    "tr": "Kuru Et"
-                  },
-                  "price": 45000,
-                  "photo": null,
-                  "note": "kaynak: \"KURU ET\""
-                },
-                {
-                  "slug": "peynir-tabagi",
-                  "name": {
-                    "tr": "Peynir Tabağı"
-                  },
-                  "price": 98000,
-                  "photo": null,
-                  "note": "kaynak: \"PEYNİR TABAĞI\""
-                },
-                {
-                  "slug": "meyve-tabagi-kucuk",
-                  "name": {
-                    "tr": "Meyve Tabağı Küçük"
-                  },
-                  "price": 64000,
-                  "photo": null,
-                  "note": "kaynak: \"MEYVE TABAĞI KÜÇÜK\""
-                },
-                {
-                  "slug": "meyve-tabagi-buyuk",
-                  "name": {
-                    "tr": "Meyve Tabağı Büyük"
-                  },
-                  "price": 85000,
-                  "photo": null,
-                  "note": "kaynak: \"MEYVE TABAĞI BÜYÜK\""
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "slug": "alkolsuz",
-          "name": {
-            "tr": "Alkolsüz"
+            "tr": "Alkolsüz İçecekler"
           },
           "vat": 10,
           "subsections": [

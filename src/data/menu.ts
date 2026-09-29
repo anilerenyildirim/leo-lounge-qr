@@ -8,9 +8,10 @@
    panel iki siteyi de yönetecek, o gün iki ayrı şema okuması yazılmak
    zorunda kalınmasın.
 
-   VERİ ELLE YAZILMADI. qrall'daki eski QR menüden (23 kategori, 232
-   ürün) çekildi ve bir üreteçle dönüştürüldü. Kaynak değişirse üreteç
-   yeniden koşturulur; menu.json elle düzenlenmez.
+   VERİ ELLE YAZILMADI. İlk hâli qrall'daki eski QR menüden (23
+   kategori, 232 ürün) bir üreteçle çekildi. 29 Eylül 2026'dan beri
+   kaynağı PANEL: menü orada düzenlenir, yayın bu dosyayı commit'ler.
+   menu.json elle düzenlenmez, üreteç de emekli (tools/README.md).
 
    ŞEMA NOTLARI
    · Metin alanları TEK DİLLİ OLSA DA sözlük: { "tr": "…" }.

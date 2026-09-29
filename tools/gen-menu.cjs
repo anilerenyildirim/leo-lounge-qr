@@ -24,6 +24,17 @@
 const fs = require('fs');
 const path = require('path');
 
+/* EMEKLİ (29 Eylül 2026). menu.json'un kaynağı artık panel
+   (panel.onlinemenu-qr.com, kiracı leo-lounge): menü panelden
+   düzenleniyor, "Yayınla" dosyayı bu depoya commit'liyor. Üreteç bugün
+   koşarsa paneldeki fiyat ve düzenlemeleri, 24 bölümlük okuma düzenini
+   ezer ve eski 6 bölüme döndürür. Yalnız tarihsel kayıt ve qrall
+   verisini yeniden okumak için duruyor. */
+if (process.env.EMEKLI_URETECI_KOSTUR !== '1') {
+  console.error('Bu üreteç emekli: menu.json panelden yönetiliyor (bkz. tools/README.md).');
+  process.exit(1);
+}
+
 const OUT = path.join(__dirname, '..', 'src', 'data', 'menu.json');
 /* Fotoğraf klasörü YEREL ve kişisel — repoya yazılmıyor (repo public).
    Ölçüler dosya başlığından okunduğu için klasör gerekli:
