@@ -110,11 +110,11 @@
                 {
                   "slug": "deniz-mahsullu-salata",
                   "name": {
-                    "tr": "Deniz Mahsüllü Salata"
+                    "tr": "Deniz Mahsullü Salata"
                   },
                   "price": 99000,
                   "description": {
-                    "tr": "Mix deniz mahsülü, akdeniz yeşillik, yeşil zeytin, kapari çiçeği, kırmızı soğan, yağ limon sos"
+                    "tr": "Mix deniz mahsulü, akdeniz yeşillik, yeşil zeytin, kapari çiçeği, kırmızı soğan, yağ limon sos"
                   },
                   "photo": {
                     "w": 1200,
@@ -174,7 +174,7 @@
                   },
                   "price": 99000,
                   "description": {
-                    "tr": "Buratta peyniri, akdeniz yeşillik, salatalık, domates, incir, kayısı, ceviz, pesto sos, yağ limon sos"
+                    "tr": "Burrata peyniri, akdeniz yeşillik, salatalık, domates, incir, kayısı, ceviz, pesto sos, yağ limon sos"
                   },
                   "photo": {
                     "w": 1200,
@@ -261,7 +261,7 @@
                   },
                   "price": 87000,
                   "description": {
-                    "tr": "Tempura karides, avakado, philadellpia peyniri, salatalık, kibrit patates, havyar"
+                    "tr": "Tempura karides, avokado, philadelphia peyniri, salatalık, kibrit patates, havyar"
                   },
                   "photo": {
                     "w": 1200,
@@ -294,7 +294,7 @@
                   },
                   "price": 87500,
                   "description": {
-                    "tr": "Karide, domates sos, acı sos, pesto sos"
+                    "tr": "Karides, domates sos, acı sos, pesto sos"
                   },
                   "photo": {
                     "w": 1200,
@@ -309,7 +309,7 @@
                   },
                   "price": 65000,
                   "description": {
-                    "tr": "Krema, kültür mantar, istridye mantar, porçini mantar, pesto sos"
+                    "tr": "Krema, kültür mantar, pesto sos"
                   },
                   "photo": {
                     "w": 1200,
@@ -402,7 +402,7 @@
                   },
                   "price": 99000,
                   "description": {
-                    "tr": "Pizza sos, mozzarella peyniri, dana füme et, fesleğen yaprakları, rende permasan"
+                    "tr": "Pizza sos, mozzarella peyniri, dana füme et, fesleğen yaprakları, rende parmesan"
                   },
                   "photo": {
                     "w": 1200,
@@ -417,7 +417,7 @@
                   },
                   "price": 77000,
                   "description": {
-                    "tr": "Izgara patlıcan, ricotta peyniri, cherry domates, fesleğen yaprakları, rende permasan"
+                    "tr": "Izgara patlıcan, ricotta peyniri, cherry domates, fesleğen yaprakları, rende parmesan"
                   },
                   "photo": {
                     "w": 1200,
@@ -432,7 +432,7 @@
                   },
                   "price": 72000,
                   "description": {
-                    "tr": "Pizza sos, mozzarella peyniri, cherry domates, pesto sos, fesleğen yaprakları, rende permasan"
+                    "tr": "Pizza sos, mozzarella peyniri, cherry domates, pesto sos, fesleğen yaprakları, rende parmesan"
                   },
                   "photo": {
                     "w": 1200,
@@ -447,7 +447,7 @@
                   },
                   "price": 120000,
                   "description": {
-                    "tr": "Buratta peyniri, pizza sos, mozzarella peyniri, mortadella italyan salamı, fesleğen yaprakları, rende permasan"
+                    "tr": "Burrata peyniri, pizza sos, mozzarella peyniri, mortadella italyan salamı, fesleğen yaprakları, rende parmesan"
                   },
                   "photo": {
                     "w": 1200,
@@ -462,7 +462,7 @@
                   },
                   "price": 130000,
                   "description": {
-                    "tr": "Pizza sos, mozzarella peyniri, karides, kalamar, fesleğen yaprakları, rende permasan"
+                    "tr": "Pizza sos, mozzarella peyniri, karides, kalamar, karamelize soğan, fesleğen yaprakları, rende parmesan"
                   },
                   "photo": {
                     "w": 1200,
@@ -507,7 +507,7 @@
                   },
                   "price": 65000,
                   "description": {
-                    "tr": "Kıyma, karemelize soğan, dana sosis, füme et, leo sos, soğan kıtırı, baharatlı patates"
+                    "tr": "Kıyma, karamelize soğan, dana sosis, füme et, leo sos, soğan kıtırı, baharatlı patates"
                   },
                   "photo": {
                     "w": 1200,
@@ -522,7 +522,7 @@
                   },
                   "price": 72000,
                   "description": {
-                    "tr": "140 gr burger köftesi, turşu, domates, karemelize soğan, leo sos, baharatlı patates"
+                    "tr": "140 gr burger köftesi, turşu, domates, karamelize soğan, leo sos, baharatlı patates"
                   },
                   "photo": {
                     "w": 1200,
@@ -537,7 +537,7 @@
                   },
                   "price": 80000,
                   "description": {
-                    "tr": "140 gr burger köftesi, çedar peyniri, turşu, domates, karemelize soğan, leo sos, baharatlı patates"
+                    "tr": "140 gr burger köftesi, çedar peyniri, turşu, domates, karamelize soğan, leo sos, baharatlı patates"
                   },
                   "photo": {
                     "w": 1200,
@@ -552,7 +552,7 @@
                   },
                   "price": 90000,
                   "description": {
-                    "tr": "140 gr burger köftesi, turşu, domates, karemelize soğan, füme et, dana jambon, suda mozzarella, leo sos, baharatlı patates"
+                    "tr": "140 gr burger köftesi, turşu, domates, karamelize soğan, füme et, suda mozzarella, leo sos, baharatlı patates"
                   },
                   "photo": {
                     "w": 1200,
@@ -615,7 +615,7 @@
                   },
                   "price": 135000,
                   "description": {
-                    "tr": "Marine edilmiş antirikot, babay patates, mantar soağan maydonoz mix"
+                    "tr": "Marine edilmiş antrikot, baby patates, mantar soğan maydanoz mix"
                   },
                   "photo": {
                     "w": 1200,
@@ -645,7 +645,7 @@
                   },
                   "price": 149000,
                   "description": {
-                    "tr": "180 gr marine edilmiş bonfile, baby patates, mantar soğan maydonoz mix"
+                    "tr": "180 gr marine edilmiş bonfile, baby patates, mantar soğan maydanoz mix"
                   },
                   "photo": {
                     "w": 1200,
@@ -813,7 +813,7 @@
                   },
                   "price": 75000,
                   "description": {
-                    "tr": "Kırmızıı Meyve Çayı İle Demlenmiş vodka, Vişne Marmelatı, Ananas, Limon, Chambord"
+                    "tr": "Kırmızı Meyve Çayı İle Demlenmiş vodka, Vişne Marmelatı, Ananas, Limon, Chambord"
                   },
                   "photo": null,
                   "note": "TEYİT: açıklamada \"Kırmızıı\" — fazladan ı. | kaynak: \"ISLAND\""
@@ -849,7 +849,7 @@
                   },
                   "price": 75000,
                   "description": {
-                    "tr": "Keçiboynuzu Pekmezi, Kakao Bitters, Portakal Bitters, Angoustra Bitters, Rum Blend"
+                    "tr": "Keçiboynuzu Pekmezi, Kakao Bitters, Portakal Bitters, Angostura Bitters, Rum Blend"
                   },
                   "photo": null,
                   "note": "kaynak: \"THE ALCHEMİST\""
@@ -909,7 +909,7 @@
                   },
                   "price": 80000,
                   "description": {
-                    "tr": "Zacapa 23, Potakal likörü, Passion likörü, Fesleğen, Passion püresi, Nohut suyu, Lime"
+                    "tr": "Zacapa 23, Portakal likörü, Passion likörü, Fesleğen, Passion püresi, Nohut suyu, Lime"
                   },
                   "photo": null,
                   "note": "TEYİT: açıklamada \"POTAKAL\" — doğrusu \"Portakal\". | kaynak: \"ALEXİA\""
@@ -1034,7 +1034,7 @@
                   },
                   "price": 85000,
                   "description": {
-                    "tr": "White Rum, Cointreu, Tekila, Cin, Vodka, Top Cola"
+                    "tr": "White Rum, Cointreau, Tekila, Cin, Vodka, Top Cola"
                   },
                   "photo": null
                 },
@@ -1256,7 +1256,7 @@
                 {
                   "slug": "frederik-tropic-ipa",
                   "name": {
-                    "tr": "Frederik Tropic İpa"
+                    "tr": "Frederik Tropic IPA"
                   },
                   "price": 42000,
                   "photo": null,
@@ -1292,7 +1292,7 @@
                 {
                   "slug": "tuborg-ice-33-cl",
                   "name": {
-                    "tr": "Tuborg İce 33 Cl"
+                    "tr": "Tuborg Ice 33 Cl"
                   },
                   "price": 33000,
                   "photo": null,
@@ -1773,7 +1773,7 @@
                 {
                   "slug": "gentlemanjack-double",
                   "name": {
-                    "tr": "Gentlemanjack Double"
+                    "tr": "Gentleman Jack Double"
                   },
                   "price": 100000,
                   "photo": null,
@@ -1845,7 +1845,7 @@
                 {
                   "slug": "jack-daniles-honey-double",
                   "name": {
-                    "tr": "Jack Daniles Honey Double"
+                    "tr": "Jack Daniels Honey Double"
                   },
                   "price": 100000,
                   "photo": null,
@@ -1863,7 +1863,7 @@
                 {
                   "slug": "red-lable-double",
                   "name": {
-                    "tr": "Red Lable Double"
+                    "tr": "Red Label Double"
                   },
                   "price": 80000,
                   "photo": null,
@@ -2033,7 +2033,7 @@
                 {
                   "slug": "balck-label-70-cl",
                   "name": {
-                    "tr": "Balck Label 70 Cl"
+                    "tr": "Black Label 70 Cl"
                   },
                   "price": 920000,
                   "photo": null,
@@ -2239,7 +2239,7 @@
                 {
                   "slug": "tanquary-double",
                   "name": {
-                    "tr": "Tanquary Double"
+                    "tr": "Tanqueray Double"
                   },
                   "price": 150000,
                   "photo": null,
@@ -2301,7 +2301,7 @@
                 {
                   "slug": "double-votka-redbull",
                   "name": {
-                    "tr": "Double Votka Redbull"
+                    "tr": "Double Vodka Redbull"
                   },
                   "price": 120000,
                   "photo": null,
@@ -2345,7 +2345,7 @@
                 {
                   "slug": "bacardi-balck",
                   "name": {
-                    "tr": "Bacardi Balck"
+                    "tr": "Bacardi Black"
                   },
                   "price": 76000,
                   "photo": null,
@@ -2433,7 +2433,7 @@
                 {
                   "slug": "arcshers-tek",
                   "name": {
-                    "tr": "Arcshers Tek"
+                    "tr": "Archers Tek"
                   },
                   "price": 45000,
                   "photo": null,
