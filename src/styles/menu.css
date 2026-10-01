@@ -515,7 +515,9 @@ html body { padding-bottom: 0; }
 .mfoot-legal {
   font-size: 13.5px;
   line-height: 1.6;
-  color: var(--muted);
+  /* --muted koyu zeminde kayboluyordu; Konum / Instagram bağlantılarıyla
+     aynı renk (müşteri isteği, 1 Ekim). */
+  color: var(--text);
 }
 
 .mfoot-links {
