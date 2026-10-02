@@ -206,6 +206,9 @@
                     "tr": "Bonfile Bowl"
                   },
                   "price": 82000,
+                  "description": {
+                    "tr": "120 gr bonfile, siyah pirinç, akdeniz yeşillik, avokado, brokoli, cherry domates, mantar mix"
+                  },
                   "photo": {
                     "w": 1200,
                     "h": 800
@@ -218,6 +221,9 @@
                     "tr": "Tavuklu Bowl"
                   },
                   "price": 74000,
+                  "description": {
+                    "tr": "120 gr tavuk, siyah pirinç, akdeniz yeşillik, avokado, brokoli, cherry domates, mantar mix"
+                  },
                   "photo": {
                     "w": 1200,
                     "h": 800
@@ -230,6 +236,9 @@
                     "tr": "Karidesli Bowl"
                   },
                   "price": 92000,
+                  "description": {
+                    "tr": "120 gr karides, patates, sweet chili sos"
+                  },
                   "photo": {
                     "w": 1200,
                     "h": 800
@@ -476,6 +485,9 @@
                     "tr": "4 Peynirli Pizza"
                   },
                   "price": 85000,
+                  "description": {
+                    "tr": "Pizza sos, mozzarella peyniri, rokfor peyniri, cheddar peyniri, parmesan peyniri"
+                  },
                   "photo": {
                     "w": 1200,
                     "h": 800
@@ -615,7 +627,7 @@
                   },
                   "price": 135000,
                   "description": {
-                    "tr": "Marine edilmiş antrikot, baby patates, mantar soğan maydanoz mix"
+                    "tr": "200-210 gr antrikot, patates püresi, mantar mix"
                   },
                   "photo": {
                     "w": 1200,
@@ -645,7 +657,7 @@
                   },
                   "price": 149000,
                   "description": {
-                    "tr": "180 gr marine edilmiş bonfile, baby patates, mantar soğan maydanoz mix"
+                    "tr": "160 gr bonfile, patates püresi, mantar mix"
                   },
                   "photo": {
                     "w": 1200,
@@ -659,6 +671,9 @@
                     "tr": "Izgara Karides"
                   },
                   "price": 150000,
+                  "description": {
+                    "tr": "333 gr karides, patates kızartması, sweet chili sos"
+                  },
                   "photo": {
                     "w": 1200,
                     "h": 800
